@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T08:08:35+00:00",
+  "generated_at": "2026-09-15T17:02:00+00:00",
   "brand": "TrueDealAtlas",
   "niche": "US consumer brand coupons and discounts",
   "locale": "en-US",
@@ -14,14 +14,14 @@
     {
       "name": "Walmart",
       "source_url": "https://www.walmart.com/shop/deals",
-      "status": "error",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
-      "offer_count": 0
+      "status": "ok",
+      "offer_count": 2
     },
     {
       "name": "Best Buy",
       "source_url": "https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858",
-      "status": "ok",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found",
       "offer_count": 0
     },
     {
@@ -48,7 +48,7 @@
       "name": "JCPenney",
       "source_url": "https://www.jcpenney.com/m/sale",
       "status": "error",
-      "error": "HTTP Error 403: Forbidden",
+      "error": "The read operation timed out",
       "offer_count": 0
     },
     {
@@ -80,7 +80,7 @@
       "name": "Uniqlo",
       "source_url": "https://www.uniqlo.com/us/en/special-feature/sale",
       "status": "error",
-      "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+      "error": "The read operation timed out",
       "offer_count": 0
     },
     {
@@ -99,8 +99,7 @@
     {
       "name": "Under Armour",
       "source_url": "https://www.underarmour.com/en-us/c/sale/",
-      "status": "error",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+      "status": "ok",
       "offer_count": 0
     },
     {
@@ -126,9 +125,8 @@
     {
       "name": "Bath & Body Works",
       "source_url": "https://www.bathandbodyworks.com/c/sale",
-      "status": "error",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
-      "offer_count": 0
+      "status": "ok",
+      "offer_count": 6
     },
     {
       "name": "Nordstrom Rack",
@@ -204,8 +202,9 @@
     {
       "name": "Dell",
       "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "status": "ok",
-      "offer_count": 8
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
     },
     {
       "name": "HP",
@@ -244,11 +243,27 @@
   ],
   "offers": [
     {
+      "provider": "Walmart",
+      "title": "Walmart: Free shipping, arrives",
+      "offer_url": "https://www.walmart.com/shop/deals",
+      "source_url": "https://www.walmart.com/shop/deals",
+      "fetched_at": "2026-09-15T16:59:52+00:00",
+      "active": true
+    },
+    {
+      "provider": "Walmart",
+      "title": "Walmart: Clearance",
+      "offer_url": "https://www.walmart.com/shop/deals/clearance",
+      "source_url": "https://www.walmart.com/shop/deals",
+      "fetched_at": "2026-09-15T16:59:52+00:00",
+      "active": true
+    },
+    {
       "provider": "Old Navy",
       "title": "Old Navy: Women's Clothing Sale | Old Navy",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-15T08:06:49+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true
     },
     {
@@ -256,7 +271,7 @@
       "title": "Old Navy: Free shipping on $50+ for rewards members",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-15T08:06:49+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true,
       "price": "50",
       "currency": "USD"
@@ -266,7 +281,7 @@
       "title": "Old Navy: Cardmember Month Is ON! 30% Off Your First Purchase + Daily Card Offers",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-15T08:06:49+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -275,16 +290,16 @@
       "title": "Old Navy: Card Perk! Extra 20% off Jeans Code: VIP",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-15T08:06:49+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true,
       "discount_percent": 20
     },
     {
       "provider": "Old Navy",
       "title": "Old Navy: Clearance",
-      "offer_url": "https://oldnavy.gap.com/browse/toddler/clearance?cid=3044225&nav=meganav%3AToddler%3ANew%20%26%20Trending%3AClearance",
+      "offer_url": "https://oldnavy.gap.com/browse/toddler/clearance?cid=3044225&nav=meganav%3AToddler%3ADeals%3AClearance",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-15T08:06:49+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true
     },
     {
@@ -292,7 +307,7 @@
       "title": "Gap: 30–50% off all jeans",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -301,7 +316,7 @@
       "title": "Gap: Up to 50% off sitewide",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -310,7 +325,7 @@
       "title": "Gap: Extra 25% off your first purchase with your new card. Combinable with today’s deals. Ends 9/15.",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true,
       "discount_percent": 25
     },
@@ -319,7 +334,7 @@
       "title": "Gap: A great pair of jeans is the foundation of any wardrobe. Whether upgrading your go-to pair or trying something new, Gap men’s jeans offer comfort, durability, and everyday weara...",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true
     },
     {
@@ -327,7 +342,7 @@
       "title": "Gap: offer versatility—wear them with an Oxford shirt and loafers for a polished outfit or a cozy",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true
     },
     {
@@ -335,7 +350,7 @@
       "title": "Gap: are always a classic choice, while dark washes offer a more refined feel—think a blazer over a crisp button-down. For an edgier look,",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:23+00:00",
       "active": true
     },
     {
@@ -343,7 +358,7 @@
       "title": "Banana Republic: FREE SHIPPING ON $50+ FOR ENCORE MEMBERS",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true,
       "price": "50",
       "currency": "USD"
@@ -353,7 +368,7 @@
       "title": "Banana Republic: Up to 30% off Select Styles",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -362,7 +377,7 @@
       "title": "Banana Republic: Women's Sale",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true
     },
     {
@@ -370,7 +385,7 @@
       "title": "Banana Republic: Petite's Sale",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true
     },
     {
@@ -378,7 +393,7 @@
       "title": "Banana Republic: Discover refined silhouettes, luxurious fabrics, and thoughtful details with Banana Republic’s collection of women’s dresses. rom polished midis to flowing satin maxis, each pie...",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true
     },
     {
@@ -386,7 +401,7 @@
       "title": "Banana Republic: offer effortless styling with clean lines, waist-defining details, and wide-leg options that can be dressed up or down.",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true
     },
     {
@@ -394,7 +409,7 @@
       "title": "Banana Republic: Home Sale",
       "offer_url": "https://bananarepublic.gap.com/browse/home/shop-all-home?cid=3045523&cl=true",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-15T08:06:50+00:00",
+      "fetched_at": "2026-09-15T17:00:24+00:00",
       "active": true
     },
     {
@@ -402,7 +417,7 @@
       "title": "Nike: Clearance Outlet Deals & Discounts. Nike.com",
       "offer_url": "https://www.nike.com/w/sale-3yaep",
       "source_url": "https://www.nike.com/w/sale-3yaep",
-      "fetched_at": "2026-09-15T08:07:30+00:00",
+      "fetched_at": "2026-09-15T17:01:05+00:00",
       "active": true
     },
     {
@@ -410,7 +425,7 @@
       "title": "Nike: Shop All Sale",
       "offer_url": "https://www.nike.com/w/sale-3yaep",
       "source_url": "https://www.nike.com/w/sale-3yaep",
-      "fetched_at": "2026-09-15T08:07:30+00:00",
+      "fetched_at": "2026-09-15T17:01:05+00:00",
       "active": true
     },
     {
@@ -418,7 +433,7 @@
       "title": "Nike: Terms of Sale",
       "offer_url": "https://www.nike.com/w/sale-3yaep",
       "source_url": "https://www.nike.com/w/sale-3yaep",
-      "fetched_at": "2026-09-15T08:07:30+00:00",
+      "fetched_at": "2026-09-15T17:01:05+00:00",
       "active": true
     },
     {
@@ -426,7 +441,7 @@
       "title": "Ulta Beauty: 21+ Days of Beauty Event | 50% Off | Fall 2026 | Ulta Beauty",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -435,7 +450,7 @@
       "title": "Ulta Beauty: Diamond & Platinum: Get FREE SHIPPING on Beauty Steals®",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true
     },
     {
@@ -443,7 +458,7 @@
       "title": "Ulta Beauty Rewards®",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true
     },
     {
@@ -451,7 +466,7 @@
       "title": "Ulta Beauty: Makeup on Sale",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true
     },
     {
@@ -459,7 +474,7 @@
       "title": "Ulta Beauty: Skin Care on Sale",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true
     },
     {
@@ -467,7 +482,7 @@
       "title": "Ulta Beauty: Hair Care on Sale",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true
     },
     {
@@ -475,7 +490,7 @@
       "title": "Ulta Beauty: Fragrance on Sale",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
       "active": true
     },
     {
@@ -483,7 +498,60 @@
       "title": "Ulta Beauty: Body Care on Sale",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-15T08:07:32+00:00",
+      "fetched_at": "2026-09-15T17:01:07+00:00",
+      "active": true
+    },
+    {
+      "provider": "Bath & Body Works",
+      "title": "Bath & Body Works: 75% Off Select Items | Bath & Body Works",
+      "offer_url": "https://www.bathandbodyworks.com/c/sale",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetched_at": "2026-09-15T17:01:09+00:00",
+      "active": true,
+      "discount_percent": 75
+    },
+    {
+      "provider": "Bath & Body Works",
+      "title": "Bath & Body Works: Free shipping on $50 orders",
+      "offer_url": "https://www.bathandbodyworks.com/c/sale",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetched_at": "2026-09-15T17:01:09+00:00",
+      "active": true,
+      "price": "50",
+      "currency": "USD"
+    },
+    {
+      "provider": "Bath & Body Works",
+      "title": "Bath & Body Works: Semi-Annual Sale",
+      "offer_url": "https://www.bathandbodyworks.com/c/sale",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetched_at": "2026-09-15T17:01:09+00:00",
+      "active": true
+    },
+    {
+      "provider": "Bath & Body Works",
+      "title": "Bath & Body Works: 75% Off Select Items",
+      "offer_url": "https://www.bathandbodyworks.com/c/sale",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetched_at": "2026-09-15T17:01:09+00:00",
+      "active": true,
+      "discount_percent": 75
+    },
+    {
+      "provider": "Bath & Body Works",
+      "title": "Bath & Body Works: 75% Off Select Sale Items",
+      "offer_url": "https://www.bathandbodyworks.com/c/sale",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetched_at": "2026-09-15T17:01:09+00:00",
+      "active": true,
+      "discount_percent": 75
+    },
+    {
+      "provider": "Bath & Body Works",
+      "title": "Bath & Body Works: Become a Rewards loyalty member",
+      "offer_url": "https://www.bathandbodyworks.com/c/sale",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetched_at": "2026-09-15T17:01:09+00:00",
       "active": true
     },
     {
@@ -491,15 +559,24 @@
       "title": "Nordstrom Rack: Deals, Sale & Clearance Items | Nordstrom Rack",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: EXTRA 40% OFF select clearance dresses, sandals, shorts & accessories. FINAL SALE.",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
+      "active": true,
+      "discount_percent": 40
     },
     {
       "provider": "Nordstrom Rack",
       "title": "Nordstrom Rack: Save on Select Dresses, Sandals, Shorts & Accessories",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true
     },
     {
@@ -507,7 +584,7 @@
       "title": "Nordstrom Rack: On now: take an extra 40% off select clearance! Also in stores. ALL SALES FINAL. Restrictions apply.",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true,
       "discount_percent": 40
     },
@@ -516,7 +593,7 @@
       "title": "Nordstrom Rack: All Clearance",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true
     },
     {
@@ -524,7 +601,7 @@
       "title": "Nordstrom Rack: Clearance Under $25",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true,
       "price": "25",
       "currency": "USD"
@@ -534,7 +611,7 @@
       "title": "Nordstrom Rack: Clearance Under $50",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true,
       "price": "50",
       "currency": "USD"
@@ -544,25 +621,16 @@
       "title": "Nordstrom Rack: (Up to 82% off)",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
+      "fetched_at": "2026-09-15T17:01:11+00:00",
       "active": true,
       "discount_percent": 82
-    },
-    {
-      "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: (Up to 84% off select items)",
-      "offer_url": "https://www.nordstromrack.com/clearance",
-      "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-15T08:07:34+00:00",
-      "active": true,
-      "discount_percent": 84
     },
     {
       "provider": "Wayfair",
       "title": "Wayfair: Official Wayfair Coupon Codes - Sep, 2026 | Wayfair",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true
     },
     {
@@ -570,7 +638,7 @@
       "title": "Wayfair Coupons & Coupon Codes",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true
     },
     {
@@ -578,7 +646,7 @@
       "title": "Wayfair: We rarely send coupons, but when we do we exclusively send personalized coupon codes directly to our customers. Signing up for emails will guarantee that you will never miss out...",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true
     },
     {
@@ -586,7 +654,7 @@
       "title": "Wayfair: Up to 70% off Every Day",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true,
       "discount_percent": 70
     },
@@ -595,7 +663,7 @@
       "title": "Wayfair: Shop every style of furniture and decor at up to 70% off. Exclusive sales start daily.",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true,
       "discount_percent": 70
     },
@@ -604,7 +672,7 @@
       "title": "Wayfair: Free Shipping Over $35",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true,
       "price": "35",
       "currency": "USD"
@@ -614,7 +682,7 @@
       "title": "Wayfair: That's right; we offer free shipping on most stuff, even the big stuff. Your shopping cart will automatically eliminate the shipping fee.",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true
     },
     {
@@ -622,7 +690,7 @@
       "title": "Wayfair: Up to 70% Off",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-15T08:07:36+00:00",
+      "fetched_at": "2026-09-15T17:01:14+00:00",
       "active": true,
       "discount_percent": 70
     },
@@ -631,7 +699,7 @@
       "title": "Amazon: Subscribe & Save",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-15T08:07:38+00:00",
+      "fetched_at": "2026-09-15T17:01:15+00:00",
       "active": true
     },
     {
@@ -639,7 +707,7 @@
       "title": "Amazon: Prime Big Deal Days is October 6-7",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-15T08:07:38+00:00",
+      "fetched_at": "2026-09-15T17:01:15+00:00",
       "active": true
     },
     {
@@ -647,7 +715,7 @@
       "title": "Amazon: 25% off or more on home",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-15T08:07:38+00:00",
+      "fetched_at": "2026-09-15T17:01:15+00:00",
       "active": true,
       "discount_percent": 25
     },
@@ -656,7 +724,7 @@
       "title": "Amazon: Save on outlet",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-15T08:07:38+00:00",
+      "fetched_at": "2026-09-15T17:01:15+00:00",
       "active": true
     },
     {
@@ -664,7 +732,7 @@
       "title": "Amazon: Lightning deals over 50% off",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-15T08:07:38+00:00",
+      "fetched_at": "2026-09-15T17:01:15+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -673,7 +741,7 @@
       "title": "Amazon: Over 25% off electronics",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-15T08:07:38+00:00",
+      "fetched_at": "2026-09-15T17:01:15+00:00",
       "active": true,
       "discount_percent": 25
     },
@@ -682,7 +750,7 @@
       "title": "eBay: Daily Deals on eBay | Best deals and Free Shipping",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -690,7 +758,7 @@
       "title": "eBay: Use code FINDYOURS20 for 20% off tech, home, and more",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -699,7 +767,7 @@
       "title": "eBay: Use code AUTHENTICITY for up to 20% off select fashion",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -708,7 +776,7 @@
       "title": "eBay: Up to 60% off eBay Refurbished cell phones and accessories",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -717,7 +785,7 @@
       "title": "eBay: Save on trusted eBay Refurbished tech, up to 60% off with warranty",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -726,7 +794,7 @@
       "title": "eBay: Save up to 50% off refurbished home and tools with warranty",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -735,7 +803,7 @@
       "title": "eBay: Best of tech up to 50% off",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -744,7 +812,7 @@
       "title": "eBay: 30% off EcoFlow with code EFSEP30OFF",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -753,7 +821,7 @@
       "title": "Apple: Save up to $799 after an eligible trade-in in any condition.",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "price": "799",
       "currency": "USD"
@@ -763,7 +831,7 @@
       "title": "Apple: While traveling internationally, your carrier may offer convenient and affordable international roaming options. Additionally, if your iPhone is unlocked, you can use a travel e...",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -771,7 +839,7 @@
       "title": "Apple: Connectivity discounts are reflected in the advertised price of select iPhone models, and are available to customers who connect with select carriers at the time of purchase. Th...",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -779,7 +847,7 @@
       "title": "Apple: Which network providers offer 5G service?",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -787,7 +855,7 @@
       "title": "Apple: AT&T, T-Mobile, and Verizon are the national wireless carriers for iPhone in the United States, and they all offer 5G service. iPhone 16, iPhone 17e, iPhone 17, iPhone Air, iPho...",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -795,7 +863,7 @@
       "title": "Apple: T-Mobile iPhone 16 Special Deal",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -803,7 +871,7 @@
       "title": "Apple: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 36 months with purchase of an iPhone 16 and trade-in of eligibl...",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true,
       "price": "35",
       "currency": "USD"
@@ -813,7 +881,7 @@
       "title": "Apple: Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop & balance on required finance agreement is due. Bill credits end if you pay...",
       "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
-      "fetched_at": "2026-09-15T08:07:50+00:00",
+      "fetched_at": "2026-09-15T17:01:16+00:00",
       "active": true
     },
     {
@@ -821,7 +889,7 @@
       "title": "Samsung Rewards",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true
     },
     {
@@ -829,7 +897,7 @@
       "title": "Samsung Offer Programs",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true
     },
     {
@@ -837,7 +905,7 @@
       "title": "Samsung: Without this product, applied coupon or promotion code cannot be redeemed.",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true
     },
     {
@@ -845,7 +913,7 @@
       "title": "Samsung: Earn rewards points when shopping on Samsung.com and Shop app.",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true
     },
     {
@@ -853,7 +921,7 @@
       "title": "Samsung: Save with Samsung Offer Programs",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true
     },
     {
@@ -861,7 +929,7 @@
       "title": "Samsung: Save up to 30% off with exclusive offers for students, teachers, government, military and corporate employees. You could be eligible.",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -870,7 +938,7 @@
       "title": "Samsung: or $300 off without trade-in.",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true,
       "price": "300",
       "currency": "USD"
@@ -880,81 +948,15 @@
       "title": "Samsung: Save on S-Series Soundbar HW-S801D when you buy The Frame Pro (2026).",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-15T08:07:51+00:00",
+      "fetched_at": "2026-09-15T17:01:17+00:00",
       "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell Rewards Balance",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell: Enjoy members-only rewards and discounts",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell Rewards",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell: Save up to an additional 5% for your business with Dell Premier.",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true,
-      "discount_percent": 5
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell: Bundle & Save. Simple as That.",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell Pro 5 Keyboard and Mouse - KM526 - Light Ash (Off White)",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell: Bundle & Save",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true
-    },
-    {
-      "provider": "Dell",
-      "title": "Dell: ​Get extra 50% off AW5625P Backpack with any Alienware Laptop purchase",
-      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
-      "fetched_at": "2026-09-15T08:07:52+00:00",
-      "active": true,
-      "discount_percent": 50
     },
     {
       "provider": "Google Store",
       "title": "Google Store: Smart thermostats keep your home comfortable and help you save on energy.",
       "offer_url": "https://store.google.com/us/magazine/offerterms",
       "source_url": "https://store.google.com/us/magazine/offerterms",
-      "fetched_at": "2026-09-15T08:08:15+00:00",
+      "fetched_at": "2026-09-15T17:01:39+00:00",
       "active": true
     },
     {
@@ -962,7 +964,7 @@
       "title": "Google Store: Energy Savings Smart thermostats keep your home comfortable and help you save on energy.",
       "offer_url": "https://store.google.com/intl/en/ideas/articles/google-nest-thermostat-energy-savings/",
       "source_url": "https://store.google.com/us/magazine/offerterms",
-      "fetched_at": "2026-09-15T08:08:15+00:00",
+      "fetched_at": "2026-09-15T17:01:39+00:00",
       "active": true
     }
   ]

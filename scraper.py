@@ -37,16 +37,24 @@ def parse_config(path: Path = CONFIG_PATH) -> dict:
 
 class PageTextParser(HTMLParser):
     def __init__(self):
-        super().__init__(); self.parts = []; self.links = []; self.href = None; self.link_text = []
+        super().__init__(); self.parts = []; self.links = []; self.href = None; self.link_text = []; self.skip = 0
     def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style", "noscript", "template"):
+            self.skip += 1
+            return
         if tag == "a":
             self.href = dict(attrs).get("href"); self.link_text = []
     def handle_endtag(self, tag):
+        if tag in ("script", "style", "noscript", "template") and self.skip:
+            self.skip -= 1
+            return
         if tag == "a" and self.href:
             label = " ".join(self.link_text).strip()
             if label: self.links.append((label, self.href))
             self.href = None
     def handle_data(self, data):
+        if self.skip:
+            return
         clean = re.sub(r"\s+", " ", html.unescape(data)).strip()
         if clean:
             self.parts.append(clean)
@@ -75,6 +83,8 @@ def extract_offers(provider, page):
     seen, offers = set(), []
     fetched_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     for text, offer_url in candidates:
+        if re.search(r"(?:window\.|webpack|javascript|function\s*\(|@context|errorBeacon|licenseKey|align-items:)", text, re.I):
+            continue
         key = re.sub(r"\W+", " ", text.lower()).strip()
         if key in seen: continue
         seen.add(key)

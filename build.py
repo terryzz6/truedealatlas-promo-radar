@@ -7,7 +7,9 @@ from scraper import parse_config
 
 ROOT=Path(__file__).parent; DATA=ROOT/"data"/"offers.json"; SITE=ROOT/"site"; BASE="https://truedealatlas.pages.dev"
 def esc(v): return html.escape(str(v), quote=True)
-def slug(v): return re.sub(r"[^a-z0-9]+", "-", v.lower()).strip("-") or "item"
+def slug(v):
+    value = re.sub(r"[^a-z0-9]+", "-", v.lower()).strip("-") or "item"
+    return value[: 95].rstrip("-")
 def load_data():
     cfg=parse_config(); payload=json.loads(DATA.read_text(encoding="utf-8")) if DATA.exists() else {"offers":[],"providers":[],"generated_at":datetime.now(timezone.utc).isoformat()}; payload.setdefault("brand",cfg["meta"].get("brand","TrueDealAtlas")); payload.setdefault("niche",cfg["meta"].get("niche","US consumer brand coupons and discounts")); return cfg,payload
 def jsonld(obj): return '<script type="application/ld+json">'+json.dumps(obj,ensure_ascii=False)+'</script>'

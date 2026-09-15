@@ -1,0 +1,1021 @@
+{
+  "generated_at": "2026-09-15T07:41:41+00:00",
+  "brand": "TrueDealAtlas",
+  "niche": "US consumer brand coupons and discounts",
+  "locale": "en-US",
+  "providers": [
+    {
+      "name": "Target",
+      "source_url": "https://www.target.com/c/target-circle/-/N-4tj1t",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found",
+      "offer_count": 0
+    },
+    {
+      "name": "Walmart",
+      "source_url": "https://www.walmart.com/shop/deals",
+      "status": "error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+      "offer_count": 0
+    },
+    {
+      "name": "Best Buy",
+      "source_url": "https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858",
+      "status": "ok",
+      "offer_count": 0
+    },
+    {
+      "name": "Kohl's",
+      "source_url": "https://www.kohls.com/sale-event/todays-deals.jsp",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Macy's",
+      "source_url": "https://www.macys.com/s/promotional-details/score/",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Nordstrom",
+      "source_url": "https://www.nordstrom.com/browse/sale",
+      "status": "ok",
+      "offer_count": 0
+    },
+    {
+      "name": "JCPenney",
+      "source_url": "https://www.jcpenney.com/m/sale",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Old Navy",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Gap",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Banana Republic",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "H&M",
+      "source_url": "https://www2.hm.com/en_us/sale.html",
+      "status": "error",
+      "error": "The read operation timed out",
+      "offer_count": 0
+    },
+    {
+      "name": "Uniqlo",
+      "source_url": "https://www.uniqlo.com/us/en/special-feature/sale",
+      "status": "error",
+      "error": "The read operation timed out",
+      "offer_count": 0
+    },
+    {
+      "name": "Nike",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "adidas",
+      "source_url": "https://www.adidas.com/us/sale",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Under Armour",
+      "source_url": "https://www.underarmour.com/en-us/c/sale/",
+      "status": "error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+      "offer_count": 0
+    },
+    {
+      "name": "Levi's",
+      "source_url": "https://www.levi.com/US/en_US/sale/c/levi_clothing_sale",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Sephora",
+      "source_url": "https://www.sephora.com/beauty/beauty-offers",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Ulta Beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Bath & Body Works",
+      "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "status": "error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+      "offer_count": 0
+    },
+    {
+      "name": "Nordstrom Rack",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Home Depot",
+      "source_url": "https://www.homedepot.com/c/coupons",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Lowe's",
+      "source_url": "https://www.lowes.com/l/savings.html",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Wayfair",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Chewy",
+      "source_url": "https://www.chewy.com/deals",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "offer_count": 0
+    },
+    {
+      "name": "Petco",
+      "source_url": "https://www.petco.com/shop/en/petcostore/category/sale",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Amazon",
+      "source_url": "https://www.amazon.com/gp/goldbox",
+      "status": "error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+      "offer_count": 0
+    },
+    {
+      "name": "eBay",
+      "source_url": "https://www.ebay.com/deals",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Etsy",
+      "source_url": "https://www.etsy.com/c/sale",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Apple",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Samsung",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "Dell",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "status": "ok",
+      "offer_count": 8
+    },
+    {
+      "name": "HP",
+      "source_url": "https://www.hp.com/us-en/shop/cv/hp-deals",
+      "status": "error",
+      "error": "The read operation timed out",
+      "offer_count": 0
+    },
+    {
+      "name": "Lenovo",
+      "source_url": "https://www.lenovo.com/us/en/d/deals/",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Google Store",
+      "source_url": "https://store.google.com/us/magazine/offerterms",
+      "status": "ok",
+      "offer_count": 3
+    },
+    {
+      "name": "REI",
+      "source_url": "https://www.rei.com/rei-garage",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
+      "offer_count": 0
+    },
+    {
+      "name": "Lululemon",
+      "source_url": "https://shop.lululemon.com/c/sale/_/N-1z0xcuu",
+      "status": "error",
+      "error": "The read operation timed out",
+      "offer_count": 0
+    }
+  ],
+  "offers": [
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: Women's Clothing Sale | Old Navy",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: window.NREUM||(NREUM={});NREUM.info = {\"agent\":\"\",\"beacon\":\"bam.nr-data.net\",\"errorBeacon\":\"bam.nr-data.net\",\"licenseKey\":\"NRBR-4c469572768eeedb787\",\"applicationID\":\"687603578\",...",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true,
+      "price": "8",
+      "currency": "USD"
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: .sitewide-w93yqo{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:rgba(255, 255, 255, 0.75);bottom:100%;color:#FFFFF...",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: Free shipping on $50+ for rewards members",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true,
+      "price": "50",
+      "currency": "USD"
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: Cardmember Month Is ON! 30% Off Your First Purchase + Daily Card Offers",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true,
+      "discount_percent": 30
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: #topNavWrapper .divisionLink:not(.sw_mega-nav__division-link)._selected {color: #003764;}#topNavWrapper .meganav:not(.custom, .sw_mega-nav__flyout) .catnav--header > span {margi...",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: Card Perk! Extra 20% off Jeans Code: VIP",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "Old Navy",
+      "title": "Old Navy: {\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@id\":\"https://oldnavy.gap.com/browse/category.do?cid=11852...",
+      "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetched_at": "2026-09-15T07:39:52+00:00",
+      "active": true
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: window.NREUM||(NREUM={});NREUM.info = {\"agent\":\"\",\"beacon\":\"bam.nr-data.net\",\"errorBeacon\":\"bam.nr-data.net\",\"licenseKey\":\"NRBR-4c469572768eeedb787\",\"applicationID\":\"687603578\",...",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "price": "8",
+      "currency": "USD"
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: .sitewide-w93yqo{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:rgba(255, 255, 255, 0.75);bottom:100%;color:#FFFFF...",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: 30–50% off all jeans",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: Up to 50% off sitewide",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: Extra 25% off your first purchase with your new card. Combinable with today’s deals. Ends 9/15.",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "discount_percent": 25
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: .sw_navigation-bar__desktop-wrapper{max-width:100%}#topNavWrapper>div>div>ul>li:nth-child(10)>div>a{font-weight:500!important}.divisionLink[data-divisionname='Sale']{color:#e519...",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: #topNavWrapper .topnav:not(.sw_mega-nav__division-list) li:not(.catnav--item) {padding: 0;}#topNavWrapper .topnav:not(.sw_mega-nav__division-list) a.divisionLink {box-shadow: no...",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Gap",
+      "title": "Gap: A great pair of jeans is the foundation of any wardrobe. Whether upgrading your go-to pair or trying something new, Gap men’s jeans offer comfort, durability, and everyday weara...",
+      "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: window.NREUM||(NREUM={});NREUM.info = {\"agent\":\"\",\"beacon\":\"bam.nr-data.net\",\"errorBeacon\":\"bam.nr-data.net\",\"licenseKey\":\"NRBR-4c469572768eeedb787\",\"applicationID\":\"687603578\",...",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "price": "8",
+      "currency": "USD"
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: .sitewide-w93yqo{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:rgba(255, 255, 255, 0.75);bottom:100%;color:#FFFFF...",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: FREE SHIPPING ON $50+ FOR ENCORE MEMBERS",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "price": "50",
+      "currency": "USD"
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: Up to 30% off Select Styles",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true,
+      "discount_percent": 30
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: Women's Sale",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: Petite's Sale",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: Discover refined silhouettes, luxurious fabrics, and thoughtful details with Banana Republic’s collection of women’s dresses. rom polished midis to flowing satin maxis, each pie...",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Banana Republic",
+      "title": "Banana Republic: offer effortless styling with clean lines, waist-defining details, and wide-leg options that can be dressed up or down.",
+      "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetched_at": "2026-09-15T07:39:53+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: Clearance Outlet Deals & Discounts. Nike.com",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: window.NREUM||(NREUM={});NREUM.info = {\"agent\":\"\",\"beacon\":\"bam.nr-data.net\",\"errorBeacon\":\"bam.nr-data.net\",\"licenseKey\":\"NRBR-a9222fd7973d8c876e1\",\"applicationID\":\"45012625\",\"...",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true,
+      "price": "8",
+      "currency": "USD"
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: .css-1herv46{min-height:60px;}.css-1maloet{position:relative;z-index:0;}@media screen and (prefers-reduced-motion:reduce),(update:slow){.css-1maloet *{-webkit-animation-duration...",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: window.NAV_INITIAL_DATA_SHARED={\"locale\":{\"urlParam\":\"en\",\"language\":\"en\",\"intl\":\"en-US\",\"langRegion\":\"en-US\",\"hreflang\":\"en-US\",\"default\":true,\"country\":\"us\",\"currency\":\"USD\",\"...",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: Shop All Sale",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: window.NAV_INITIAL_DATA={\"flags\":{\"BOLD_PRIVACY_FOOTER_LINK\":false,\"COOKIE_MODAL_REJECT_ALL\":false,\"GLOBAL_NAV_MOBILE_ORDERS\":true,\"GLOBAL_NAV_MENU\":true,\"GLOBAL_NAV_FIND_A_STOR...",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: Terms of Sale",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: {\"props\":{\"pageProps\":{\"cloudUrlFragment\":\"\",\"initialState\":{\"global\":{\"metaTags\":{\"defaultTitle\":\"Nike Store. Shoes, Clothing \\u0026 Gear.\",\"meta\":[{\"content\":\"Clearance Outlet...",
+      "offer_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetched_at": "2026-09-15T07:40:34+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: 21+ Days of Beauty Event | 50% Off | Fall 2026 | Ulta Beauty",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: Diamond & Platinum: Get FREE SHIPPING on Beauty Steals®",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty Rewards®",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: Makeup on Sale",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: Skin Care on Sale",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: Hair Care on Sale",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: Fragrance on Sale",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ulta Beauty",
+      "title": "Ulta Beauty: Body Care on Sale",
+      "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetched_at": "2026-09-15T07:40:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Deals, Sale & Clearance Items | Nordstrom Rack",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Save on Select Dresses, Sandals, Shorts & Accessories",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: On now: take an extra 40% off select clearance! Also in stores. ALL SALES FINAL. Restrictions apply.",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true,
+      "discount_percent": 40
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: All Clearance",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Clearance Under $25",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true,
+      "price": "25",
+      "currency": "USD"
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Clearance Under $50",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true,
+      "price": "50",
+      "currency": "USD"
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: (Up to 82% off)",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true,
+      "discount_percent": 82
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: (Up to 84% off select items)",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-15T07:40:38+00:00",
+      "active": true,
+      "discount_percent": 84
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: Official Wayfair Coupon Codes - Sep, 2026 | Wayfair",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: window.wf = {}; wf.extend = function x(t, s) { if (!s) { s = t; t = window } if (t !== s) { for (var n in s)if (t[n] instanceof Object && !(t[n] instanceof Array) && !t[n].jquer...",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: if (window && window[\"sf-ui-layout::WEBPACK_ENTRY_DATA\"]) { window[\"sf-ui-layout::WEBPACK_ENTRY_DATA\"]={...window[\"sf-ui-layout::WEBPACK_ENTRY_DATA\"], ...{\"header\":{\"id\":\"sf-ui-...",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: if (window && window[\"sf-ui-layout::WEBPACK_ENTRY_DATA\"]) { window[\"sf-ui-layout::WEBPACK_ENTRY_DATA\"]={...window[\"sf-ui-layout::WEBPACK_ENTRY_DATA\"], ...{\"global-help\":{\"id\":\"s...",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair Coupons & Coupon Codes",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: We rarely send coupons, but when we do we exclusively send personalized coupon codes directly to our customers. Signing up for emails will guarantee that you will never miss out...",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: Up to 70% off Every Day",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true,
+      "discount_percent": 70
+    },
+    {
+      "provider": "Wayfair",
+      "title": "Wayfair: Shop every style of furniture and decor at up to 70% off. Exclusive sales start daily.",
+      "offer_url": "https://www.wayfair.com/coupon-codes-policy",
+      "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetched_at": "2026-09-15T07:40:41+00:00",
+      "active": true,
+      "discount_percent": 70
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Daily Deals on eBay | Best deals and Free Shipping",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Use code FINDYOURS20 for 20% off tech, home, and more",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Use code AUTHENTICITY for up to 20% off select fashion",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Up to 60% off eBay Refurbished cell phones and accessories",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 60
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Save on trusted eBay Refurbished tech, up to 60% off with warranty",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 60
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Save up to 50% off refurbished home and tools with warranty",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: Best of tech up to 50% off",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "eBay",
+      "title": "eBay: 30% off EcoFlow with code EFSEP30OFF",
+      "offer_url": "https://www.ebay.com/deals",
+      "source_url": "https://www.ebay.com/deals",
+      "fetched_at": "2026-09-15T07:40:55+00:00",
+      "active": true,
+      "discount_percent": 30
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: {\"@context\":\"https://schema.org\",\"@type\":\"Product\",\"name\":\"iPhone 16\",\"url\":\"https://www.apple.com/shop/buy-iphone/iphone-16\",\"mainEntityOfPage\":\"https://www.apple.com/shop/buy-...",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true,
+      "discount_percent": 0,
+      "price": "35",
+      "currency": "USD"
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: {\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can I activate an iPhone 16 outside of the United States?\",\"acceptedAnswer\":{\"@type\"...",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: Save up to $799 after an eligible trade-in in any condition.",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true,
+      "price": "799",
+      "currency": "USD"
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: While traveling internationally, your carrier may offer convenient and affordable international roaming options. Additionally, if your iPhone is unlocked, you can use a travel e...",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: Connectivity discounts are reflected in the advertised price of select iPhone models, and are available to customers who connect with select carriers at the time of purchase. Th...",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: Which network providers offer 5G service?",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: AT&T, T-Mobile, and Verizon are the national wireless carriers for iPhone in the United States, and they all offer 5G service. iPhone 16, iPhone 17e, iPhone 17, iPhone Air, iPho...",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true
+    },
+    {
+      "provider": "Apple",
+      "title": "Apple: window.BUYFLOW_MESSAGES_BOOTSTRAP = {\"signature\":\"308006092a864886f70d010702a0803080020101310d300b0609608648016503040201300b06092a864886f70d010701a0803082030b308202b1a0030201020...",
+      "offer_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetched_at": "2026-09-15T07:40:56+00:00",
+      "active": true,
+      "discount_percent": 3
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung: var winhref = window.location.href.replace(\"/content/samsung\",\"\").replace(\".html\",\"/\"); if ( winhref.indexOf(\"?\") > 0) { winhref = winhref.substring(0, winhref.indexOf(\"?\")); }...",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung: const hideHeaderFooterByWindowFlutterInappwebview = () => { //$('.gnb').hide(); if(document.querySelector(\".gnb\") != null && document.querySelector(\".gnb\").style != null) { docu...",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung: const searchParams = new URLSearchParams(location.search); let appViewParam = searchParams.get('appView'); let sourceParam = searchParams.get('source'); if(appViewParam == \"SM\"...",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung Rewards",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung Offer Programs",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung: Without this product, applied coupon or promotion code cannot be redeemed.",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung: {\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"numberOfItems\":\"16\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":{\"@type\":\"Product\",\"offers\":{\"@type\":\"Offer\",\"priceCurrenc...",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Samsung",
+      "title": "Samsung: Earn rewards points when shopping on Samsung.com and Shop app.",
+      "offer_url": "https://www.samsung.com/us/offers/",
+      "source_url": "https://www.samsung.com/us/offers/",
+      "fetched_at": "2026-09-15T07:40:57+00:00",
+      "active": true
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell: var Dell = window.Dell || {}; Dell.SuperCategory = Dell.SuperCategory || {}; Dell.SuperCategory.TechNote = Dell.SuperCategory.TechNote || {}; Dell.SuperCategory.TechNote.techNot...",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true,
+      "price": "2",
+      "currency": "USD"
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell Rewards Balance",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell: Enjoy members-only rewards and discounts",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell Rewards",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell: Save up to an additional 5% for your business with Dell Premier.",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true,
+      "discount_percent": 5
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell: @charset \"UTF-8\";.cd-compare-drawer-wrap .dds__button{align-items:center;border:1px solid transparent;border-radius:2px;cursor:pointer;display:inline-flex;font-size:1rem;font-we...",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell: Bundle & Save. Simple as That.",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true
+    },
+    {
+      "provider": "Dell",
+      "title": "Dell: @charset \"UTF-8\";.dell-ps-dds body:not(.user-is-tabbing) button.dds__link:focus{text-decoration:underline}.dell-ps-dds .dds__button-link,.dell-ps-dds .dds__more-less__button{bac...",
+      "offer_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetched_at": "2026-09-15T07:40:58+00:00",
+      "active": true
+    },
+    {
+      "provider": "Google Store",
+      "title": "Google Store: Smart thermostats keep your home comfortable and help you save on energy.",
+      "offer_url": "https://store.google.com/us/magazine/offerterms",
+      "source_url": "https://store.google.com/us/magazine/offerterms",
+      "fetched_at": "2026-09-15T07:41:20+00:00",
+      "active": true
+    },
+    {
+      "provider": "Google Store",
+      "title": "Google Store: *:not([data-nested-tracking-module-wrapper]) > .page-module:has([data-module-control-id=\"Pixel11_hero_storefront_lifestyle_video_ios\"]):not(:has(.page-module)), *:not([data-nest...",
+      "offer_url": "https://store.google.com/us/magazine/offerterms",
+      "source_url": "https://store.google.com/us/magazine/offerterms",
+      "fetched_at": "2026-09-15T07:41:20+00:00",
+      "active": true
+    },
+    {
+      "provider": "Google Store",
+      "title": "Google Store: Energy Savings Smart thermostats keep your home comfortable and help you save on energy.",
+      "offer_url": "https://store.google.com/intl/en/ideas/articles/google-nest-thermostat-energy-savings/",
+      "source_url": "https://store.google.com/us/magazine/offerterms",
+      "fetched_at": "2026-09-15T07:41:20+00:00",
+      "active": true
+    }
+  ]
+}

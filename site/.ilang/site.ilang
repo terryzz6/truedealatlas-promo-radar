@@ -1,0 +1,59 @@
+ILANG
+TYPE: config PROJECT: TrueDealAtlas LANG: zh
+
+::STATE{@SITE, brand:TrueDealAtlas, niche:US consumer brand coupons and discounts, domain:truedealatlas.pages.dev, locale:en-US}
+
+::MODULE{PROVIDERS|title:Official US offer sources}
+  Target | https://www.target.com | https://www.target.com/c/target-circle/-/N-4tj1t |
+  Walmart | https://www.walmart.com | https://www.walmart.com/shop/deals |
+  Best Buy | https://www.bestbuy.com | https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858 |
+  Kohl's | https://www.kohls.com | https://www.kohls.com/sale-event/todays-deals.jsp |
+  Macy's | https://www.macys.com | https://www.macys.com/s/promotional-details/score/ |
+  Nordstrom | https://www.nordstrom.com | https://www.nordstrom.com/browse/sale |
+  JCPenney | https://www.jcpenney.com | https://www.jcpenney.com/m/sale |
+  Old Navy | https://oldnavy.gap.com | https://oldnavy.gap.com/browse/category.do?cid=26190 |
+  Gap | https://www.gap.com | https://www.gap.com/browse/category.do?cid=6998 |
+  Banana Republic | https://bananarepublic.gap.com | https://bananarepublic.gap.com/browse/category.do?cid=69883 |
+  H&M | https://www2.hm.com/en_us/sale.html | https://www2.hm.com/en_us/sale.html |
+  Uniqlo | https://www.uniqlo.com/us/en | https://www.uniqlo.com/us/en/special-feature/sale |
+  Nike | https://www.nike.com | https://www.nike.com/w/sale-3yaep |
+  adidas | https://www.adidas.com/us/sale | https://www.adidas.com/us/sale |
+  Under Armour | https://www.underarmour.com | https://www.underarmour.com/en-us/c/sale/ |
+  Levi's | https://www.levi.com | https://www.levi.com/US/en_US/sale/c/levi_clothing_sale |
+  Sephora | https://www.sephora.com | https://www.sephora.com/beauty/beauty-offers |
+  Ulta Beauty | https://www.ulta.com | https://www.ulta.com/promotion/21-days-of-beauty |
+  Bath & Body Works | https://www.bathandbodyworks.com | https://www.bathandbodyworks.com/c/sale |
+  Nordstrom Rack | https://www.nordstromrack.com | https://www.nordstromrack.com/clearance |
+  Home Depot | https://www.homedepot.com | https://www.homedepot.com/c/coupons |
+  Lowe's | https://www.lowes.com | https://www.lowes.com/l/savings.html |
+  Wayfair | https://www.wayfair.com | https://www.wayfair.com/coupon-codes-policy |
+  Chewy | https://www.chewy.com | https://www.chewy.com/deals |
+  Petco | https://www.petco.com | https://www.petco.com/shop/en/petcostore/category/sale |
+  Amazon | https://www.amazon.com | https://www.amazon.com/gp/goldbox |
+  eBay | https://www.ebay.com | https://www.ebay.com/deals |
+  Etsy | https://www.etsy.com | https://www.etsy.com/c/sale |
+  Apple | https://www.apple.com | https://www.apple.com/shop/buy-iphone/iphone-16 |
+  Samsung | https://www.samsung.com/us | https://www.samsung.com/us/offers/ |
+  Dell | https://www.dell.com/en-us | https://www.dell.com/en-us/shop/dell-deals/ar/8240 |
+  HP | https://www.hp.com/us-en/shop | https://www.hp.com/us-en/shop/cv/hp-deals |
+  Lenovo | https://www.lenovo.com/us/en/d/deals/ | https://www.lenovo.com/us/en/d/deals/ |
+  Google Store | https://store.google.com/us | https://store.google.com/us/magazine/offerterms |
+  REI | https://www.rei.com | https://www.rei.com/rei-garage |
+  Lululemon | https://shop.lululemon.com | https://shop.lululemon.com/c/sale/_/N-1z0xcuu |
+
+::MODULE{FIELDS|title:Normalized offer fields}
+  title price currency offer_url valid_until source_url fetched_at provider
+
+::RULE{Only publish offers supported by text or structured data fetched from the provider URL}
+::RULE{Missing price means omit price and priceCurrency from JSON-LD}
+::RULE{Past valid_until means mark expired and keep it out of active lists}
+::RULE{Respect robots.txt, timeouts, and one request per provider per run}
+::BOUNDARY{never:编优惠 编价格 编佣金 绕过登录或反爬|scope=permanent}
+
+::MODULE{RENDER|title:Static rendering rules}
+  Generate index, provider, deal, compare, sitemap and robots from offers.json
+  Generate canonical, Open Graph, Twitter card and JSON-LD on every page
+  Use fetched_at for sitemap lastmod and display source links for provenance
+  Locale en-US, currency USD when a provider page exposes a dollar amount
+
+::STATE{@UPDATE, frequency:every 6 hours, runtime:GitHub Actions, output:site/}

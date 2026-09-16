@@ -40,6 +40,19 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
   Google Store | https://store.google.com/us | https://store.google.com/us/magazine/offerterms |
   REI | https://www.rei.com | https://www.rei.com/rei-garage |
   Lululemon | https://shop.lululemon.com | https://shop.lululemon.com/c/sale/_/N-1z0xcuu |
+  Everlane | https://www.everlane.com | https://www.everlane.com/collections/womens-sale |
+  Faherty | https://fahertybrand.com | https://fahertybrand.com/collections/sale |
+  Marine Layer | https://www.marinelayer.com | https://www.marinelayer.com/collections/last-call |
+  Outerknown | https://www.outerknown.com | https://www.outerknown.com/collections/sale-jeans |
+  Taylor Stitch | https://www.taylorstitch.com | https://www.taylorstitch.com/collections/mens-last-call |
+  Alex Mill | https://www.alexmill.com | https://www.alexmill.com/collections/womens-sale |
+  American Giant | https://www.american-giant.com | https://www.american-giant.com/collections/sale-page |
+  Ministry of Supply | https://www.ministryofsupply.com | https://www.ministryofsupply.com/pages/last-chance-sale | | render
+  Rhone | https://www.rhone.com | https://www.rhone.com/collections/sale/ | | render
+  Vuori | https://vuoriclothing.com | https://vuoriclothing.com/collections/sale |
+  Outdoor Voices | https://www.outdoorvoices.com | https://www.outdoorvoices.com/collections/ov-extra |
+  Universal Standard | https://www.universalstandard.com | https://www.universalstandard.com/pages/sale |
+  M.M.LaFleur | https://mmlafleur.com | https://mmlafleur.com/collections/sale |
 
 ::MODULE{FIELDS|title:Normalized offer fields}
   title price currency offer_url valid_until source_url fetched_at provider

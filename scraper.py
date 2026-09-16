@@ -166,7 +166,7 @@ def render(url):
         ]
         process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         port_file = Path(profile) / "DevToolsActivePort"
-        for _ in range(100):
+        for _ in range(300):
             if port_file.exists(): break
             if process.poll() is not None: raise RuntimeError("Chrome exited before rendering")
             time.sleep(0.05)

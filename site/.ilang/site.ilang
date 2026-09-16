@@ -1,7 +1,7 @@
 ILANG
 TYPE: config PROJECT: TrueDealAtlas LANG: zh
 
-::STATE{@SITE, brand:TrueDealAtlas, niche:US consumer brand coupons and discounts, domain:truedealatlas.pages.dev, locale:en-US}
+::STATE{@SITE, brand:TrueDealAtlas, niche:US consumer brand coupons and discounts, domain:truedealatlas.com, locale:en-US}
 
 ::MODULE{PROVIDERS|title:Official US offer sources}
   Target | https://www.target.com | https://www.target.com/c/target-circle/-/N-4tj1t |

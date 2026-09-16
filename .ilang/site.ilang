@@ -4,7 +4,7 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
 ::STATE{@SITE, brand:TrueDealAtlas, niche:US consumer brand coupons and discounts, domain:truedealatlas.com, locale:en-US}
 
 ::MODULE{PROVIDERS|title:Official US offer sources}
-  Target | https://www.target.com | https://www.target.com/c/target-circle/-/N-4tj1t |
+  Target | https://www.target.com | https://www.target.com/c/top-deals/-/N-4xw74 | | render
   Walmart | https://www.walmart.com | https://www.walmart.com/shop/deals |
   Best Buy | https://www.bestbuy.com | https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858 |
   Kohl's | https://www.kohls.com | https://www.kohls.com/sale-event/todays-deals.jsp |
@@ -36,7 +36,7 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
   Samsung | https://www.samsung.com/us | https://www.samsung.com/us/offers/ |
   Dell | https://www.dell.com/en-us | https://www.dell.com/en-us/shop/dell-deals/ar/8240 |
   HP | https://www.hp.com/us-en/shop | https://www.hp.com/us-en/shop/cv/hp-deals |
-  Lenovo | https://www.lenovo.com/us/en/d/deals/ | https://www.lenovo.com/us/en/d/deals/ |
+  Lenovo | https://www.lenovo.com/us/en/d/deals/ | https://www.lenovo.com/us/en/d/deals/ | | render
   Google Store | https://store.google.com/us | https://store.google.com/us/magazine/offerterms |
   REI | https://www.rei.com | https://www.rei.com/rei-garage |
   Lululemon | https://shop.lululemon.com | https://shop.lululemon.com/c/sale/_/N-1z0xcuu |

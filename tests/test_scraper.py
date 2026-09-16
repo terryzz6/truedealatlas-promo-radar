@@ -1,6 +1,6 @@
 import unittest
 
-from scraper import extract_offers
+from scraper import extract_offers, parse_config
 
 
 class OfferExtractionTests(unittest.TestCase):
@@ -11,6 +11,12 @@ class OfferExtractionTests(unittest.TestCase):
 
     def extract(self, *parts):
         return extract_offers(self.provider, "".join(f"<p>{part}</p>" for part in parts))
+
+    def test_fetch_modes_come_from_site_config(self):
+        providers = {item["name"]: item for item in parse_config()["providers"]}
+        self.assertEqual("render", providers["Target"]["fetch_mode"])
+        self.assertEqual("render", providers["Lenovo"]["fetch_mode"])
+        self.assertEqual("static", providers["Gap"]["fetch_mode"])
 
     def test_rejects_policy_and_fragment_text(self):
         offers = self.extract(

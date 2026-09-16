@@ -1,19 +1,20 @@
 {
-  "generated_at": "2026-09-16T12:44:01+00:00",
+  "generated_at": "2026-09-16T13:27:28+00:00",
   "brand": "TrueDealAtlas",
   "niche": "US consumer brand coupons and discounts",
   "locale": "en-US",
   "providers": [
     {
       "name": "Target",
-      "source_url": "https://www.target.com/c/target-circle/-/N-4tj1t",
-      "status": "error",
-      "error": "HTTP Error 404: Not Found",
-      "offer_count": 0
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetch_mode": "render",
+      "status": "ok",
+      "offer_count": 7
     },
     {
       "name": "Walmart",
       "source_url": "https://www.walmart.com/shop/deals",
+      "fetch_mode": "static",
       "status": "error",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
       "offer_count": 0
@@ -21,12 +22,14 @@
     {
       "name": "Best Buy",
       "source_url": "https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 0
     },
     {
       "name": "Kohl's",
       "source_url": "https://www.kohls.com/sale-event/todays-deals.jsp",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -34,6 +37,7 @@
     {
       "name": "Macy's",
       "source_url": "https://www.macys.com/s/promotional-details/score/",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -41,12 +45,14 @@
     {
       "name": "Nordstrom",
       "source_url": "https://www.nordstrom.com/browse/sale",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 0
     },
     {
       "name": "JCPenney",
       "source_url": "https://www.jcpenney.com/m/sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -54,24 +60,28 @@
     {
       "name": "Old Navy",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 2
     },
     {
       "name": "Gap",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 2
     },
     {
       "name": "Banana Republic",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 1
     },
     {
       "name": "H&M",
       "source_url": "https://www2.hm.com/en_us/sale.html",
+      "fetch_mode": "static",
       "status": "error",
       "error": "The read operation timed out",
       "offer_count": 0
@@ -79,6 +89,7 @@
     {
       "name": "Uniqlo",
       "source_url": "https://www.uniqlo.com/us/en/special-feature/sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
       "offer_count": 0
@@ -86,12 +97,14 @@
     {
       "name": "Nike",
       "source_url": "https://www.nike.com/w/sale-3yaep",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 0
     },
     {
       "name": "adidas",
       "source_url": "https://www.adidas.com/us/sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -99,6 +112,7 @@
     {
       "name": "Under Armour",
       "source_url": "https://www.underarmour.com/en-us/c/sale/",
+      "fetch_mode": "static",
       "status": "error",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
       "offer_count": 0
@@ -106,6 +120,7 @@
     {
       "name": "Levi's",
       "source_url": "https://www.levi.com/US/en_US/sale/c/levi_clothing_sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -113,6 +128,7 @@
     {
       "name": "Sephora",
       "source_url": "https://www.sephora.com/beauty/beauty-offers",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -120,12 +136,14 @@
     {
       "name": "Ulta Beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 4
     },
     {
       "name": "Bath & Body Works",
       "source_url": "https://www.bathandbodyworks.com/c/sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
       "offer_count": 0
@@ -133,12 +151,14 @@
     {
       "name": "Nordstrom Rack",
       "source_url": "https://www.nordstromrack.com/clearance",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 8
     },
     {
       "name": "Home Depot",
       "source_url": "https://www.homedepot.com/c/coupons",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -146,6 +166,7 @@
     {
       "name": "Lowe's",
       "source_url": "https://www.lowes.com/l/savings.html",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -153,12 +174,14 @@
     {
       "name": "Wayfair",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 3
     },
     {
       "name": "Chewy",
       "source_url": "https://www.chewy.com/deals",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 429: Too Many Requests",
       "offer_count": 0
@@ -166,6 +189,7 @@
     {
       "name": "Petco",
       "source_url": "https://www.petco.com/shop/en/petcostore/category/sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -173,19 +197,21 @@
     {
       "name": "Amazon",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "status": "error",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
-      "offer_count": 0
+      "fetch_mode": "static",
+      "status": "ok",
+      "offer_count": 1
     },
     {
       "name": "eBay",
       "source_url": "https://www.ebay.com/deals",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 8
     },
     {
       "name": "Etsy",
       "source_url": "https://www.etsy.com/c/sale",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -193,18 +219,21 @@
     {
       "name": "Apple",
       "source_url": "https://www.apple.com/shop/buy-iphone/iphone-16",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 0
     },
     {
       "name": "Samsung",
       "source_url": "https://www.samsung.com/us/offers/",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 1
     },
     {
       "name": "Dell",
       "source_url": "https://www.dell.com/en-us/shop/dell-deals/ar/8240",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -212,26 +241,29 @@
     {
       "name": "HP",
       "source_url": "https://www.hp.com/us-en/shop/cv/hp-deals",
+      "fetch_mode": "static",
       "status": "error",
-      "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+      "error": "The read operation timed out",
       "offer_count": 0
     },
     {
       "name": "Lenovo",
       "source_url": "https://www.lenovo.com/us/en/d/deals/",
-      "status": "error",
-      "error": "HTTP Error 403: Forbidden",
-      "offer_count": 0
+      "fetch_mode": "render",
+      "status": "ok",
+      "offer_count": 1
     },
     {
       "name": "Google Store",
       "source_url": "https://store.google.com/us/magazine/offerterms",
+      "fetch_mode": "static",
       "status": "ok",
       "offer_count": 0
     },
     {
       "name": "REI",
       "source_url": "https://www.rei.com/rei-garage",
+      "fetch_mode": "static",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "offer_count": 0
@@ -239,12 +271,90 @@
     {
       "name": "Lululemon",
       "source_url": "https://shop.lululemon.com/c/sale/_/N-1z0xcuu",
+      "fetch_mode": "static",
       "status": "error",
-      "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+      "error": "The read operation timed out",
       "offer_count": 0
     }
   ],
   "offers": [
+    {
+      "provider": "Target",
+      "title": "Target: 30% Off women’s tops*",
+      "offer_text": "30 30% off women’s tops*",
+      "conditions": "Women’s tops*",
+      "offer_url": "https://www.target.com/pl/8675-870877576872189?marketing_id=8675-870877576872189",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 30
+    },
+    {
+      "provider": "Target",
+      "title": "Target: Up To 50% Off indoor furniture* Online only",
+      "offer_text": "Up to 50 Up to 50% off indoor furniture* Online only.",
+      "conditions": "Indoor furniture* Online only",
+      "offer_url": "https://www.target.com/pl/8675-1902250149063350?marketing_id=8675-1902250149063350",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "Target",
+      "title": "Target: Up To 35% Off floor care items*",
+      "offer_text": "Up to 35 Up to 35% off floor care items*",
+      "conditions": "Floor care items*",
+      "offer_url": "https://www.target.com/pl/8675-1899177024958720?marketing_id=8675-1899177024958720",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 35
+    },
+    {
+      "provider": "Target",
+      "title": "Target: 50% Off chocolate & candy*",
+      "offer_text": "BOGO 50 BOGO 50% off chocolate & candy*",
+      "conditions": "Chocolate & candy*",
+      "offer_url": "https://www.target.com/pl/941468854",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "Target",
+      "title": "Target: Up To 30% Off women’s shoes* Online only",
+      "offer_text": "Up to 30 Up to 30% off women’s shoes* Online only.",
+      "conditions": "Women’s shoes* Online only",
+      "offer_url": "https://www.target.com/pl/449261218",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 30
+    },
+    {
+      "provider": "Target",
+      "title": "Target: Up To 40% Off bedding & more* Online",
+      "offer_text": "Up to 40 Up to 40% off bedding & more* Online only.",
+      "conditions": "Bedding & more* Online only",
+      "offer_url": "https://www.target.com/pl/988366896",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 40
+    },
+    {
+      "provider": "Target",
+      "title": "Target: Up To 30% Off home items* + more",
+      "offer_text": "Up to 30 Up to 30% off home items* + more in-store deals",
+      "conditions": "Home items*",
+      "offer_url": "https://www.target.com/c/home-clearance/-/N-5tg3v",
+      "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
+      "fetched_at": "2026-09-16T13:24:30+00:00",
+      "active": true,
+      "discount_percent": 30
+    },
     {
       "provider": "Old Navy",
       "title": "Old Navy: 30% Off Your First Purchase",
@@ -252,7 +362,7 @@
       "conditions": "Your First Purchase",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-16T12:42:29+00:00",
+      "fetched_at": "2026-09-16T13:24:47+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -263,7 +373,7 @@
       "conditions": "Jeans Code: VIP",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-16T12:42:29+00:00",
+      "fetched_at": "2026-09-16T13:24:47+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -274,7 +384,7 @@
       "conditions": "Your purchase; Code YOURS",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-16T12:42:30+00:00",
+      "fetched_at": "2026-09-16T13:24:49+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -285,7 +395,7 @@
       "conditions": "Your first purchase with your new card",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-16T12:42:30+00:00",
+      "fetched_at": "2026-09-16T13:24:49+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -296,7 +406,7 @@
       "conditions": "Your first purchase",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-16T12:42:30+00:00",
+      "fetched_at": "2026-09-16T13:24:51+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -307,7 +417,7 @@
       "conditions": "Diamond & Platinum; on Beauty Steals®",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-16T12:43:12+00:00",
+      "fetched_at": "2026-09-16T13:25:50+00:00",
       "active": true
     },
     {
@@ -317,7 +427,7 @@
       "conditions": "Gift with Purchase",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-16T12:43:12+00:00",
+      "fetched_at": "2026-09-16T13:25:50+00:00",
       "active": true
     },
     {
@@ -327,7 +437,7 @@
       "conditions": "Daily and Weekly Beauty Steals®",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-16T12:43:12+00:00",
+      "fetched_at": "2026-09-16T13:25:50+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -338,7 +448,7 @@
       "conditions": "The first purchase¹ on your new card at Ulta Beauty",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-16T12:43:12+00:00",
+      "fetched_at": "2026-09-16T13:25:50+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -349,7 +459,7 @@
       "conditions": "Select clearance",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true,
       "discount_percent": 40
     },
@@ -360,7 +470,7 @@
       "conditions": "Clearance items only",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true
     },
     {
@@ -370,7 +480,7 @@
       "conditions": "Clearance items only",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true
     },
     {
@@ -380,7 +490,7 @@
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true,
       "discount_percent": 61
     },
@@ -391,7 +501,7 @@
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true,
       "discount_percent": 84
     },
@@ -402,7 +512,7 @@
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -413,20 +523,20 @@
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true,
       "discount_percent": 58
     },
     {
       "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: Up To 81% Off select items",
-      "offer_text": "Up to 81% off select items",
+      "title": "Nordstrom Rack: Up To 76% Off select items",
+      "offer_text": "Up to 76% off select items",
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-16T12:43:14+00:00",
+      "fetched_at": "2026-09-16T13:25:54+00:00",
       "active": true,
-      "discount_percent": 81
+      "discount_percent": 76
     },
     {
       "provider": "Wayfair",
@@ -435,7 +545,7 @@
       "conditions": "Every Day",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-16T12:43:17+00:00",
+      "fetched_at": "2026-09-16T13:25:59+00:00",
       "active": true,
       "discount_percent": 70
     },
@@ -446,7 +556,7 @@
       "conditions": "Over $35",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-16T12:43:17+00:00",
+      "fetched_at": "2026-09-16T13:25:59+00:00",
       "active": true
     },
     {
@@ -456,8 +566,19 @@
       "conditions": "Your first qualifying order of $250+",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-16T12:43:17+00:00",
+      "fetched_at": "2026-09-16T13:25:59+00:00",
       "active": true
+    },
+    {
+      "provider": "Amazon",
+      "title": "Amazon: 25% Off or more on home",
+      "offer_text": "25% off or more on home",
+      "conditions": "Or more on home",
+      "offer_url": "https://www.amazon.com/gp/goldbox",
+      "source_url": "https://www.amazon.com/gp/goldbox",
+      "fetched_at": "2026-09-16T13:26:04+00:00",
+      "active": true,
+      "discount_percent": 25
     },
     {
       "provider": "eBay",
@@ -466,7 +587,7 @@
       "conditions": "Tech, home, and more; Code FINDYOURS20",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -477,7 +598,7 @@
       "conditions": "EBay Refurbished cell phones and accessories",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -488,7 +609,7 @@
       "conditions": "With warranty",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -499,7 +620,7 @@
       "conditions": "Refurbished home and tools with warranty",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -510,7 +631,7 @@
       "conditions": "EcoFlow with code EFSEP30OFF",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -521,7 +642,7 @@
       "conditions": "Men's and women's footwear",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -532,7 +653,7 @@
       "conditions": "Home interiors",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -543,7 +664,7 @@
       "conditions": "Renewable energy",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-16T12:43:19+00:00",
+      "fetched_at": "2026-09-16T13:26:06+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -554,9 +675,19 @@
       "conditions": "With exclusive offers for students, teachers, government, military and corporate employees",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-16T12:43:20+00:00",
+      "fetched_at": "2026-09-16T13:26:10+00:00",
       "active": true,
       "discount_percent": 30
+    },
+    {
+      "provider": "Lenovo",
+      "title": "Lenovo: $100 Off",
+      "offer_text": "New Lenovo Pro members get $100 off first order of $1,000+, exclusive savings & 1:1 tech support.",
+      "conditions": "First order of $1,000+, exclusive savings & 1:1 tech support",
+      "offer_url": "https://www.lenovo.com/us/en/d/deals/",
+      "source_url": "https://www.lenovo.com/us/en/d/deals/",
+      "fetched_at": "2026-09-16T13:26:53+00:00",
+      "active": true
     }
   ]
 }

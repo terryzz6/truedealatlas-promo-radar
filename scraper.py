@@ -1,6 +1,6 @@
 # ILANG: ROLE=scraper; READ=.ilang/site.ilang; SOURCE=public official pages; NEVER=fake offers/prices
 from __future__ import annotations
-import html, json, re, time
+import base64, html, json, os, re, shutil, socket, struct, subprocess, tempfile, time
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -25,7 +25,7 @@ def parse_config(path: Path = CONFIG_PATH) -> dict:
         if in_providers and "|" in line:
             parts = [part.strip() for part in line.split("|")]
             if len(parts) >= 3 and all(parts[:3]):
-                providers.append({"name": parts[0], "website": parts[1], "offer_url": parts[2], "affiliate": parts[3] if len(parts) > 3 else ""})
+                providers.append({"name": parts[0], "website": parts[1], "offer_url": parts[2], "affiliate": parts[3] if len(parts) > 3 else "", "fetch_mode": parts[4] if len(parts) > 4 else "static"})
     state = re.search(r"::STATE\{@SITE,([^}]+)\}", text)
     meta = {}
     if state:
@@ -73,9 +73,150 @@ FRAGMENT_START = re.compile(r"^(?:and|or|but|because|by|while|additionally|which
 FRAGMENT_END = re.compile(r"\b(?:including|and|or|with|for|on|to|from|of|in|plus)\.?$", re.I)
 DATE = re.compile(r"(?:through|until|ends?|expires?)\s+([A-Z][a-z]+\s+\d{1,2}(?:,\s*\d{4})?)", re.I)
 
-def fetch(url):
-    request = Request(url, headers={"User-Agent": "TrueDealAtlasBot/1.0 (+public-offer-index)"})
-    with urlopen(request, timeout=20) as response:
+def find_chrome():
+    candidates = [
+        os.environ.get("CHROME_PATH"),
+        shutil.which("google-chrome"),
+        shutil.which("google-chrome-stable"),
+        shutil.which("chromium"),
+        shutil.which("chromium-browser"),
+    ]
+    if os.name == "nt":
+        candidates += [
+            Path(os.environ.get("PROGRAMFILES", "")) / "Google/Chrome/Application/chrome.exe",
+            Path(os.environ.get("PROGRAMFILES(X86)", "")) / "Google/Chrome/Application/chrome.exe",
+            Path(os.environ.get("LOCALAPPDATA", "")) / "Google/Chrome/Application/chrome.exe",
+        ]
+    return next((str(path) for path in candidates if path and Path(path).is_file()), None)
+
+def websocket_connect(url):
+    match = re.match(r"ws://([^/:]+):(\d+)(/.*)", url)
+    if not match:
+        raise RuntimeError("unsupported Chrome debugging URL")
+    host, port, path = match.group(1), int(match.group(2)), match.group(3)
+    connection = socket.create_connection((host, port), timeout=10)
+    key = base64.b64encode(os.urandom(16)).decode("ascii")
+    request = (
+        f"GET {path} HTTP/1.1\r\nHost: {host}:{port}\r\nUpgrade: websocket\r\n"
+        f"Connection: Upgrade\r\nSec-WebSocket-Key: {key}\r\nSec-WebSocket-Version: 13\r\n\r\n"
+    )
+    connection.sendall(request.encode("ascii"))
+    response = b""
+    while b"\r\n\r\n" not in response:
+        response += connection.recv(4096)
+    if b" 101 " not in response.split(b"\r\n", 1)[0]:
+        connection.close()
+        raise RuntimeError("Chrome debugging WebSocket upgrade failed")
+    return connection
+
+def websocket_send(connection, payload):
+    data = json.dumps(payload, separators=(",", ":")).encode("utf-8")
+    header = bytearray([0x81])
+    if len(data) < 126:
+        header.append(0x80 | len(data))
+    elif len(data) < 65536:
+        header.append(0x80 | 126); header.extend(struct.pack("!H", len(data)))
+    else:
+        header.append(0x80 | 127); header.extend(struct.pack("!Q", len(data)))
+    mask = os.urandom(4); header.extend(mask)
+    connection.sendall(bytes(header) + bytes(value ^ mask[index % 4] for index, value in enumerate(data)))
+
+def websocket_receive(connection):
+    def read_exact(length):
+        value = b""
+        while len(value) < length:
+            chunk = connection.recv(length - len(value))
+            if not chunk: raise RuntimeError("Chrome debugging WebSocket closed")
+            value += chunk
+        return value
+    first, second = read_exact(2)
+    opcode, length = first & 0x0F, second & 0x7F
+    if length == 126: length = struct.unpack("!H", read_exact(2))[0]
+    elif length == 127: length = struct.unpack("!Q", read_exact(8))[0]
+    if second & 0x80: mask = read_exact(4)
+    else: mask = None
+    data = read_exact(length)
+    if mask: data = bytes(value ^ mask[index % 4] for index, value in enumerate(data))
+    if opcode == 8: raise RuntimeError("Chrome debugging WebSocket closed")
+    return json.loads(data.decode("utf-8"))
+
+def chrome_command(connection, command_id, method, params=None, timeout=20):
+    websocket_send(connection, {"id": command_id, "method": method, "params": params or {}})
+    connection.settimeout(timeout)
+    while True:
+        message = websocket_receive(connection)
+        if message.get("id") == command_id:
+            if message.get("error"):
+                raise RuntimeError(message["error"].get("message", "Chrome command failed"))
+            return message.get("result", {})
+
+def render(url):
+    chrome = find_chrome()
+    if not chrome:
+        raise RuntimeError("render requested but Chrome/Chromium is not installed")
+    profile = tempfile.mkdtemp(prefix="truedealatlas-")
+    process = None; connection = None
+    try:
+        command = [
+            chrome, "--headless=new", "--disable-gpu", "--no-sandbox",
+            "--disable-dev-shm-usage", "--disable-background-networking",
+            "--disable-component-update", "--disable-extensions", "--disable-sync",
+            "--no-first-run", "--no-default-browser-check", "--incognito",
+            "--user-data-dir=" + profile, "--remote-debugging-port=0", "about:blank",
+        ]
+        process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        port_file = Path(profile) / "DevToolsActivePort"
+        for _ in range(100):
+            if port_file.exists(): break
+            if process.poll() is not None: raise RuntimeError("Chrome exited before rendering")
+            time.sleep(0.05)
+        else: raise RuntimeError("Chrome debugging port did not start")
+        port = port_file.read_text(encoding="utf-8").splitlines()[0]
+        targets = json.loads(urlopen(f"http://127.0.0.1:{port}/json/list", timeout=5).read())
+        page_target = next(item for item in targets if item.get("type") == "page")
+        connection = websocket_connect(page_target["webSocketDebuggerUrl"])
+        chrome_command(connection, 1, "Page.enable")
+        chrome_command(connection, 2, "Page.navigate", {"url": url})
+        connection.settimeout(20)
+        deadline = time.monotonic() + 20
+        while time.monotonic() < deadline:
+            try:
+                if websocket_receive(connection).get("method") == "Page.loadEventFired": break
+            except socket.timeout: break
+        time.sleep(2)
+        result = chrome_command(connection, 3, "Runtime.evaluate", {
+            "expression": "document.documentElement.outerHTML",
+            "returnByValue": True,
+        })
+        page = result.get("result", {}).get("value", "")
+    finally:
+        if connection:
+            try: chrome_command(connection, 99, "Browser.close", timeout=3)
+            except Exception: pass
+            connection.close()
+        if process:
+            try: process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill(); process.wait(timeout=5)
+        shutil.rmtree(profile, ignore_errors=True)
+    parser = PageTextParser(); parser.feed(page)
+    visible = " ".join(parser.parts)
+    if re.search(r"(?:captcha|robot or human|verify you are human|press\s*&\s*hold|access denied)", visible, re.I):
+        raise RuntimeError("render blocked by a human-verification or access-denied page")
+    if len(visible) < 100:
+        raise RuntimeError("render returned no usable page")
+    return page
+
+def fetch(url, mode="static"):
+    if mode == "render":
+        return render(url)
+    request = Request(url, headers={
+        "User-Agent": "TrueDealAtlasBot/1.1 (+https://truedealatlas.com/about.html)",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.5",
+        "Accept-Language": "en-US,en;q=0.8",
+        "Cache-Control": "no-cache",
+    })
+    with urlopen(request, timeout=30) as response:
         raw = response.read(2_000_000)
         return raw.decode(response.headers.get_content_charset() or "utf-8", errors="replace")
 
@@ -226,12 +367,12 @@ def main():
     config = parse_config(); all_offers = []; provider_status = []
     for provider in config["providers"]:
         try:
-            offers = extract_offers(provider, fetch(provider["offer_url"]))
+            offers = extract_offers(provider, fetch(provider["offer_url"], provider.get("fetch_mode", "static")))
             all_offers.extend(offers)
-            provider_status.append({"name": provider["name"], "source_url": provider["offer_url"], "status": "ok", "offer_count": len(offers)})
+            provider_status.append({"name": provider["name"], "source_url": provider["offer_url"], "fetch_mode": provider.get("fetch_mode", "static"), "status": "ok", "offer_count": len(offers)})
         except Exception as exc:
-            provider_status.append({"name": provider["name"], "source_url": provider["offer_url"], "status": "error", "error": str(exc)[:180], "offer_count": 0})
-        time.sleep(0.15)
+            provider_status.append({"name": provider["name"], "source_url": provider["offer_url"], "fetch_mode": provider.get("fetch_mode", "static"), "status": "error", "error": str(exc)[:300], "offer_count": 0})
+        time.sleep(1)
     payload = {"generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "brand": config["meta"].get("brand", "TrueDealAtlas"), "niche": config["meta"].get("niche", "US consumer brand coupons and discounts"), "locale": config["meta"].get("locale", "en-US"), "providers": provider_status, "offers": all_offers}
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

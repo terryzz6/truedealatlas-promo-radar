@@ -41,6 +41,8 @@ def build():
     (SITE/"about.html").write_text(page("About TrueDealAtlas","How TrueDealAtlas sources and checks official US brand offers.",about_body,"/about.html"),encoding="utf-8")
     (SITE/"privacy.html").write_text(page("Privacy Policy | TrueDealAtlas","Privacy, hosting, analytics, and affiliate disclosure for TrueDealAtlas.",privacy_body,"/privacy.html"),encoding="utf-8")
     (SITE/"contact.html").write_text(page("Contact TrueDealAtlas","How to contact TrueDealAtlas about corrections and questions.",contact_body,"/contact.html"),encoding="utf-8")
+    not_found=page("Page Not Found | TrueDealAtlas","The requested page does not exist.",'<article class="detail"><p class="eyebrow">404</p><h1>Page not found</h1><p>This offer may have expired or been removed after verification.</p><a href="/">Browse current deals</a></article>',"/404.html").replace('<meta name="description"','<meta name="robots" content="noindex"><meta name="description"',1)
+    (SITE/"404.html").write_text(not_found,encoding="utf-8")
     links=[]
     for p in data.get("providers",[]):
         ps=slug(p["name"]); po=[o for o in offers if o.get("provider")==p["name"]]; pbody='<section class="hero compact"><p class="eyebrow">Official source</p><h1>{}</h1><p>{} active offers indexed.</p><a class="button" href="{}" rel="nofollow noopener">Open official page</a></section><section><h2>Indexed offers</h2><div class="grid">{}</div></section>'.format(esc(p["name"]),len(po),esc(p["source_url"]),"".join(offer_card(o) for o in po) or '<p class="muted">No active offer text detected on the last check.</p>')

@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from scraper import parse_config
 
-ROOT=Path(__file__).parent; DATA=ROOT/"data"/"offers.json"; SITE=ROOT/"site"; BASE="https://truedealatlas.pages.dev"
+ROOT=Path(__file__).parent; DATA=ROOT/"data"/"offers.json"; SITE=ROOT/"site"; BASE="https://"+parse_config()["meta"].get("domain","truedealatlas.com").strip().rstrip("/")
 def esc(v): return html.escape(str(v), quote=True)
 def slug(v):
     value = re.sub(r"[^a-z0-9]+", "-", v.lower()).strip("-") or "item"

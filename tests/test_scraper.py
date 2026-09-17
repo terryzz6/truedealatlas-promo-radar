@@ -91,8 +91,9 @@ class PipelineStateTests(unittest.TestCase):
         "fetch_mode": "static",
     }
 
-    def run_pipeline(self, responses, previous_offers=None):
+    def run_pipeline(self, responses, previous_offers=None, provider=None):
         calls = []
+        provider = provider or self.provider
 
         def fake_fetch(url, mode):
             calls.append((url, mode))
@@ -102,7 +103,7 @@ class PipelineStateTests(unittest.TestCase):
             return response
 
         offers, statuses = collect_offers(
-            {"providers": [self.provider]},
+            {"providers": [provider]},
             {"offers": previous_offers or []},
             fetcher=fake_fetch,
             sleeper=lambda _: None,
@@ -156,6 +157,15 @@ class PipelineStateTests(unittest.TestCase):
         self.assertEqual([prior], offers)
         self.assertEqual("unavailable", status["result"])
         self.assertEqual("source returned a challenge or access-denied page", status["error"])
+
+    def test_named_zero_result_provider_keeps_previous_fetch_classification(self):
+        provider = {**self.provider, "name": "Rhone"}
+        challenge = "<html><body><h1>Just a moment...</h1><p>Verifying your connection.</p></body></html>"
+        offers, status, calls = self.run_pipeline([challenge], provider=provider)
+        self.assertEqual([], offers)
+        self.assertEqual("ok", status["status"])
+        self.assertEqual("empty", status["result"])
+        self.assertEqual(1, len(calls))
 
     def test_load_previous_payload_defaults_when_missing(self):
         with tempfile.TemporaryDirectory() as directory:

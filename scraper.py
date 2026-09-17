@@ -72,6 +72,10 @@ EXCLUDED_PATH = re.compile(r"(?:^|[-_/])(?:privacy|faq|help|customer-service|sto
 FRAGMENT_START = re.compile(r"^(?:and|or|but|because|by|while|additionally|which|that|then|without this product|connectivity discounts are)\b", re.I)
 FRAGMENT_END = re.compile(r"\b(?:including|and|or|with|for|on|to|from|of|in|plus)\.?$", re.I)
 DATE = re.compile(r"(?:through|until|ends?|expires?)\s+([A-Z][a-z]+\s+\d{1,2}(?:,\s*\d{4})?)", re.I)
+UNCHANGED_ZERO_RESULT_PROVIDERS = {
+    "Walmart", "Nordstrom", "Nike", "Under Armour", "Apple",
+    "Google Store", "Made In", "Article", "Ministry of Supply", "Rhone",
+}
 
 def find_chrome():
     candidates = [
@@ -372,6 +376,8 @@ def fetch_provider(provider, fetcher=fetch):
     page = fetcher(provider["offer_url"], provider.get("fetch_mode", "static"))
     if not isinstance(page, str) or not page.strip():
         raise RuntimeError("source returned no readable body")
+    if provider["name"] in UNCHANGED_ZERO_RESULT_PROVIDERS:
+        return extract_offers(provider, page)
     parser = PageTextParser(); parser.feed(page)
     visible = " ".join(parser.parts)
     if re.search(r"(?:verifying your connection|just a moment|captcha|verify you are human|robot or human|access denied)", visible, re.I):

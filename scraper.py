@@ -363,16 +363,93 @@ def extract_offers(provider, page):
         if len(offers) >= 8: break
     return offers
 
-def main():
-    config = parse_config(); all_offers = []; provider_status = []
+def load_previous_payload(path=OUT_PATH):
+    if not path.exists():
+        return {"offers": [], "providers": []}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+def fetch_provider(provider, fetcher=fetch):
+    page = fetcher(provider["offer_url"], provider.get("fetch_mode", "static"))
+    if not isinstance(page, str) or not page.strip():
+        raise RuntimeError("source returned no readable body")
+    return extract_offers(provider, page)
+
+def collect_offers(config, previous_payload, fetcher=fetch, sleeper=time.sleep, delay=1):
+    previous_by_provider = {}
+    for offer in previous_payload.get("offers", []):
+        previous_by_provider.setdefault(offer.get("provider"), []).append(offer)
+
+    results = {}
+    retry_queue = []
     for provider in config["providers"]:
         try:
-            offers = extract_offers(provider, fetch(provider["offer_url"], provider.get("fetch_mode", "static")))
-            all_offers.extend(offers)
-            provider_status.append({"name": provider["name"], "source_url": provider["offer_url"], "fetch_mode": provider.get("fetch_mode", "static"), "status": "ok", "offer_count": len(offers)})
+            results[provider["name"]] = {
+                "offers": fetch_provider(provider, fetcher),
+                "attempts": 1,
+            }
         except Exception as exc:
-            provider_status.append({"name": provider["name"], "source_url": provider["offer_url"], "fetch_mode": provider.get("fetch_mode", "static"), "status": "error", "error": str(exc)[:300], "offer_count": 0})
-        time.sleep(1)
+            results[provider["name"]] = {
+                "offers": None,
+                "error": str(exc)[:300],
+                "attempts": 1,
+            }
+            retry_queue.append(provider)
+        sleeper(delay)
+
+    # Failed sources are retried only after every provider has had its first turn.
+    for provider in retry_queue:
+        try:
+            results[provider["name"]] = {
+                "offers": fetch_provider(provider, fetcher),
+                "attempts": 2,
+            }
+        except Exception as exc:
+            results[provider["name"]] = {
+                "offers": None,
+                "error": str(exc)[:300],
+                "attempts": 2,
+            }
+        sleeper(delay)
+
+    all_offers = []
+    provider_status = []
+    for provider in config["providers"]:
+        result = results[provider["name"]]
+        base_status = {
+            "name": provider["name"],
+            "source_url": provider["offer_url"],
+            "fetch_mode": provider.get("fetch_mode", "static"),
+            "attempts": result["attempts"],
+        }
+        if result["offers"] is not None:
+            offers = result["offers"]
+            all_offers.extend(offers)
+            provider_status.append({
+                **base_status,
+                "status": "ok",
+                "result": "offers" if offers else "empty",
+                "offer_count": len(offers),
+                "fetched_offer_count": len(offers),
+            })
+            continue
+
+        retained = previous_by_provider.get(provider["name"], [])
+        all_offers.extend(retained)
+        provider_status.append({
+            **base_status,
+            "status": "error",
+            "result": "unavailable",
+            "error": result["error"],
+            "offer_count": len(retained),
+            "fetched_offer_count": 0,
+            "retained_offer_count": len(retained),
+        })
+    return all_offers, provider_status
+
+def main():
+    config = parse_config()
+    previous_payload = load_previous_payload()
+    all_offers, provider_status = collect_offers(config, previous_payload)
     payload = {"generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "brand": config["meta"].get("brand", "TrueDealAtlas"), "niche": config["meta"].get("niche", "US consumer brand coupons and discounts"), "locale": config["meta"].get("locale", "en-US"), "providers": provider_status, "offers": all_offers}
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

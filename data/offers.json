@@ -1040,6 +1040,140 @@
       "source_url": "https://vuoriclothing.com/collections/sale",
       "fetched_at": "2026-09-17T01:32:08+00:00",
       "active": true
+    },
+    {
+      "provider": "Marine Layer",
+      "title": "Marine Layer: Free Shipping on $75+",
+      "offer_text": "Free Shipping on $75+",
+      "conditions": "On $75+",
+      "offer_url": "https://www.marinelayer.com/collections/last-call",
+      "source_url": "https://www.marinelayer.com/collections/last-call",
+      "fetched_at": "2026-09-17T01:13:01+00:00",
+      "active": true
+    },
+    {
+      "provider": "Marine Layer",
+      "title": "Marine Layer: Free Shipping on Orders $75+",
+      "offer_text": "Free Shipping on Orders $75+",
+      "conditions": "On Orders $75+",
+      "offer_url": "https://www.marinelayer.com/collections/last-call",
+      "source_url": "https://www.marinelayer.com/collections/last-call",
+      "fetched_at": "2026-09-17T01:13:01+00:00",
+      "active": true
+    },
+    {
+      "provider": "Marine Layer",
+      "title": "Marine Layer: Free Shipping on orders over $75",
+      "offer_text": "Free shipping on orders over $75",
+      "conditions": "On orders over $75",
+      "offer_url": "https://www.marinelayer.com/collections/last-call",
+      "source_url": "https://www.marinelayer.com/collections/last-call",
+      "fetched_at": "2026-09-17T01:13:01+00:00",
+      "active": true
+    },
+    {
+      "provider": "Marine Layer",
+      "title": "Marine Layer: 20% Off Any 3 Tees",
+      "offer_text": "20% Off Any 3 Tees",
+      "conditions": "Any 3 Tees",
+      "offer_url": "https://www.marinelayer.com/collections/last-call",
+      "source_url": "https://www.marinelayer.com/collections/last-call",
+      "fetched_at": "2026-09-17T01:13:01+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "Outerknown",
+      "title": "Outerknown: Free Shipping on Orders $125+",
+      "offer_text": "Free Shipping on Orders $125+",
+      "conditions": "On Orders $125+",
+      "offer_url": "https://www.outerknown.com/collections/sale-jeans",
+      "source_url": "https://www.outerknown.com/collections/sale-jeans",
+      "fetched_at": "2026-09-17T01:13:03+00:00",
+      "active": true
+    },
+    {
+      "provider": "Taylor Stitch",
+      "title": "Taylor Stitch: Free Shipping & Returns On Every",
+      "offer_text": "Free Shipping & Returns On Every Domestic Order",
+      "conditions": "& Returns On Every Domestic Order",
+      "offer_url": "https://www.taylorstitch.com/collections/mens-last-call",
+      "source_url": "https://www.taylorstitch.com/collections/mens-last-call",
+      "fetched_at": "2026-09-17T01:13:04+00:00",
+      "active": true
+    },
+    {
+      "provider": "Taylor Stitch",
+      "title": "Taylor Stitch: 20% Off your first purchase",
+      "offer_text": "Sign up for marketing emails to receive 20% off your first purchase.",
+      "conditions": "Your first purchase",
+      "offer_url": "https://www.taylorstitch.com/collections/mens-last-call",
+      "source_url": "https://www.taylorstitch.com/collections/mens-last-call",
+      "fetched_at": "2026-09-17T01:13:04+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "Alex Mill",
+      "title": "Alex Mill: 10% Off your first purchase",
+      "offer_text": "Subscribe to our newsletter and get 10% off your first purchase.",
+      "conditions": "Your first purchase",
+      "offer_url": "https://www.alexmill.com/collections/womens-sale",
+      "source_url": "https://www.alexmill.com/collections/womens-sale",
+      "fetched_at": "2026-09-17T01:13:06+00:00",
+      "active": true,
+      "discount_percent": 10
+    },
+    {
+      "provider": "American Giant",
+      "title": "American Giant: Free Shipping on Orders $150+",
+      "offer_text": "Free Shipping on Orders $150+",
+      "conditions": "On Orders $150+",
+      "offer_url": "https://www.american-giant.com/collections/sale-page",
+      "source_url": "https://www.american-giant.com/collections/sale-page",
+      "fetched_at": "2026-09-17T01:13:08+00:00",
+      "active": true
+    },
+    {
+      "provider": "Outdoor Voices",
+      "title": "Outdoor Voices: Free Shipping on orders $100+",
+      "offer_text": "Free Shipping on orders $100+",
+      "conditions": "On orders $100+",
+      "offer_url": "https://www.outdoorvoices.com/collections/ov-extra",
+      "source_url": "https://www.outdoorvoices.com/collections/ov-extra",
+      "fetched_at": "2026-09-17T01:13:20+00:00",
+      "active": true
+    },
+    {
+      "provider": "Outdoor Voices",
+      "title": "Outdoor Voices: Free Shipping on orders over $100",
+      "offer_text": "Free Shipping on orders over $100 in the U.S.",
+      "conditions": "On orders over $100 in the U",
+      "offer_url": "https://www.outdoorvoices.com/collections/ov-extra",
+      "source_url": "https://www.outdoorvoices.com/collections/ov-extra",
+      "fetched_at": "2026-09-17T01:13:20+00:00",
+      "active": true
+    },
+    {
+      "provider": "Universal Standard",
+      "title": "Universal Standard: Free Shipping & Fast Returns",
+      "offer_text": "Free Shipping & Fast Returns",
+      "conditions": "& Fast Returns",
+      "offer_url": "https://www.universalstandard.com/pages/sale",
+      "source_url": "https://www.universalstandard.com/pages/sale",
+      "fetched_at": "2026-09-17T01:13:22+00:00",
+      "active": true
+    },
+    {
+      "provider": "M.M.LaFleur",
+      "title": "M.M.LaFleur: Up To 20% Off Bundle & Save Knits",
+      "offer_text": "Up to 20% off Bundle & Save Knits, T-shirts and workwear. Save Now",
+      "conditions": "Bundle & Save Knits, T-shirts and workwear",
+      "offer_url": "https://mmlafleur.com/pages/bundles",
+      "source_url": "https://mmlafleur.com/collections/sale",
+      "fetched_at": "2026-09-17T01:13:25+00:00",
+      "active": true,
+      "discount_percent": 20
     }
   ]
 }

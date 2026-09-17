@@ -23,6 +23,13 @@ def page(title,desc,body,path="/",template_name=None):
 def offer_card(o):
     detail="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])); value="{}% off".format(o["discount_percent"]) if o.get("discount_percent") else ("USD {}".format(o["price"]) if o.get("price") else "Official offer")
     return '<article class="deal"><span class="tag">{}</span><h3><a href="{}">{}</a></h3><p class="muted">Checked {}</p><a class="button" href="{}" rel="nofollow noopener">View at {}</a></article>'.format(esc(value),detail,esc(o["title"]),esc(o.get("fetched_at","")),esc(o["offer_url"]),esc(o["provider"]))
+def provider_result_message(provider, has_offers):
+    result=provider.get("result")
+    if result=="unavailable" or (not result and provider.get("status")=="error"):
+        return "Source not retrieved in this update. Previously verified offers remain listed with their original check times."
+    if not has_offers and (result=="empty" or provider.get("status")=="ok"):
+        return "The source was retrieved successfully, but no active offer text was detected in this update."
+    return ""
 def build():
     cfg,data=load_data(); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
     for old_deal in (SITE/"deals").glob("*.html"):
@@ -45,7 +52,7 @@ def build():
     (SITE/"404.html").write_text(not_found,encoding="utf-8")
     links=[]
     for p in data.get("providers",[]):
-        ps=slug(p["name"]); po=[o for o in offers if o.get("provider")==p["name"]]; pbody='<section class="hero compact"><p class="eyebrow">Official source</p><h1>{}</h1><p>{} active offers indexed.</p><a class="button" href="{}" rel="nofollow noopener">Open official page</a></section><section><h2>Indexed offers</h2><div class="grid">{}</div></section>'.format(esc(p["name"]),len(po),esc(p["source_url"]),"".join(offer_card(o) for o in po) or '<p class="muted">No active offer text detected on the last check.</p>')
+        ps=slug(p["name"]); po=[o for o in offers if o.get("provider")==p["name"]]; status_message=provider_result_message(p,bool(po)); offer_markup="".join(offer_card(o) for o in po) or '<p class="muted">{}</p>'.format(esc(status_message)); status_note='<p class="muted">{}</p>'.format(esc(status_message)) if status_message and po else ""; pbody='<section class="hero compact"><p class="eyebrow">Official source</p><h1>{}</h1><p>{} active offers indexed.</p>{}<a class="button" href="{}" rel="nofollow noopener">Open official page</a></section><section><h2>Indexed offers</h2><div class="grid">{}</div></section>'.format(esc(p["name"]),len(po),status_note,esc(p["source_url"]),offer_markup)
         if po:
             prices=[float(o["price"]) for o in po if o.get("price")]
             p_schema={"@context":"https://schema.org","@type":"Product","name":p["name"],"url":BASE+"/providers/"+ps+".html","offers":{"@type":"AggregateOffer","offerCount":len(po)}}

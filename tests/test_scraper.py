@@ -1,6 +1,9 @@
+import tempfile
 import unittest
+from pathlib import Path
 
-from scraper import extract_offers, parse_config
+from build import provider_result_message
+from scraper import collect_offers, extract_offers, load_previous_payload, parse_config
 
 
 class OfferExtractionTests(unittest.TestCase):
@@ -78,6 +81,82 @@ class OfferExtractionTests(unittest.TestCase):
         self.assertEqual(1, len(offers))
         self.assertEqual("Example Brand: 30% Off your purchase with Code YOURS", offers[0]["title"])
         self.assertEqual("Your purchase; Code YOURS", offers[0]["conditions"])
+
+
+class PipelineStateTests(unittest.TestCase):
+    provider = {
+        "name": "Example Brand",
+        "website": "https://example.com",
+        "offer_url": "https://example.com/sale",
+        "fetch_mode": "static",
+    }
+
+    def run_pipeline(self, responses, previous_offers=None):
+        calls = []
+
+        def fake_fetch(url, mode):
+            calls.append((url, mode))
+            response = responses.pop(0)
+            if isinstance(response, Exception):
+                raise response
+            return response
+
+        offers, statuses = collect_offers(
+            {"providers": [self.provider]},
+            {"offers": previous_offers or []},
+            fetcher=fake_fetch,
+            sleeper=lambda _: None,
+            delay=0,
+        )
+        return offers, statuses[0], calls
+
+    def test_failed_provider_retains_prior_offer_and_timestamp(self):
+        prior = {
+            "provider": "Example Brand",
+            "title": "Example Brand: 20% Off Select Items",
+            "offer_text": "20% off select items",
+            "conditions": "Select items",
+            "offer_url": "https://example.com/sale",
+            "source_url": "https://example.com/sale",
+            "fetched_at": "2026-09-16T01:02:03+00:00",
+            "active": True,
+        }
+        offers, status, calls = self.run_pipeline(
+            [RuntimeError("first failure"), RuntimeError("second failure")],
+            [prior],
+        )
+        self.assertEqual([prior], offers)
+        self.assertEqual("2026-09-16T01:02:03+00:00", offers[0]["fetched_at"])
+        self.assertEqual("unavailable", status["result"])
+        self.assertEqual("second failure", status["error"])
+        self.assertEqual(2, status["attempts"])
+        self.assertEqual(1, status["retained_offer_count"])
+        self.assertEqual(2, len(calls))
+
+    def test_successful_empty_provider_removes_prior_offer(self):
+        prior = {"provider": "Example Brand", "fetched_at": "unchanged"}
+        offers, status, _ = self.run_pipeline(["<html><body>No promotions today.</body></html>"], [prior])
+        self.assertEqual([], offers)
+        self.assertEqual("empty", status["result"])
+        self.assertEqual(1, status["attempts"])
+
+    def test_retry_success_uses_fresh_offers(self):
+        page = "<p>25% off select jackets</p>"
+        offers, status, calls = self.run_pipeline([RuntimeError("temporary"), page])
+        self.assertEqual(1, len(offers))
+        self.assertEqual("offers", status["result"])
+        self.assertEqual(2, status["attempts"])
+        self.assertEqual(2, len(calls))
+
+    def test_load_previous_payload_defaults_when_missing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            payload = load_previous_payload(Path(directory) / "missing.json")
+        self.assertEqual({"offers": [], "providers": []}, payload)
+
+    def test_provider_messages_distinguish_empty_from_unavailable(self):
+        self.assertIn("not retrieved", provider_result_message({"result": "unavailable"}, True))
+        self.assertIn("retrieved successfully", provider_result_message({"result": "empty"}, False))
+        self.assertEqual("", provider_result_message({"result": "offers"}, True))
 
 
 if __name__ == "__main__":

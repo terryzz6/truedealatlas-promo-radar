@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T06:27:15+00:00",
+  "generated_at": "2026-09-17T07:02:45+00:00",
   "brand": "TrueDealAtlas",
   "niche": "US consumer brand coupons and discounts",
   "locale": "en-US",
@@ -703,6 +703,56 @@
       "result": "offers",
       "offer_count": 1,
       "fetched_offer_count": 1
+    },
+    {
+      "name": "Atlas Coffee Club",
+      "source_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
+      "fetch_mode": "static",
+      "attempts": 1,
+      "status": "ok",
+      "result": "offers",
+      "offer_count": 3,
+      "fetched_offer_count": 3
+    },
+    {
+      "name": "Perelel",
+      "source_url": "https://perelelhealth.com/collections/giveback-sale",
+      "fetch_mode": "static",
+      "attempts": 1,
+      "status": "ok",
+      "result": "offers",
+      "offer_count": 2,
+      "fetched_offer_count": 2
+    },
+    {
+      "name": "Coterie",
+      "source_url": "https://www.coterie.com/military",
+      "fetch_mode": "static",
+      "attempts": 1,
+      "status": "ok",
+      "result": "offers",
+      "offer_count": 3,
+      "fetched_offer_count": 3
+    },
+    {
+      "name": "Ergobaby",
+      "source_url": "https://ergobaby.com/en-us/collections/sale",
+      "fetch_mode": "static",
+      "attempts": 1,
+      "status": "ok",
+      "result": "offers",
+      "offer_count": 2,
+      "fetched_offer_count": 2
+    },
+    {
+      "name": "Lovevery",
+      "source_url": "https://lovevery.com/pages/coupons",
+      "fetch_mode": "static",
+      "attempts": 1,
+      "status": "ok",
+      "result": "offers",
+      "offer_count": 2,
+      "fetched_offer_count": 2
     }
   ],
   "offers": [
@@ -1776,6 +1826,101 @@
       "offer_url": "https://versedskin.com/collections/last-chance",
       "source_url": "https://versedskin.com/collections/last-chance",
       "fetched_at": "2026-09-17T06:24:03+00:00",
+      "active": true
+    },
+    {
+      "provider": "Atlas Coffee Club",
+      "title": "Atlas Coffee Club: Free Shipping (applies to US only",
+      "offer_text": "Free Shipping (applies to US only",
+      "conditions": "(applies to US only",
+      "offer_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
+      "source_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
+      "fetched_at": "2026-09-17T06:59:42+00:00",
+      "active": true
+    },
+    {
+      "provider": "Atlas Coffee Club",
+      "title": "Atlas Coffee Club: 50% Off Your First Order",
+      "offer_text": "Want 50% Off Your First Order?",
+      "conditions": "Your First Order",
+      "offer_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
+      "source_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
+      "fetched_at": "2026-09-17T06:59:42+00:00",
+      "active": true,
+      "discount_percent": 50
+    },
+    {
+      "provider": "Perelel",
+      "title": "Perelel: 20% Off when you pay it",
+      "offer_text": "Get 20% off when you pay it forward.",
+      "conditions": "When you pay it forward",
+      "offer_url": "https://perelelhealth.com/collections/giveback-sale",
+      "source_url": "https://perelelhealth.com/collections/giveback-sale",
+      "fetched_at": "2026-09-17T06:59:44+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "Coterie",
+      "title": "Coterie: 15% Off Auto-Renew Orders",
+      "offer_text": "Military Discounts | 15% Off Auto-Renew Orders",
+      "conditions": "Auto-Renew Orders",
+      "offer_url": "https://www.coterie.com/military",
+      "source_url": "https://www.coterie.com/military",
+      "fetched_at": "2026-09-17T06:59:46+00:00",
+      "active": true,
+      "discount_percent": 15
+    },
+    {
+      "provider": "Coterie",
+      "title": "Coterie: 10% Off every Auto Renew order",
+      "offer_text": "10% off every Auto Renew order. Free shipping when you bundle.",
+      "conditions": "Every Auto Renew order",
+      "offer_url": "https://www.coterie.com/military",
+      "source_url": "https://www.coterie.com/military",
+      "fetched_at": "2026-09-17T06:59:46+00:00",
+      "active": true,
+      "discount_percent": 10
+    },
+    {
+      "provider": "Coterie",
+      "title": "Coterie: Free Shipping on both of your",
+      "offer_text": "If you are looking to create an additional monthly shipment, proceed to checkout. Note that with your second Auto-Renew purchase you will qualify for free shipping on both of your active Auto-Renews.",
+      "conditions": "On both of your active Auto-Renews",
+      "offer_url": "https://www.coterie.com/military",
+      "source_url": "https://www.coterie.com/military",
+      "fetched_at": "2026-09-17T06:59:46+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ergobaby",
+      "title": "Ergobaby: Free Shipping OVER $50 USD",
+      "offer_text": "FREE SHIPPING OVER $50 USD",
+      "conditions": "OVER $50 USD",
+      "offer_url": "https://ergobaby.com/en-us/collections/sale",
+      "source_url": "https://ergobaby.com/en-us/collections/sale",
+      "fetched_at": "2026-09-17T06:59:48+00:00",
+      "active": true
+    },
+    {
+      "provider": "Ergobaby",
+      "title": "Ergobaby: 15% Off your first purchase",
+      "offer_text": "If you sign up here, it can. Get 15% off your first purchase.",
+      "conditions": "Your first purchase",
+      "offer_url": "https://ergobaby.com/en-us/collections/sale",
+      "source_url": "https://ergobaby.com/en-us/collections/sale",
+      "fetched_at": "2026-09-17T06:59:48+00:00",
+      "active": true,
+      "discount_percent": 15
+    },
+    {
+      "provider": "Lovevery",
+      "title": "Lovevery: Subscribe to The Play Kits for a free gift",
+      "offer_text": "Subscribe to The Play Kits for a free gift. Gift options rotate periodically. Terms apply.",
+      "conditions": "Subscribe to The Play Kits for a free gift. Gift options rotate periodically. Terms apply.",
+      "offer_url": "https://lovevery.com/pages/coupons",
+      "source_url": "https://lovevery.com/pages/coupons",
+      "fetched_at": "2026-09-17T06:59:50+00:00",
       "active": true
     }
   ]

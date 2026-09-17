@@ -70,6 +70,11 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
   Saie | https://saiehello.com | https://saiehello.com/collections/our-biggest-sale-of-the-year | | render
   Tower 28 Beauty | https://www.tower28beauty.com | https://www.tower28beauty.com/collections/eligible-for-promo | | render
   Versed | https://versedskin.com | https://versedskin.com/collections/last-chance | | render
+  Atlas Coffee Club | https://atlascoffeeclub.com | https://atlascoffeeclub.com/collections/indonesia-offer-subscription |
+  Perelel | https://perelelhealth.com | https://perelelhealth.com/collections/giveback-sale |
+  Coterie | https://www.coterie.com | https://www.coterie.com/military |
+  Ergobaby | https://ergobaby.com | https://ergobaby.com/en-us/collections/sale |
+  Lovevery | https://lovevery.com | https://lovevery.com/pages/coupons |
 
 ::MODULE{FIELDS|title:Normalized offer fields}
   title price currency offer_url valid_until source_url fetched_at provider

@@ -5,7 +5,7 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
 
 ::MODULE{PROVIDERS|title:Official US offer sources}
   Target | https://www.target.com | https://www.target.com/c/top-deals/-/N-4xw74 | | render
-  Walmart | https://www.walmart.com | https://www.walmart.com/shop/deals |
+  Walmart | https://www.walmart.com | https://www.walmart.com/shop/deals/flash-deals |
   Best Buy | https://www.bestbuy.com | https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858 |
   Kohl's | https://www.kohls.com | https://www.kohls.com/sale-event/todays-deals.jsp |
   Macy's | https://www.macys.com | https://www.macys.com/s/promotional-details/score/ |
@@ -16,7 +16,7 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
   Banana Republic | https://bananarepublic.gap.com | https://bananarepublic.gap.com/browse/category.do?cid=69883 |
   H&M | https://www2.hm.com/en_us/sale.html | https://www2.hm.com/en_us/sale.html |
   Uniqlo | https://www.uniqlo.com/us/en | https://www.uniqlo.com/us/en/special-feature/sale |
-  Nike | https://www.nike.com | https://www.nike.com/w/sale-3yaep |
+  Nike | https://www.nike.com | https://www.nike.com/promo-code |
   adidas | https://www.adidas.com/us/sale | https://www.adidas.com/us/sale |
   Under Armour | https://www.underarmour.com | https://www.underarmour.com/en-us/c/sale/ |
   Levi's | https://www.levi.com | https://www.levi.com/US/en_US/sale/c/levi_clothing_sale |
@@ -37,13 +37,13 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
   Dell | https://www.dell.com/en-us | https://www.dell.com/en-us/shop/dell-deals/ar/8240 |
   HP | https://www.hp.com/us-en/shop | https://www.hp.com/us-en/shop/cv/hp-deals |
   Lenovo | https://www.lenovo.com/us/en/d/deals/ | https://www.lenovo.com/us/en/d/deals/ | | render
-  Google Store | https://store.google.com/us | https://store.google.com/us/magazine/offerterms |
+  Google Store | https://store.google.com/us | https://store.google.com/us/collection/offers?hl=en-US | | large
   REI | https://www.rei.com | https://www.rei.com/rei-garage |
   Cotopaxi | https://www.cotopaxi.com | https://www.cotopaxi.com/collections/sale |
   Topo Designs | https://topodesigns.com | https://topodesigns.com/collections/sale-collection |
   Outdoor Research | https://www.outdoorresearch.com | https://www.outdoorresearch.com/collections/sale |
   Mountain Hardwear | https://www.mountainhardwear.com | https://www.mountainhardwear.com/outdoor-clothing-outlet/ |
-  Made In | https://madeincookware.com | https://madeincookware.com/collections/sale |
+  Made In | https://madeincookware.com | https://madeincookware.com/collections/new-customer-welcome-offer |
   Great Jones | https://greatjonesgoods.com | https://greatjonesgoods.com/collections/warehouse-sale |
   Boll & Branch | https://www.bollandbranch.com | https://www.bollandbranch.com/collections/sale/ |
   Article | https://www.article.com | https://www.article.com/c/sale |

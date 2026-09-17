@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T02:50:09+00:00",
+  "generated_at": "2026-09-17T04:07:36+00:00",
   "brand": "TrueDealAtlas",
   "niche": "US consumer brand coupons and discounts",
   "locale": "en-US",
@@ -16,13 +16,13 @@
     },
     {
       "name": "Walmart",
-      "source_url": "https://www.walmart.com/shop/deals",
+      "source_url": "https://www.walmart.com/shop/deals/flash-deals",
       "fetch_mode": "static",
       "attempts": 1,
       "status": "ok",
-      "result": "empty",
-      "offer_count": 0,
-      "fetched_offer_count": 0
+      "result": "offers",
+      "offer_count": 1,
+      "fetched_offer_count": 1
     },
     {
       "name": "Best Buy",
@@ -138,13 +138,13 @@
     },
     {
       "name": "Nike",
-      "source_url": "https://www.nike.com/w/sale-3yaep",
+      "source_url": "https://www.nike.com/promo-code",
       "fetch_mode": "static",
       "attempts": 1,
       "status": "ok",
-      "result": "empty",
-      "offer_count": 0,
-      "fetched_offer_count": 0
+      "result": "offers",
+      "offer_count": 1,
+      "fetched_offer_count": 1
     },
     {
       "name": "adidas",
@@ -372,13 +372,13 @@
     },
     {
       "name": "Google Store",
-      "source_url": "https://store.google.com/us/magazine/offerterms",
-      "fetch_mode": "static",
+      "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "fetch_mode": "large",
       "attempts": 1,
       "status": "ok",
-      "result": "empty",
-      "offer_count": 0,
-      "fetched_offer_count": 0
+      "result": "offers",
+      "offer_count": 3,
+      "fetched_offer_count": 3
     },
     {
       "name": "REI",
@@ -434,13 +434,13 @@
     },
     {
       "name": "Made In",
-      "source_url": "https://madeincookware.com/collections/sale",
+      "source_url": "https://madeincookware.com/collections/new-customer-welcome-offer",
       "fetch_mode": "static",
       "attempts": 1,
       "status": "ok",
-      "result": "empty",
-      "offer_count": 0,
-      "fetched_offer_count": 0
+      "result": "offers",
+      "offer_count": 1,
+      "fetched_offer_count": 1
     },
     {
       "name": "Great Jones",
@@ -1372,6 +1372,70 @@
       "fetched_at": "2026-09-17T02:47:03+00:00",
       "active": true,
       "discount_percent": 20
+    },
+    {
+      "provider": "Walmart",
+      "title": "Walmart: Up To 65% Off your faves",
+      "offer_text": "Up to 65% off your faves",
+      "conditions": "Your faves",
+      "offer_url": "https://www.walmart.com/shop/deals/flash-deals",
+      "source_url": "https://www.walmart.com/shop/deals/flash-deals",
+      "fetched_at": "2026-09-17T04:06:22+00:00",
+      "active": true,
+      "discount_percent": 65
+    },
+    {
+      "provider": "Nike",
+      "title": "Nike: 10% Off",
+      "offer_text": "Yes, celebrate your birthday month with 10% off on Nike.com and in-store. Click",
+      "conditions": "On Nike",
+      "offer_url": "https://www.nike.com/promo-code",
+      "source_url": "https://www.nike.com/promo-code",
+      "fetched_at": "2026-09-17T04:06:23+00:00",
+      "active": true,
+      "discount_percent": 10
+    },
+    {
+      "provider": "Made In",
+      "title": "Made In: Up To 20% Off Best Selling Cookware, Knives",
+      "offer_text": "For a Limited Time Only — New Customers Take up to 20% Off Best Selling Cookware, Knives, Bakeware and more.",
+      "conditions": "Best Selling Cookware, Knives, Bakeware and more",
+      "offer_url": "https://madeincookware.com/collections/new-customer-welcome-offer",
+      "source_url": "https://madeincookware.com/collections/new-customer-welcome-offer",
+      "fetched_at": "2026-09-17T04:06:25+00:00",
+      "active": true,
+      "discount_percent": 20
+    },
+    {
+      "provider": "Google Store",
+      "title": "Google Store: $1,100 Off",
+      "offer_text": "Get the new Google Pixel 11 Pro on us or get $1,100 off the new Google Pixel 11 Pro XL, plus $10/mo off your phone plan when you join Google Fi Wireless.",
+      "conditions": "The new Google Pixel 11 Pro XL, plus $10/mo off your phone plan when you join Google Fi Wireless",
+      "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "fetched_at": "2026-09-17T04:07:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Google Store",
+      "title": "Google Store: $300 Off",
+      "offer_text": "Get $300 off instantly and $799 back over 24 monthly credits. Plus, a $10/mo service credit for 2 years on the Unlimited Premium plan.",
+      "conditions": "Instantly and $799 back over 24 monthly credits",
+      "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "fetched_at": "2026-09-17T04:07:36+00:00",
+      "active": true
+    },
+    {
+      "provider": "Google Store",
+      "title": "Google Store: Up To 40% Off a Google-certified refurbished Pixel",
+      "offer_text": "Get up to 40% off a Google-certified refurbished Pixel phone.",
+      "conditions": "A Google-certified refurbished Pixel phone",
+      "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
+      "fetched_at": "2026-09-17T04:07:36+00:00",
+      "active": true,
+      "discount_percent": 40
     }
   ]
 }

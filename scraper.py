@@ -221,7 +221,8 @@ def fetch(url, mode="static"):
         "Cache-Control": "no-cache",
     })
     with urlopen(request, timeout=30) as response:
-        raw = response.read(2_000_000)
+        read_limit = 4_000_000 if mode == "large" else 2_000_000
+        raw = response.read(read_limit)
         return raw.decode(response.headers.get_content_charset() or "utf-8", errors="replace")
 
 def clean_text(text):

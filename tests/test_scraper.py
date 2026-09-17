@@ -19,6 +19,7 @@ class OfferExtractionTests(unittest.TestCase):
         providers = {item["name"]: item for item in parse_config()["providers"]}
         self.assertEqual("render", providers["Target"]["fetch_mode"])
         self.assertEqual("render", providers["Lenovo"]["fetch_mode"])
+        self.assertEqual("large", providers["Google Store"]["fetch_mode"])
         self.assertEqual("static", providers["Gap"]["fetch_mode"])
 
     def test_rejects_policy_and_fragment_text(self):

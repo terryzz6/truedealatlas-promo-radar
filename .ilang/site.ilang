@@ -61,6 +61,15 @@ TYPE: config PROJECT: TrueDealAtlas LANG: zh
   Outdoor Voices | https://www.outdoorvoices.com | https://www.outdoorvoices.com/collections/ov-extra |
   Universal Standard | https://www.universalstandard.com | https://www.universalstandard.com/pages/sale |
   M.M.LaFleur | https://mmlafleur.com | https://mmlafleur.com/collections/sale |
+  Biossance | https://www.biossance.com | https://www.biossance.com/c/offers/ |
+  Cocokind | https://www.cocokind.com | https://www.cocokind.com/collections/sale | | render
+  ILIA Beauty | https://iliabeauty.com | https://iliabeauty.com/collections/ilia-sale | | render
+  Kinship | https://lovekinship.com | https://lovekinship.com/collections/sale | | render
+  Kosas | https://kosas.com | https://kosas.com/pages/offers | | render
+  Necessaire | https://necessaire.com | https://necessaire.com/pages/referrals | | render
+  Saie | https://saiehello.com | https://saiehello.com/collections/our-biggest-sale-of-the-year | | render
+  Tower 28 Beauty | https://www.tower28beauty.com | https://www.tower28beauty.com/collections/eligible-for-promo | | render
+  Versed | https://versedskin.com | https://versedskin.com/collections/last-chance | | render
 
 ::MODULE{FIELDS|title:Normalized offer fields}
   title price currency offer_url valid_until source_url fetched_at provider

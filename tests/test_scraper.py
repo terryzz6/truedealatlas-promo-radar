@@ -135,18 +135,27 @@ class PipelineStateTests(unittest.TestCase):
 
     def test_successful_empty_provider_removes_prior_offer(self):
         prior = {"provider": "Example Brand", "fetched_at": "unchanged"}
-        offers, status, _ = self.run_pipeline(["<html><body>No promotions today.</body></html>"], [prior])
+        page = "<html><body><p>{}</p></body></html>".format("No promotions today. " * 10)
+        offers, status, _ = self.run_pipeline([page], [prior])
         self.assertEqual([], offers)
         self.assertEqual("empty", status["result"])
         self.assertEqual(1, status["attempts"])
 
     def test_retry_success_uses_fresh_offers(self):
-        page = "<p>25% off select jackets</p>"
+        page = "<p>25% off select jackets</p><p>{}</p>".format("Official sale collection. " * 6)
         offers, status, calls = self.run_pipeline([RuntimeError("temporary"), page])
         self.assertEqual(1, len(offers))
         self.assertEqual("offers", status["result"])
         self.assertEqual(2, status["attempts"])
         self.assertEqual(2, len(calls))
+
+    def test_challenge_page_retains_prior_offer(self):
+        prior = {"provider": "Example Brand", "fetched_at": "original"}
+        challenge = "<html><body><h1>Just a moment...</h1><p>Verifying your connection before proceeding.</p></body></html>"
+        offers, status, _ = self.run_pipeline([challenge, challenge], [prior])
+        self.assertEqual([prior], offers)
+        self.assertEqual("unavailable", status["result"])
+        self.assertEqual("source returned a challenge or access-denied page", status["error"])
 
     def test_load_previous_payload_defaults_when_missing(self):
         with tempfile.TemporaryDirectory() as directory:

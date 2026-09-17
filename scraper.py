@@ -372,6 +372,12 @@ def fetch_provider(provider, fetcher=fetch):
     page = fetcher(provider["offer_url"], provider.get("fetch_mode", "static"))
     if not isinstance(page, str) or not page.strip():
         raise RuntimeError("source returned no readable body")
+    parser = PageTextParser(); parser.feed(page)
+    visible = " ".join(parser.parts)
+    if re.search(r"(?:verifying your connection|just a moment|captcha|verify you are human|robot or human|access denied)", visible, re.I):
+        raise RuntimeError("source returned a challenge or access-denied page")
+    if len(visible) < 100:
+        raise RuntimeError("source returned no usable page text")
     return extract_offers(provider, page)
 
 def collect_offers(config, previous_payload, fetcher=fetch, sleeper=time.sleep, delay=1):

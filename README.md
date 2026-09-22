@@ -27,6 +27,18 @@ These are official US brand sites and offer/sale entry points used as the initia
 
 The exact URLs are versioned in .ilang/site.ilang so they can be reviewed and replaced when a provider changes its navigation.
 
+## Reusable data export
+
+The `resources/` directory contains a source-traceable CSV and Markdown snapshot of active offers. Each row keeps the official destination URL, the official source page URL, and the UTC fetch timestamp. Read `docs/source-methodology.md` for the provenance and refresh workflow. The export links back to [TrueDealAtlas](https://truedealatlas.com/) as its live reference index.
+
+Refresh the export after a scrape with:
+
+```text
+python scraper.py
+python build.py
+python tools/export_public_dataset.py
+```
+
 ## Monetization boundary
 
 Affiliate URLs are intentionally empty until an approved program URL is supplied. Add only compliant links from a public affiliate program such as CJ, Impact, or ShareASale, and keep the official source URL visible. No brand bidding, cookie injection, fabricated commissions, or fabricated prices.

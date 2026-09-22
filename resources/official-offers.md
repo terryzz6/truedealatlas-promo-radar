@@ -2,8 +2,8 @@
 
 This snapshot is exported from [TrueDealAtlas](https://truedealatlas.com/), an independent index of public offer pages from official US consumer brands.
 
-- Snapshot time: `2026-09-17T07:02:45+00:00` (UTC)
-- Active offers in this snapshot: **110**
+- Snapshot time: `2026-09-21T22:07:19+00:00` (UTC)
+- Active offers in this snapshot: **108**
 - Configured official sources: **71**
 - Source policy: every row keeps both the official detail URL and the source page URL.
 

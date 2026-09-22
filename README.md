@@ -29,7 +29,7 @@ The exact URLs are versioned in .ilang/site.ilang so they can be reviewed and re
 
 ## Reusable data export
 
-The `resources/` directory contains a source-traceable CSV and Markdown snapshot of active offers. Each row keeps the official destination URL, the official source page URL, and the UTC fetch timestamp. Read `docs/source-methodology.md` for the provenance and refresh workflow. The export links back to [TrueDealAtlas](https://truedealatlas.com/) as its live reference index.
+The `resources/` directory contains a source-traceable CSV and Markdown snapshot of active offers. Each row keeps the official destination URL, the official source page URL, and the UTC fetch timestamp. Read `docs/source-methodology.md` for the provenance and refresh workflow. The export links back to [TrueDealAtlas](https://truedealatlas.com/) as its live reference index. The public dataset is archived on [Zenodo](https://doi.org/10.5281/zenodo.22885986) (DOI: `10.5281/zenodo.22885986`).
 
 Refresh the export after a scrape with:
 

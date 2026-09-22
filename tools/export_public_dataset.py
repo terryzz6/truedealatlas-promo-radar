@@ -49,6 +49,7 @@ def main() -> None:
         "# Official US Consumer Offers",
         "",
         "This snapshot is exported from [TrueDealAtlas](https://truedealatlas.com/), an independent index of public offer pages from official US consumer brands.",
+        "The public dataset is archived on [Zenodo](https://doi.org/10.5281/zenodo.22885986) (DOI: `10.5281/zenodo.22885986`).",
         "",
         f"- Snapshot time: `{generated_at}` (UTC)",
         f"- Active offers in this snapshot: **{len(offers)}**",

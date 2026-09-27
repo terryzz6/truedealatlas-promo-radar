@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "old-navy-coupon-how-to-check",
+    "title": "Old Navy Coupon: How to Check the Offer Before You Pay",
+    "description": "A quick way to check an Old Navy coupon, sale page, and eligibility terms before checkout.",
+    "answer": "Start with Old Navy's official coupons page, match the promotion to your cart, and verify the end date or eligibility terms at checkout. Do not rely on a code copied from a third-party list unless Old Navy accepts it.",
+    "sections": [
+      {"heading": "Start with the official Old Navy page", "paragraphs": ["The official Old Navy coupons and promo codes page is the first place to check because it states the promotion and links back to the brand. TrueDealAtlas lists the source page next to each indexed offer so you can verify the terms yourself.", "If a sale page and a coupon page show different wording, treat the more specific eligibility language as the rule for your cart."]},
+      {"heading": "Check the three details that change the outcome", "paragraphs": ["Look for the expiration date, the products or categories included, and any membership, payment, or minimum-spend requirement. A headline discount is not proof that every item qualifies.", "For sign-up or card offers, the official page may require a new account, a new card, or a first purchase. Those are different offers from a general sale price."]},
+      {"heading": "Use the checkout total as the final check", "paragraphs": ["Add the eligible item, enter the code only when the official page provides one, and confirm that the discount appears before paying. If the discount does not appear, remove it from your decision rather than guessing at a replacement code."]}
+    ],
+    "faq": [
+      {"question": "How do I get 20% off Old Navy?", "answer": "Check the official Old Navy coupons page and its current eligibility terms. A percentage shown in a search result may be limited to a category, account type, or date window."},
+      {"question": "Is there a 30% off code for Old Navy?", "answer": "Only treat a 30% code as current when the official checkout accepts it under the terms shown by Old Navy. Third-party pages can retain expired or restricted codes."},
+      {"question": "How can I get a $10 discount at Old Navy?", "answer": "Review Old Navy's official sign-up and rewards information. The amount, qualifying order, and delivery method are part of the offer and should be confirmed on the brand page."}
+    ],
+    "sources": [
+      {"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"},
+      {"label": "Old Navy sign-up offers", "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"},
+      {"label": "TrueDealAtlas Old Navy provider page", "url": "https://truedealatlas.com/providers/old-navy.html"}
+    ]
+  },
+  {
+    "slug": "old-navy-coupon-vs-sale",
+    "title": "Old Navy Coupon vs Sale Price: Which One Should You Check First?",
+    "description": "How to compare an Old Navy coupon with an advertised sale without assuming the discounts stack.",
+    "answer": "Check whether the item is already on sale, then read the coupon's exclusions and stacking rule. The checkout total, not the largest percentage in a headline, decides which option saves more.",
+    "sections": [
+      {"heading": "Separate the sale from the coupon", "paragraphs": ["A sale price is attached to an item or category. A coupon can have a code, an account requirement, or a minimum spend. Compare the final eligible price for the exact item rather than adding the percentages together."]},
+      {"heading": "Look for exclusions before comparing", "paragraphs": ["Brand pages commonly restrict coupons by category, clearance status, payment method, or member status. Read the official terms before assuming a coupon applies to an item already marked down."]}
+    ],
+    "faq": [{"question": "Can Old Navy coupons stack with sale prices?", "answer": "Only when the official terms allow it. Test the exact cart at checkout and use the result shown by Old Navy."}],
+    "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy deals", "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"}]
+  },
+  {
+    "slug": "old-navy-super-cash-explained",
+    "title": "Old Navy Super Cash: What to Verify Before Redeeming",
+    "description": "A source-first checklist for checking Old Navy Super Cash dates, thresholds, and redemption terms.",
+    "answer": "Verify the earning window, redemption window, minimum purchase, and eligible account on Old Navy's official Super Cash information before treating the certificate as a current discount.",
+    "sections": [{"heading": "Why the dates matter", "paragraphs": ["Super Cash has separate earning and redemption periods. A search snippet can mention the program while the current window has already changed, so use the official terms for the date that applies to your order."]}, {"heading": "Check the threshold and account", "paragraphs": ["Read the minimum-spend tier and whether the certificate is tied to a rewards account. Keep the official page open while you test the cart so the redemption rule is easy to verify."]}],
+    "faq": [{"question": "Can I use Super Cash on any Old Navy order?", "answer": "No assumption is safe: check the current official redemption terms, including dates, minimum spend, exclusions, and account requirements."}],
+    "sources": [{"label": "Old Navy Super Cash information", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}, {"label": "Old Navy rewards sign-up", "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"}]
+  }
+]

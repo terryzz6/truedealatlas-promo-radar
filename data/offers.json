@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T21:30:09+00:00",
+  "generated_at": "2026-09-27T20:04:38+00:00",
   "brand": "TrueDealAtlas",
   "niche": "US consumer brand coupons and discounts",
   "locale": "en-US",
@@ -8,11 +8,13 @@
       "name": "Target",
       "source_url": "https://www.target.com/c/top-deals/-/N-4xw74",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 8,
-      "fetched_offer_count": 8
+      "fetched_offer_count": 0,
+      "retained_offer_count": 8
     },
     {
       "name": "Walmart",
@@ -28,13 +30,11 @@
       "name": "Best Buy",
       "source_url": "https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299786858.c?id=pcmcat1563299786858",
       "fetch_mode": "static",
-      "attempts": 2,
-      "status": "error",
-      "result": "unavailable",
-      "error": "HTTP Error 404: Not Found",
+      "attempts": 1,
+      "status": "ok",
+      "result": "empty",
       "offer_count": 0,
-      "fetched_offer_count": 0,
-      "retained_offer_count": 0
+      "fetched_offer_count": 0
     },
     {
       "name": "Kohl's",
@@ -77,7 +77,7 @@
       "attempts": 2,
       "status": "error",
       "result": "unavailable",
-      "error": "The read operation timed out",
+      "error": "HTTP Error 403: Forbidden",
       "offer_count": 0,
       "fetched_offer_count": 0,
       "retained_offer_count": 0
@@ -131,7 +131,7 @@
       "attempts": 2,
       "status": "error",
       "result": "unavailable",
-      "error": "The read operation timed out",
+      "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
       "offer_count": 0,
       "fetched_offer_count": 0,
       "retained_offer_count": 0
@@ -162,11 +162,13 @@
       "name": "Under Armour",
       "source_url": "https://www.underarmour.com/en-us/c/sale/",
       "fetch_mode": "static",
-      "attempts": 1,
-      "status": "ok",
-      "result": "empty",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "HTTP Error 418: Unknown Error",
       "offer_count": 0,
-      "fetched_offer_count": 0
+      "fetched_offer_count": 0,
+      "retained_offer_count": 0
     },
     {
       "name": "Levi's",
@@ -362,11 +364,13 @@
       "name": "Lenovo",
       "source_url": "https://www.lenovo.com/us/en/d/deals/",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Google Store",
@@ -530,11 +534,13 @@
       "name": "Taylor Stitch",
       "source_url": "https://www.taylorstitch.com/collections/mens-last-call",
       "fetch_mode": "static",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests",
       "offer_count": 2,
-      "fetched_offer_count": 2
+      "fetched_offer_count": 0,
+      "retained_offer_count": 2
     },
     {
       "name": "Alex Mill",
@@ -552,31 +558,37 @@
       "name": "American Giant",
       "source_url": "https://www.american-giant.com/collections/sale-page",
       "fetch_mode": "static",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Ministry of Supply",
       "source_url": "https://www.ministryofsupply.com/pages/last-chance-sale",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "empty",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 0,
-      "fetched_offer_count": 0
+      "fetched_offer_count": 0,
+      "retained_offer_count": 0
     },
     {
       "name": "Rhone",
       "source_url": "https://www.rhone.com/collections/sale/",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "empty",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 0,
-      "fetched_offer_count": 0
+      "fetched_offer_count": 0,
+      "retained_offer_count": 0
     },
     {
       "name": "Vuori",
@@ -594,31 +606,37 @@
       "name": "Outdoor Voices",
       "source_url": "https://www.outdoorvoices.com/collections/ov-extra",
       "fetch_mode": "static",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests",
       "offer_count": 2,
-      "fetched_offer_count": 2
+      "fetched_offer_count": 0,
+      "retained_offer_count": 2
     },
     {
       "name": "Universal Standard",
       "source_url": "https://www.universalstandard.com/pages/sale",
       "fetch_mode": "static",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests",
       "offer_count": 2,
-      "fetched_offer_count": 2
+      "fetched_offer_count": 0,
+      "retained_offer_count": 2
     },
     {
       "name": "M.M.LaFleur",
       "source_url": "https://mmlafleur.com/collections/sale",
       "fetch_mode": "static",
-      "attempts": 1,
-      "status": "ok",
-      "result": "empty",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests",
       "offer_count": 0,
-      "fetched_offer_count": 0
+      "fetched_offer_count": 0,
+      "retained_offer_count": 0
     },
     {
       "name": "Biossance",
@@ -634,81 +652,97 @@
       "name": "Cocokind",
       "source_url": "https://www.cocokind.com/collections/sale",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 2,
-      "fetched_offer_count": 2
+      "fetched_offer_count": 0,
+      "retained_offer_count": 2
     },
     {
       "name": "ILIA Beauty",
       "source_url": "https://iliabeauty.com/collections/ilia-sale",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 3,
-      "fetched_offer_count": 3
+      "fetched_offer_count": 0,
+      "retained_offer_count": 3
     },
     {
       "name": "Kinship",
       "source_url": "https://lovekinship.com/collections/sale",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Kosas",
       "source_url": "https://kosas.com/pages/offers",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 2,
-      "fetched_offer_count": 2
+      "fetched_offer_count": 0,
+      "retained_offer_count": 2
     },
     {
       "name": "Necessaire",
       "source_url": "https://necessaire.com/pages/referrals",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Saie",
       "source_url": "https://saiehello.com/collections/our-biggest-sale-of-the-year",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Tower 28 Beauty",
       "source_url": "https://www.tower28beauty.com/collections/eligible-for-promo",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Command '['C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--disable-component-update', '--disable-extensions', '--disable-sync', '--no-first-run', '--no-default-browser-che",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Versed",
       "source_url": "https://versedskin.com/collections/last-chance",
       "fetch_mode": "render",
-      "attempts": 1,
-      "status": "ok",
-      "result": "offers",
+      "attempts": 2,
+      "status": "error",
+      "result": "unavailable",
+      "error": "Chrome debugging port did not start",
       "offer_count": 1,
-      "fetched_offer_count": 1
+      "fetched_offer_count": 0,
+      "retained_offer_count": 1
     },
     {
       "name": "Atlas Coffee Club",
@@ -857,7 +891,7 @@
       "conditions": "Your faves",
       "offer_url": "https://www.walmart.com/shop/deals/flash-deals",
       "source_url": "https://www.walmart.com/shop/deals/flash-deals",
-      "fetched_at": "2026-09-27T21:21:45+00:00",
+      "fetched_at": "2026-09-27T19:34:17+00:00",
       "active": true,
       "discount_percent": 65
     },
@@ -868,7 +902,7 @@
       "conditions": "+ Extra 30% Off Purchase",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-27T21:22:32+00:00",
+      "fetched_at": "2026-09-27T19:34:35+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -879,7 +913,7 @@
       "conditions": "Jeans Toddler Girls",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-27T21:22:32+00:00",
+      "fetched_at": "2026-09-27T19:34:35+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -890,7 +924,7 @@
       "conditions": "Jeans Toddler Boys",
       "offer_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
       "source_url": "https://oldnavy.gap.com/browse/category.do?cid=26190",
-      "fetched_at": "2026-09-27T21:22:32+00:00",
+      "fetched_at": "2026-09-27T19:34:35+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -901,7 +935,7 @@
       "conditions": "The Fall Style Event; your purchase — includes sale",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-27T21:22:33+00:00",
+      "fetched_at": "2026-09-27T19:34:37+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -912,7 +946,7 @@
       "conditions": "Your first purchase with your new Encore Credit Card",
       "offer_url": "https://www.gap.com/browse/category.do?cid=6998",
       "source_url": "https://www.gap.com/browse/category.do?cid=6998",
-      "fetched_at": "2026-09-27T21:22:33+00:00",
+      "fetched_at": "2026-09-27T19:34:37+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -923,7 +957,7 @@
       "conditions": "Your first purchase",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-27T21:22:35+00:00",
+      "fetched_at": "2026-09-27T19:34:41+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -934,7 +968,7 @@
       "conditions": "Your full-priced purchase",
       "offer_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
       "source_url": "https://bananarepublic.gap.com/browse/category.do?cid=69883",
-      "fetched_at": "2026-09-27T21:22:35+00:00",
+      "fetched_at": "2026-09-27T19:34:41+00:00",
       "active": true,
       "discount_percent": 40
     },
@@ -945,7 +979,7 @@
       "conditions": "On Nike",
       "offer_url": "https://www.nike.com/promo-code",
       "source_url": "https://www.nike.com/promo-code",
-      "fetched_at": "2026-09-27T21:23:39+00:00",
+      "fetched_at": "2026-09-27T19:35:46+00:00",
       "active": true,
       "discount_percent": 10
     },
@@ -956,7 +990,7 @@
       "conditions": "Gift with Purchase",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-27T21:23:45+00:00",
+      "fetched_at": "2026-09-27T19:35:58+00:00",
       "active": true
     },
     {
@@ -966,7 +1000,7 @@
       "conditions": "Select NYX Professional Makeup",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-27T21:23:45+00:00",
+      "fetched_at": "2026-09-27T19:35:58+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -977,7 +1011,7 @@
       "conditions": "The first purchase¹ on your new card at Ulta Beauty",
       "offer_url": "https://www.ulta.com/promotion/21-days-of-beauty",
       "source_url": "https://www.ulta.com/promotion/21-days-of-beauty",
-      "fetched_at": "2026-09-27T21:23:45+00:00",
+      "fetched_at": "2026-09-27T19:35:58+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1019,7 +1053,7 @@
       "conditions": "Clearance items only",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
       "active": true
     },
     {
@@ -1029,8 +1063,52 @@
       "conditions": "Clearance items only",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
       "active": true
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Up To 67% Off select items",
+      "offer_text": "Up to 67% off select items",
+      "conditions": "Select items",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
+      "active": true,
+      "discount_percent": 67
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Up To 71% Off select items",
+      "offer_text": "Up to 71% off select items",
+      "conditions": "Select items",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
+      "active": true,
+      "discount_percent": 71
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Up To 81% Off select items",
+      "offer_text": "Up to 81% off select items",
+      "conditions": "Select items",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
+      "active": true,
+      "discount_percent": 81
+    },
+    {
+      "provider": "Nordstrom Rack",
+      "title": "Nordstrom Rack: Up To 86% Off select items",
+      "offer_text": "Up to 86% off select items",
+      "conditions": "Select items",
+      "offer_url": "https://www.nordstromrack.com/clearance",
+      "source_url": "https://www.nordstromrack.com/clearance",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
+      "active": true,
+      "discount_percent": 86
     },
     {
       "provider": "Nordstrom Rack",
@@ -1039,64 +1117,20 @@
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
       "active": true,
       "discount_percent": 63
     },
     {
       "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: Up To 82% Off select items",
-      "offer_text": "Up to 82% off select items",
+      "title": "Nordstrom Rack: Up To 85% Off select items",
+      "offer_text": "Up to 85% off select items",
       "conditions": "Select items",
       "offer_url": "https://www.nordstromrack.com/clearance",
       "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
+      "fetched_at": "2026-09-27T19:36:08+00:00",
       "active": true,
-      "discount_percent": 82
-    },
-    {
-      "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: Up To 91% Off select items",
-      "offer_text": "Up to 91% off select items",
-      "conditions": "Select items",
-      "offer_url": "https://www.nordstromrack.com/clearance",
-      "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
-      "active": true,
-      "discount_percent": 91
-    },
-    {
-      "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: Up To 88% Off select items",
-      "offer_text": "Up to 88% off select items",
-      "conditions": "Select items",
-      "offer_url": "https://www.nordstromrack.com/clearance",
-      "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
-      "active": true,
-      "discount_percent": 88
-    },
-    {
-      "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: Up To 56% Off select items",
-      "offer_text": "Up to 56% off select items",
-      "conditions": "Select items",
-      "offer_url": "https://www.nordstromrack.com/clearance",
-      "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
-      "active": true,
-      "discount_percent": 56
-    },
-    {
-      "provider": "Nordstrom Rack",
-      "title": "Nordstrom Rack: Up To 95% Off select items",
-      "offer_text": "Up to 95% off select items",
-      "conditions": "Select items",
-      "offer_url": "https://www.nordstromrack.com/clearance",
-      "source_url": "https://www.nordstromrack.com/clearance",
-      "fetched_at": "2026-09-27T21:23:50+00:00",
-      "active": true,
-      "discount_percent": 95
+      "discount_percent": 85
     },
     {
       "provider": "Wayfair",
@@ -1105,7 +1139,7 @@
       "conditions": "Every Day",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-27T21:23:55+00:00",
+      "fetched_at": "2026-09-27T19:36:14+00:00",
       "active": true,
       "discount_percent": 70
     },
@@ -1116,7 +1150,7 @@
       "conditions": "Over $35",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-27T21:23:55+00:00",
+      "fetched_at": "2026-09-27T19:36:14+00:00",
       "active": true
     },
     {
@@ -1126,7 +1160,7 @@
       "conditions": "Your first qualifying order of $250+",
       "offer_url": "https://www.wayfair.com/coupon-codes-policy",
       "source_url": "https://www.wayfair.com/coupon-codes-policy",
-      "fetched_at": "2026-09-27T21:23:55+00:00",
+      "fetched_at": "2026-09-27T19:36:14+00:00",
       "active": true
     },
     {
@@ -1136,7 +1170,7 @@
       "conditions": "Or more on home",
       "offer_url": "https://www.amazon.com/gp/goldbox",
       "source_url": "https://www.amazon.com/gp/goldbox",
-      "fetched_at": "2026-09-27T21:23:59+00:00",
+      "fetched_at": "2026-09-27T19:36:19+00:00",
       "active": true,
       "discount_percent": 25
     },
@@ -1147,7 +1181,7 @@
       "conditions": "Tech, home, and more; Code FINDYOURS20",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1158,7 +1192,7 @@
       "conditions": "Select fashion; Code FALLSTYLE15",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 15
     },
@@ -1169,7 +1203,7 @@
       "conditions": "EBay Refurbished cell phones and accessories",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -1180,7 +1214,7 @@
       "conditions": "With warranty",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -1191,7 +1225,7 @@
       "conditions": "Refurbished home and tools with warranty",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -1202,7 +1236,7 @@
       "conditions": "From perfume-empire",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 60
     },
@@ -1213,7 +1247,7 @@
       "conditions": "Home interiors",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1224,7 +1258,7 @@
       "conditions": "Garden tools",
       "offer_url": "https://www.ebay.com/deals",
       "source_url": "https://www.ebay.com/deals",
-      "fetched_at": "2026-09-27T21:24:01+00:00",
+      "fetched_at": "2026-09-27T19:36:24+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1235,7 +1269,7 @@
       "conditions": "With exclusive offers for students, teachers, government, military and corporate employees",
       "offer_url": "https://www.samsung.com/us/offers/",
       "source_url": "https://www.samsung.com/us/offers/",
-      "fetched_at": "2026-09-27T21:24:05+00:00",
+      "fetched_at": "2026-09-27T19:36:36+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -1256,7 +1290,7 @@
       "conditions": "Ends today",
       "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
       "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
-      "fetched_at": "2026-09-27T21:24:44+00:00",
+      "fetched_at": "2026-09-27T19:38:26+00:00",
       "active": true
     },
     {
@@ -1266,7 +1300,7 @@
       "conditions": "The new Google Pixel 11 Pro XL, plus $10/mo off your phone plan when you join Google Fi Wireless",
       "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
       "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
-      "fetched_at": "2026-09-27T21:24:44+00:00",
+      "fetched_at": "2026-09-27T19:38:26+00:00",
       "active": true
     },
     {
@@ -1276,7 +1310,7 @@
       "conditions": "Instantly and $799 back over 24 monthly credits",
       "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
       "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
-      "fetched_at": "2026-09-27T21:24:44+00:00",
+      "fetched_at": "2026-09-27T19:38:26+00:00",
       "active": true
     },
     {
@@ -1286,7 +1320,7 @@
       "conditions": "A Google-certified refurbished Pixel phone",
       "offer_url": "https://store.google.com/us/collection/offers?hl=en-US",
       "source_url": "https://store.google.com/us/collection/offers?hl=en-US",
-      "fetched_at": "2026-09-27T21:24:44+00:00",
+      "fetched_at": "2026-09-27T19:38:26+00:00",
       "active": true,
       "discount_percent": 40
     },
@@ -1297,7 +1331,7 @@
       "conditions": "On Orders $99+",
       "offer_url": "https://www.cotopaxi.com/collections/sale",
       "source_url": "https://www.cotopaxi.com/collections/sale",
-      "fetched_at": "2026-09-27T21:24:47+00:00",
+      "fetched_at": "2026-09-27T19:38:31+00:00",
       "active": true
     },
     {
@@ -1307,7 +1341,7 @@
       "conditions": "HOLIDAY GIFT WITH PURCHASE",
       "offer_url": "https://www.cotopaxi.com/collections/sale",
       "source_url": "https://www.cotopaxi.com/collections/sale",
-      "fetched_at": "2026-09-27T21:24:47+00:00",
+      "fetched_at": "2026-09-27T19:38:31+00:00",
       "active": true
     },
     {
@@ -1317,7 +1351,7 @@
       "conditions": "With orders $125+",
       "offer_url": "https://topodesigns.com/collections/sale-collection",
       "source_url": "https://topodesigns.com/collections/sale-collection",
-      "fetched_at": "2026-09-27T21:24:49+00:00",
+      "fetched_at": "2026-09-27T19:38:43+00:00",
       "active": true
     },
     {
@@ -1327,7 +1361,7 @@
       "conditions": "On US orders $125+",
       "offer_url": "https://www.outdoorresearch.com/collections/sale",
       "source_url": "https://www.outdoorresearch.com/collections/sale",
-      "fetched_at": "2026-09-27T21:24:53+00:00",
+      "fetched_at": "2026-09-27T19:38:53+00:00",
       "active": true
     },
     {
@@ -1369,7 +1403,7 @@
       "conditions": "Best Selling Cookware, Knives, Bakeware and more",
       "offer_url": "https://madeincookware.com/collections/new-customer-welcome-offer",
       "source_url": "https://madeincookware.com/collections/new-customer-welcome-offer",
-      "fetched_at": "2026-09-27T21:24:56+00:00",
+      "fetched_at": "2026-09-27T19:38:59+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1380,7 +1414,7 @@
       "conditions": "$100+, 30-day trial, free returns",
       "offer_url": "https://greatjonesgoods.com/collections/warehouse-sale",
       "source_url": "https://greatjonesgoods.com/collections/warehouse-sale",
-      "fetched_at": "2026-09-27T21:24:57+00:00",
+      "fetched_at": "2026-09-27T19:39:04+00:00",
       "active": true
     },
     {
@@ -1390,7 +1424,7 @@
       "conditions": "Your first order of $200+",
       "offer_url": "https://www.bollandbranch.com/collections/sale/",
       "source_url": "https://www.bollandbranch.com/collections/sale/",
-      "fetched_at": "2026-09-27T21:24:59+00:00",
+      "fetched_at": "2026-09-27T19:39:08+00:00",
       "active": true,
       "discount_percent": 15
     },
@@ -1401,7 +1435,7 @@
       "conditions": "Sweaters & More",
       "offer_url": "https://www.everlane.com/collections/womens-sale",
       "source_url": "https://www.everlane.com/collections/womens-sale",
-      "fetched_at": "2026-09-27T21:25:34+00:00",
+      "fetched_at": "2026-09-27T19:39:56+00:00",
       "active": true,
       "discount_percent": 30
     },
@@ -1412,7 +1446,7 @@
       "conditions": "Sale Styles",
       "offer_url": "https://www.everlane.com/collections/womens-sale",
       "source_url": "https://www.everlane.com/collections/womens-sale",
-      "fetched_at": "2026-09-27T21:25:34+00:00",
+      "fetched_at": "2026-09-27T19:39:56+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1423,7 +1457,7 @@
       "conditions": "Your first order",
       "offer_url": "https://www.everlane.com/collections/womens-sale",
       "source_url": "https://www.everlane.com/collections/womens-sale",
-      "fetched_at": "2026-09-27T21:25:34+00:00",
+      "fetched_at": "2026-09-27T19:39:56+00:00",
       "active": true,
       "discount_percent": 15
     },
@@ -1434,7 +1468,7 @@
       "conditions": "Your first order",
       "offer_url": "https://www.everlane.com/collections/womens-sale",
       "source_url": "https://www.everlane.com/collections/womens-sale",
-      "fetched_at": "2026-09-27T21:25:34+00:00",
+      "fetched_at": "2026-09-27T19:39:56+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1445,7 +1479,7 @@
       "conditions": "OVER $150 & 60 DAY RETURNS",
       "offer_url": "https://fahertybrand.com/collections/sale",
       "source_url": "https://fahertybrand.com/collections/sale",
-      "fetched_at": "2026-09-27T21:25:36+00:00",
+      "fetched_at": "2026-09-27T19:40:02+00:00",
       "active": true
     },
     {
@@ -1455,7 +1489,7 @@
       "conditions": "Over $150",
       "offer_url": "https://fahertybrand.com/collections/sale",
       "source_url": "https://fahertybrand.com/collections/sale",
-      "fetched_at": "2026-09-27T21:25:36+00:00",
+      "fetched_at": "2026-09-27T19:40:02+00:00",
       "active": true
     },
     {
@@ -1465,7 +1499,7 @@
       "conditions": "Your first online purchase when you sign up",
       "offer_url": "https://fahertybrand.com/collections/sale",
       "source_url": "https://fahertybrand.com/collections/sale",
-      "fetched_at": "2026-09-27T21:25:36+00:00",
+      "fetched_at": "2026-09-27T19:40:02+00:00",
       "active": true,
       "discount_percent": 15
     },
@@ -1476,7 +1510,7 @@
       "conditions": "On $75+",
       "offer_url": "https://www.marinelayer.com/collections/last-call",
       "source_url": "https://www.marinelayer.com/collections/last-call",
-      "fetched_at": "2026-09-27T21:25:40+00:00",
+      "fetched_at": "2026-09-27T19:40:12+00:00",
       "active": true
     },
     {
@@ -1486,7 +1520,7 @@
       "conditions": "On Orders $75+",
       "offer_url": "https://www.marinelayer.com/collections/last-call",
       "source_url": "https://www.marinelayer.com/collections/last-call",
-      "fetched_at": "2026-09-27T21:25:40+00:00",
+      "fetched_at": "2026-09-27T19:40:12+00:00",
       "active": true
     },
     {
@@ -1496,7 +1530,7 @@
       "conditions": "On orders over $75",
       "offer_url": "https://www.marinelayer.com/collections/last-call",
       "source_url": "https://www.marinelayer.com/collections/last-call",
-      "fetched_at": "2026-09-27T21:25:40+00:00",
+      "fetched_at": "2026-09-27T19:40:12+00:00",
       "active": true
     },
     {
@@ -1506,7 +1540,7 @@
       "conditions": "Any 3 Tees",
       "offer_url": "https://www.marinelayer.com/collections/last-call",
       "source_url": "https://www.marinelayer.com/collections/last-call",
-      "fetched_at": "2026-09-27T21:25:40+00:00",
+      "fetched_at": "2026-09-27T19:40:12+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1620,7 +1654,7 @@
       "conditions": "IN APP",
       "offer_url": "https://www.biossance.com/c/offers/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true
     },
     {
@@ -1630,7 +1664,7 @@
       "conditions": "Top rated duos that bring out the best in your skin",
       "offer_url": "https://www.biossance.com/c/offers/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true,
       "discount_percent": 38
     },
@@ -1641,7 +1675,7 @@
       "conditions": "Your first purchase",
       "offer_url": "https://www.biossance.com/c/offers/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true
     },
     {
@@ -1651,7 +1685,7 @@
       "conditions": "FOR STUDENTS",
       "offer_url": "https://www.biossance.com/c/offers/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1662,7 +1696,7 @@
       "conditions": "FOR TEACHERS",
       "offer_url": "https://www.biossance.com/c/offers/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1673,7 +1707,7 @@
       "conditions": "FOR HEALTHCARE HEROES",
       "offer_url": "https://www.biossance.com/c/offers/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1684,7 +1718,7 @@
       "conditions": "IN APP Exclusively on the Biossance app DOWNLOAD APP",
       "offer_url": "https://www.biossance.com/c/biossance-app/",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true
     },
     {
@@ -1694,7 +1728,7 @@
       "conditions": "FOR STUDENTS Verify your student status to unlock your exclusive 20% discount",
       "offer_url": "https://secure.gocertify.me/at/biossance/student",
       "source_url": "https://www.biossance.com/c/offers/",
-      "fetched_at": "2026-09-27T21:26:06+00:00",
+      "fetched_at": "2026-09-27T19:42:16+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1830,7 +1864,7 @@
       "conditions": "(applies to US only",
       "offer_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
       "source_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
-      "fetched_at": "2026-09-27T21:26:52+00:00",
+      "fetched_at": "2026-09-27T19:50:25+00:00",
       "active": true
     },
     {
@@ -1840,7 +1874,7 @@
       "conditions": "Limited Time Sale",
       "offer_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
       "source_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
-      "fetched_at": "2026-09-27T21:26:52+00:00",
+      "fetched_at": "2026-09-27T19:50:25+00:00",
       "active": true
     },
     {
@@ -1850,7 +1884,7 @@
       "conditions": "Your First Order",
       "offer_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
       "source_url": "https://atlascoffeeclub.com/collections/indonesia-offer-subscription",
-      "fetched_at": "2026-09-27T21:26:52+00:00",
+      "fetched_at": "2026-09-27T19:50:25+00:00",
       "active": true,
       "discount_percent": 50
     },
@@ -1861,7 +1895,7 @@
       "conditions": "When you pay it forward",
       "offer_url": "https://perelelhealth.com/collections/giveback-sale",
       "source_url": "https://perelelhealth.com/collections/giveback-sale",
-      "fetched_at": "2026-09-27T21:26:53+00:00",
+      "fetched_at": "2026-09-27T19:50:29+00:00",
       "active": true,
       "discount_percent": 20
     },
@@ -1872,7 +1906,7 @@
       "conditions": "Remove free gift? This can't be undone.",
       "offer_url": "https://perelelhealth.com/collections/giveback-sale",
       "source_url": "https://perelelhealth.com/collections/giveback-sale",
-      "fetched_at": "2026-09-27T21:26:53+00:00",
+      "fetched_at": "2026-09-27T19:50:29+00:00",
       "active": true
     },
     {
@@ -1882,7 +1916,7 @@
       "conditions": "Auto-Renew Orders",
       "offer_url": "https://www.coterie.com/military",
       "source_url": "https://www.coterie.com/military",
-      "fetched_at": "2026-09-27T21:26:55+00:00",
+      "fetched_at": "2026-09-27T19:50:32+00:00",
       "active": true,
       "discount_percent": 15
     },
@@ -1893,7 +1927,7 @@
       "conditions": "Every Auto Renew order",
       "offer_url": "https://www.coterie.com/military",
       "source_url": "https://www.coterie.com/military",
-      "fetched_at": "2026-09-27T21:26:55+00:00",
+      "fetched_at": "2026-09-27T19:50:32+00:00",
       "active": true,
       "discount_percent": 10
     },
@@ -1904,7 +1938,7 @@
       "conditions": "On both of your active Auto-Renews",
       "offer_url": "https://www.coterie.com/military",
       "source_url": "https://www.coterie.com/military",
-      "fetched_at": "2026-09-27T21:26:55+00:00",
+      "fetched_at": "2026-09-27T19:50:32+00:00",
       "active": true
     },
     {
@@ -1914,7 +1948,7 @@
       "conditions": "OVER $50 USD",
       "offer_url": "https://ergobaby.com/en-us/collections/sale",
       "source_url": "https://ergobaby.com/en-us/collections/sale",
-      "fetched_at": "2026-09-27T21:26:57+00:00",
+      "fetched_at": "2026-09-27T19:50:40+00:00",
       "active": true
     },
     {
@@ -1924,7 +1958,7 @@
       "conditions": "Your first purchase",
       "offer_url": "https://ergobaby.com/en-us/collections/sale",
       "source_url": "https://ergobaby.com/en-us/collections/sale",
-      "fetched_at": "2026-09-27T21:26:57+00:00",
+      "fetched_at": "2026-09-27T19:50:40+00:00",
       "active": true,
       "discount_percent": 15
     },
@@ -1935,7 +1969,7 @@
       "conditions": "Get a free gift",
       "offer_url": "https://lovevery.com/pages/coupons",
       "source_url": "https://lovevery.com/pages/coupons",
-      "fetched_at": "2026-09-27T21:26:58+00:00",
+      "fetched_at": "2026-09-27T19:50:42+00:00",
       "active": true
     },
     {
@@ -1945,7 +1979,7 @@
       "conditions": "Subscribe to The Play Kits for a free gift. Gift options rotate periodically. Terms apply.",
       "offer_url": "https://lovevery.com/pages/coupons",
       "source_url": "https://lovevery.com/pages/coupons",
-      "fetched_at": "2026-09-27T21:26:58+00:00",
+      "fetched_at": "2026-09-27T19:50:42+00:00",
       "active": true
     }
   ]

@@ -1,9 +1,10 @@
 # ILANG: ROLE=builder; READ=.ilang/site.ilang + data/offers.json; OUTPUT=site/; NEVER=fake prices
 from __future__ import annotations
-import html, json, re
+import html, json, re, shutil
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
-from scraper import parse_config
+from scraper import parse_config, PROMO_CODE
 
 ROOT=Path(__file__).parent; DATA=ROOT/"data"/"offers.json"; SITE=ROOT/"site"; BASE="https://"+parse_config()["meta"].get("domain","truedealatlas.com").strip().rstrip("/")
 def esc(v): return html.escape(str(v), quote=True)
@@ -19,9 +20,57 @@ def jsonld(obj): return '<script type="application/ld+json">'+json.dumps(obj,ens
 def format_checked(value):
     try:
         checked=datetime.fromisoformat(value.replace("Z","+00:00"))
-        return "Verified {} {}, {}".format(checked.strftime("%b"),checked.day,checked.year)
+        return "Source checked {} {}, {}".format(checked.strftime("%b"),checked.day,checked.year)
     except (AttributeError, TypeError, ValueError):
-        return "Recently verified"
+        return "Check date unavailable"
+
+def icon(name):
+    return '<svg class="icon" aria-hidden="true" width="20" height="20"><use href="/assets/icons.svg#{}"></use></svg>'.format(esc(name))
+
+def store_mark(name):
+    image=next((ROOT/"templates"/"store-icons").glob(slug(name)+".*"),None)
+    if image:
+        return '<span class="store-mark"><img src="/assets/stores/{}" alt="" width="32" height="32" loading="lazy"></span>'.format(esc(image.name))
+    return '<span class="store-mark initials" aria-hidden="true">{}</span>'.format(esc(name[:2].upper()))
+
+def coupon_code(offer):
+    text=str(offer.get("offer_text", ""))
+    match=PROMO_CODE.search(text)
+    return match.group(1) if match else ""
+
+def offer_kind(offer):
+    if coupon_code(offer):
+        return "codes"
+    if re.search(r"\bfree shipping\b", str(offer.get("offer_text", "")), re.I):
+        return "shipping"
+    return "sales"
+
+def offer_saving(offer):
+    text=str(offer.get("offer_text", ""))
+    percent=offer.get("discount_percent")
+    if percent:
+        prefix="BOGO " if re.search(r"\bBOGO\b|buy one.{0,30}get one", text, re.I) else "Up to " if re.search(r"\bup to\b", text, re.I) else "Extra " if re.search(r"\bextra\b", text, re.I) else ""
+        return "{}{}% off".format(prefix, percent)
+    amount=re.search(r"\$\s*([\d,]+(?:\.\d{2})?)\s*off\b", text, re.I)
+    if amount:
+        return "$"+amount.group(1)+" off"
+    if offer_kind(offer)=="shipping":
+        return "Free shipping"
+    if re.search(r"\bfree gift\b", text, re.I):
+        return "Free gift"
+    return "Store offer"
+
+def copy_control(offer):
+    code=coupon_code(offer)
+    if not code:
+        return ""
+    return '<div class="coupon-code"><span>Promo code <strong>{}</strong></span><button class="icon-button copy-code" type="button" data-code="{}" aria-label="Copy promo code {}" title="Copy promo code">{}</button></div>'.format(esc(code),esc(code),esc(code),icon("copy"))
+
+def offer_filters(offers):
+    stores=sorted({o["provider"] for o in offers},key=str.lower)
+    options="".join('<option value="{}">{}</option>'.format(esc(name),esc(name)) for name in stores)
+    tabs="".join('<button type="button" role="tab" id="tab-{}" aria-controls="deal-grid" aria-selected="{}" tabindex="{}" data-kind="{}">{}</button>'.format(key,"true" if key=="all" else "false","0" if key=="all" else "-1",key,label) for key,label in (("all","All offers"),("codes","Promo codes"),("sales","Deals"),("shipping","Free shipping")))
+    return '<div class="offer-tabs" role="tablist" aria-label="Offer type">{}</div><div class="filter-bar"><div class="filter-fields"><label>Store<select id="store-filter"><option value="">All stores</option>{}</select></label><label>Sort by<select id="sort-order"><option value="featured">Store name</option><option value="discount">Highest % off</option><option value="newest">Recently checked</option></select></label></div><label class="saved-filter"><input type="checkbox" id="saved-only"> Saved offers</label><button class="text-button" id="reset-filters" type="button" hidden>Clear filters {}</button></div>'.format(tabs,options,icon("x"))
 def display_offer_title(offer):
     title=str(offer.get("title", ""))
     prefix=str(offer.get("provider", ""))+":"
@@ -32,11 +81,15 @@ def page(title,desc,body,path="/",template_name=None):
         template_path=ROOT/"templates"/template_name
         if template_path.exists():
             body=template_path.read_text(encoding="utf-8").replace("{{content}}",body)
-    return '<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{}</title><meta name="description" content="{}"><meta name=\'impact-site-verification\' value=\'e0b16352-9ce9-435f-9d55-19b31ccd938b\'><link rel="canonical" href="{}"><meta property="og:title" content="{}"><meta property="og:description" content="{}"><meta property="og:url" content="{}"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script></head><body><div class="trust-strip"><div>Verified from official brand pages <span aria-hidden="true">&bull;</span> Refreshed every 6 hours</div></div><header class="site-header"><a class="brand" href="/" aria-label="TrueDealAtlas home"><span class="brand-mark" aria-hidden="true">T</span><span>TrueDealAtlas</span></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/">Deals</a><a href="/compare.html">Compare</a><a href="/providers/">Stores</a><a href="/guides/">Guides</a></nav><details class="mobile-nav"><summary aria-label="Open navigation"><span aria-hidden="true">&#9776;</span><span class="sr-only">Menu</span></summary><nav aria-label="Mobile navigation"><a href="/">Deals</a><a href="/compare.html">Compare</a><a href="/providers/">Stores</a><a href="/guides/">Guides</a><a href="/about.html">About</a></nav></details></header><main>{}</main><footer><div><strong>TrueDealAtlas</strong><p>Independent index of public, official offer pages. Always verify terms at the store before purchase.</p></div><nav aria-label="Footer navigation"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/contact.html">Contact</a><a href="/.ilang/site.ilang">Site rules</a></nav></footer></body></html>'.format(esc(title),esc(desc),esc(canonical),esc(title),esc(desc),esc(canonical),body)
+    nav="".join('<a href="{}"{}>{}</a>'.format(url,' aria-current="page"' if (path==url or url!="/" and path.startswith(url)) else "",label) for url,label in (("/","Coupons & deals"),("/providers/","Stores"),("/compare.html","Compare"),("/guides/","Guides")))
+    search='<form class="header-search" id="deal-search-form" action="/" role="search"><label class="sr-only" for="deal-search">Search stores, coupons, and deals</label>{}<input id="deal-search" name="q" type="search" placeholder="Search stores, coupons & deals" autocomplete="off"><button class="icon-button" type="submit" aria-label="Search" title="Search">{}</button></form>'.format(icon("search"),icon("arrow-right"))
+    return '<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{}</title><meta name="description" content="{}"><meta name=\'impact-site-verification\' value=\'e0b16352-9ce9-435f-9d55-19b31ccd938b\'><link rel="canonical" href="{}"><meta property="og:title" content="{}"><meta property="og:description" content="{}"><meta property="og:url" content="{}"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="trust-strip">Offers from official store pages. Terms apply.</div><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="TrueDealAtlas home"><span class="brand-mark" aria-hidden="true">{}</span><span>TrueDealAtlas</span></a>{}<a class="saved-link" href="/?saved=1">{}<span>Saved <span data-saved-count>0</span></span></a><details class="mobile-nav"><summary aria-label="Open navigation" title="Menu">{}</summary><nav aria-label="Mobile navigation">{}</nav></details></div><nav class="desktop-nav" aria-label="Primary navigation">{}</nav></header><main id="main">{}</main><div class="toast" id="site-toast" role="status" aria-live="polite" hidden></div><footer><div><a class="footer-brand" href="/">TrueDealAtlas</a><p>Independent coupons and deals from official US store pages. Offers can change; confirm availability and terms at the store.</p></div><nav aria-label="Footer navigation"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/contact.html">Contact</a><a href="/.ilang/site.ilang">Source policy</a></nav></footer></body></html>'.format(esc(title),esc(desc),esc(canonical),esc(title),esc(desc),esc(canonical),icon("tag"),search,icon("heart"),icon("menu"),nav,nav,body)
 def offer_card(o):
-    detail="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])); value="{}% off".format(o["discount_percent"]) if o.get("discount_percent") else "Official offer"
-    search_text="{} {} {}".format(o.get("provider",""),o.get("title",""),o.get("offer_text","")).lower()
-    return '<article class="deal deal-card" data-search="{}"><div class="deal-top"><span class="tag">{}</span><span class="verified"><span aria-hidden="true">&#10003;</span> Verified</span></div><p class="merchant">{}</p><h3><a href="{}">{}</a></h3><div class="deal-footer"><span class="muted">{}</span><a class="button" href="{}" rel="nofollow noopener">View offer <span aria-hidden="true">&rarr;</span></a></div></article>'.format(esc(search_text),esc(value),esc(o["provider"]),detail,esc(display_offer_title(o)),esc(format_checked(o.get("fetched_at",""))),esc(o["offer_url"]))
+    detail="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"]))
+    search_text="{} {} {} {}".format(o.get("provider",""),o.get("title",""),o.get("offer_text",""),o.get("conditions", "")).lower()
+    kind=offer_kind(o); label={"codes":"Promo code","shipping":"Shipping offer","sales":"Deal"}[kind]
+    terms=o.get("offer_text") or o.get("conditions") or "See store for terms."
+    return '<article class="deal deal-card" data-search="{}" data-store="{}" data-kind="{}" data-discount="{}" data-checked="{}" data-id="{}"><div class="deal-top"><a class="merchant" href="/providers/{}.html">{}<span>{}</span></a><button class="icon-button save-offer" type="button" data-id="{}" aria-pressed="false" aria-label="Save {} offer: {}" title="Save offer">{}</button></div><div class="deal-body"><span class="saving">{}</span><span class="offer-type {}">{}</span><h3><a href="{}">{}</a></h3><p class="conditions">{}</p>{}</div><div class="deal-footer"><a class="button" href="{}" target="_blank" rel="nofollow noopener">Get deal {}<span class="sr-only"> at {} (opens in a new tab)</span></a><a class="details-link" href="{}">Offer details</a></div><p class="checked">{}</p></article>'.format(esc(search_text),esc(o["provider"]),kind,esc(o.get("discount_percent",0)),esc(o.get("fetched_at","")),esc(detail),slug(o["provider"]),store_mark(o["provider"]),esc(o["provider"]),esc(detail),esc(o["provider"]),esc(display_offer_title(o)),icon("heart"),esc(offer_saving(o)),kind,label,detail,esc(display_offer_title(o)),esc(terms),copy_control(o),esc(o["offer_url"]),icon("arrow-up-right"),esc(o["provider"]),detail,esc(format_checked(o.get("fetched_at",""))))
 def provider_result_message(provider, has_offers):
     result=provider.get("result")
     if result=="unavailable" or (not result and provider.get("status")=="error"):
@@ -47,26 +100,55 @@ def provider_result_message(provider, has_offers):
 def article_card(article):
     path="/guides/{}.html".format(slug(article["slug"]))
     return '<article class="deal"><span class="tag">Guide</span><h3><a href="{}">{}</a></h3><p>{}</p><a class="button" href="{}">Read the guide</a></article>'.format(path,esc(article["title"]),esc(article.get("description","")),path)
+
+def offer_list(offers, heading="Browse offers"):
+    cards="".join(offer_card(o) for o in offers) or '<p class="empty static-empty">No offers currently listed. Check the official store for current availability.</p>'
+    return '<section class="deals-section" aria-labelledby="offers-heading"><div class="section-head"><h2 id="offers-heading">{}</h2><span class="result-count" id="deal-result-count" role="status" aria-live="polite">{} offers</span></div>{}<div class="grid deal-grid" id="deal-grid" role="tabpanel" aria-labelledby="tab-all">{}</div><div class="empty search-empty" id="search-empty" hidden><h3>No offers found</h3><p id="empty-message">Try another store or search term.</p><button class="button" type="button" id="empty-reset">Clear filters</button></div><div class="load-more-wrap"><button class="load-more" id="load-more" type="button" hidden>Show more offers {}</button></div></section>'.format(esc(heading),len(offers),offer_filters(offers),cards,icon("chevron-down"))
+
+def home_content(data, offers, store_links, guide_section):
+    stores=len({o["provider"] for o in offers})
+    try:
+        updated=datetime.fromisoformat(data["generated_at"].replace("Z","+00:00"))
+        update_label=updated.strftime("%b ")+str(updated.day)+", "+str(updated.year)
+    except (KeyError, ValueError):
+        update_label="Date unavailable"
+    return '<section class="browse-intro"><h1>Coupons & deals</h1><p>Official offers from US stores and brands.</p><div class="index-summary"><span><strong>{}</strong> offers</span><span><strong>{}</strong> stores with offers</span><span>Index updated {}</span></div></section><section class="store-section" aria-labelledby="stores-heading"><div class="section-head"><h2 id="stores-heading">Explore stores</h2><a class="text-link" href="/providers/">All stores {}</a></div><div class="store-strip">{}</div></section>{}{}<section class="source-coverage"><div>{}<h2>From the store. With the terms.</h2></div><p>Every offer links to its official source. Source checks confirm the published offer text; availability and eligibility are determined by the store.</p><a class="text-link" href="/about.html">About our sources {}</a></section>'.format(len(offers),stores,esc(update_label),icon("arrow-right"),store_links,offer_list(offers),guide_section,icon("external-link"),icon("arrow-right"))
+
+def write_assets():
+    assets=SITE/"assets"; assets.mkdir(exist_ok=True)
+    ET.register_namespace("", "http://www.w3.org/2000/svg")
+    sprite=ET.Element("{http://www.w3.org/2000/svg}svg")
+    for source in sorted((ROOT/"templates"/"icons").glob("*.svg")):
+        svg=ET.parse(source).getroot()
+        symbol=ET.SubElement(sprite,"{http://www.w3.org/2000/svg}symbol",{"id":source.stem,"viewBox":svg.get("viewBox","0 0 24 24"),"fill":"none","stroke":"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round"})
+        symbol.extend(list(svg))
+    ET.ElementTree(sprite).write(assets/"icons.svg",encoding="utf-8",xml_declaration=True)
+    license_path=ROOT/"templates"/"icons"/"LICENSE"
+    if license_path.exists():
+        shutil.copyfile(license_path,assets/"lucide-LICENSE.txt")
+    images=ROOT/"templates"/"store-icons"
+    if images.exists():
+        shutil.copytree(images,assets/"stores",dirs_exist_ok=True)
 def build():
     cfg,data=load_data(); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
     for old_deal in (SITE/"deals").glob("*.html"):
         old_deal.unlink()
     (SITE/"styles.css").write_text(STYLES,encoding="utf-8")
     (SITE/"site.js").write_text(SITE_JS,encoding="utf-8")
-    offers=[o for o in data.get("offers",[]) if o.get("active",True)]
+    write_assets()
+    offers=sorted([o for o in data.get("offers",[]) if o.get("active",True)],key=lambda o:(o["provider"].lower(),display_offer_title(o).lower()))
     paths=["{}-{}".format(slug(o["provider"]),slug(o["title"])) for o in offers]
     if len(paths) != len(set(paths)):
         raise ValueError("Duplicate deal paths detected; scraper titles must be unique")
-    cards="".join(offer_card(o) for o in offers) or '<div class="empty"><h2>No active offers detected yet</h2><p>We only publish deals found on official provider pages. Check back after the next scheduled refresh.</p></div>'
     articles=data.get("articles",[])
     guide_cards="".join(article_card(a) for a in articles[:6])
-    guide_section='<section class="sources"><div class="section-head"><h2>Shopping guides</h2><a href="/guides/">All guides</a></div><div class="grid">{}</div></section>'.format(guide_cards) if guide_cards else ""
+    guide_section='<section class="guides-section"><div class="section-head"><h2>Shopping guides</h2><a class="text-link" href="/guides/">All guides {}</a></div><div class="grid">{}</div></section>'.format(icon("arrow-right"),guide_cards) if guide_cards else ""
     provider_counts={}
     for offer in offers:
         provider_counts[offer["provider"]]=provider_counts.get(offer["provider"],0)+1
     popular=sorted(provider_counts,key=lambda name:(-provider_counts[name],name.lower()))[:8]
-    store_links="".join('<a href="/providers/{}.html">{}</a>'.format(slug(name),esc(name)) for name in popular)
-    body='<section class="hero home-hero"><div class="hero-copy"><p class="eyebrow">Official-source US deals</p><h1>Real deals.<br>Checked at the source.</h1><p class="lede">Skip expired coupon-code lists. Browse current promotions found on official US brand and retailer pages.</p><form class="deal-search" id="deal-search-form" role="search"><label class="sr-only" for="deal-search">Search deals and stores</label><div class="search-box"><span aria-hidden="true">&#128269;</span><input id="deal-search" name="q" type="search" placeholder="Search Target, Nike, beauty, tech..." autocomplete="off"><button type="submit">Search</button></div><p class="search-note">Search all {} currently active offers.</p></form></div><aside class="hero-proof" aria-label="Live source index"><p class="proof-label">Live index</p><strong>{} active offers</strong><p>from {} official store pages</p><ul><li><span aria-hidden="true">&#10003;</span> Direct links to official offers</li><li><span aria-hidden="true">&#10003;</span> Source and check time shown</li><li><span aria-hidden="true">&#10003;</span> No crowdsourced coupon codes</li></ul><a href="/providers/">See source status <span aria-hidden="true">&rarr;</span></a></aside></section><section class="store-section"><div class="section-head"><div><p class="eyebrow">Browse stores</p><h2>Stores with active offers</h2></div><a class="text-link" href="/providers/">All stores <span aria-hidden="true">&rarr;</span></a></div><div class="store-strip">{}</div></section><section class="deals-section"><div class="section-head"><div><p class="eyebrow">Freshly checked</p><h2>Verified deals</h2></div><span class="result-count muted" id="deal-result-count">{} active</span></div><div class="grid deal-grid" id="deal-grid">{}</div><div class="empty search-empty" id="search-empty" hidden><h3>No matching deals</h3><p>Try a store name or a broader term.</p></div><div class="load-more-wrap"><button class="load-more" id="load-more" type="button">Show more deals</button></div></section>{}<section class="sources source-coverage"><div><p class="eyebrow">Transparent by design</p><h2>See exactly where every deal came from.</h2></div><div><p>We check {} official offer pages. A source can be healthy even when it has no parseable promotion.</p><a class="text-link" href="/providers/">Browse stores and source status <span aria-hidden="true">&rarr;</span></a></div></section>'.format(len(offers),len(offers),len(data.get("providers",[])),store_links,len(offers),cards,guide_section,len(data.get("providers",[])))
+    store_links="".join('<a href="/providers/{}.html">{}<span><strong>{}</strong><small>{} offers</small></span></a>'.format(slug(name),store_mark(name),esc(name),provider_counts[name]) for name in popular)
+    body=home_content(data,offers,store_links,guide_section)
     (SITE/"index.html").write_text(page("TrueDealAtlas | Official US Deals","A transparent index of official US consumer brand offers and sale pages.",body,template_name="index.html"),encoding="utf-8")
     about_body='''<article class="detail"><p class="eyebrow">About TrueDealAtlas</p><h1>About TrueDealAtlas</h1><p>TrueDealAtlas is an independent index of public sale pages and promotions from US consumer brands.</p><h2>Where the data comes from</h2><p>Every listing begins with a public, official brand source such as a sale page, sitemap, or feed. We do not invent offers, prices, expiration dates, or commission claims. When a source does not expose a reliable detail, we leave it out.</p><p>The public dataset is archived on <a href="https://doi.org/10.5281/zenodo.22885986">Zenodo (DOI: 10.5281/zenodo.22885986)</a>.</p><h2>How often sources are checked</h2><p>Our deterministic Python update pipeline checks configured official sources every six hours and rebuilds the static site from the results.</p><h2>Who maintains the site</h2><p>TrueDealAtlas is maintained by its owner with an automated, source-traceable publishing workflow. Questions and corrections are welcome through the <a href="/contact.html">contact page</a>.</p><p><a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></p></article>'''
     privacy_body='''<article class="detail"><p class="eyebrow">Site policy</p><h1>Privacy Policy</h1><p>Last updated: September 16, 2026.</p><h2>Information we do not collect</h2><p>TrueDealAtlas does not offer user accounts, accept payments, or use a contact form. We do not intentionally collect names, postal addresses, payment details, or other personal information through this site.</p><h2>Hosting and measurement</h2><p>The site does not currently load a separate analytics service or advertising tracker. Cloudflare hosts and delivers the site and may process basic request and security data under its own policies.</p><h2>Outbound and affiliate links</h2><p>Links can take you to official third-party websites, which have their own privacy practices. TrueDealAtlas may use affiliate links. When a link is an affiliate link, it will be disclosed clearly; a qualifying purchase may earn the site a commission at no additional cost to you.</p><h2>Questions</h2><p>For privacy questions, use the <a href="/contact.html">contact page</a>.</p><p><a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></article>'''
@@ -78,21 +160,31 @@ def build():
     (SITE/"404.html").write_text(not_found,encoding="utf-8")
     links=[]
     for p in data.get("providers",[]):
-        ps=slug(p["name"]); po=[o for o in offers if o.get("provider")==p["name"]]; status_message=provider_result_message(p,bool(po)); offer_markup="".join(offer_card(o) for o in po) or '<p class="muted">{}</p>'.format(esc(status_message)); status_note='<p class="muted">{}</p>'.format(esc(status_message)) if status_message and po else ""; pbody='<section class="hero compact"><p class="eyebrow">Official source</p><h1>{}</h1><p>{} active offers indexed.</p>{}<a class="button" href="{}" rel="nofollow noopener">Open official page</a></section><section><h2>Indexed offers</h2><div class="grid">{}</div></section>'.format(esc(p["name"]),len(po),status_note,esc(p["source_url"]),offer_markup)
+        ps=slug(p["name"]); po=[o for o in offers if o.get("provider")==p["name"]]; status_message=provider_result_message(p,bool(po))
+        status_note='<p class="source-note">{}</p>'.format(esc(status_message)) if status_message else ""
+        pbody='<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Coupons & deals</a><span>/</span><a href="/providers/">Stores</a><span>/</span><span>{}</span></nav><section class="hero compact"><p class="eyebrow">Official store offers</p><h1>{} coupons & deals</h1><p>{} offers from the official store source.</p><a class="button secondary" href="{}" target="_blank" rel="nofollow noopener">Visit {} {}<span class="sr-only"> (opens in a new tab)</span></a>{}</section>{}'.format(esc(p["name"]),esc(p["name"]),len(po),esc(p["source_url"]),esc(p["name"]),icon("arrow-up-right"),status_note,offer_list(po, "{} offers".format(p["name"])))
         if po:
             prices=[float(o["price"]) for o in po if o.get("price")]
             p_schema={"@context":"https://schema.org","@type":"Product","name":p["name"],"url":BASE+"/providers/"+ps+".html","offers":{"@type":"AggregateOffer","offerCount":len(po)}}
             if prices:
                 p_schema["offers"].update({"lowPrice":min(prices),"highPrice":max(prices),"priceCurrency":"USD"})
             pbody += jsonld(p_schema)
-        (SITE/"providers"/(ps+".html")).write_text(page(p["name"]+" Deals | TrueDealAtlas","Official {} sale and promotion source status.".format(p["name"]),pbody,"/providers/"+ps+".html","provider.html"),encoding="utf-8"); links.append('<li><a href="/providers/{}.html">{}</a> <span class="muted">{}, {} offers</span></li>'.format(ps,esc(p["name"]),p.get("status","unknown"),len(po)))
-    (SITE/"providers"/"index.html").write_text(page("Providers | TrueDealAtlas","Official provider pages checked by TrueDealAtlas",'<section class="hero compact"><h1>Providers</h1><p>Every link below points to an official brand source.</p></section><ul class="provider-list">{}</ul>'.format("".join(links)),"/providers/","provider.html"),encoding="utf-8")
-    rows="".join('<tr><td>{}</td><td><a href="/deals/{}-{}.html">{}</a></td><td>{}%</td></tr>'.format(esc(o["provider"]),slug(o["provider"]),slug(o["title"]),esc(o["title"]),esc(o.get("discount_percent",""))) for o in offers)
+        (SITE/"providers"/(ps+".html")).write_text(page(p["name"]+" Coupons & Deals | TrueDealAtlas","Official {} sale and promotion source status.".format(p["name"]),pbody,"/providers/"+ps+".html","provider.html"),encoding="utf-8")
+        note="{} offers".format(len(po)) if po else "No offers listed"
+        if p.get("status")=="error":
+            note += " / Source unavailable"
+        links.append('<li data-store-name="{}"><a href="/providers/{}.html">{}<span><strong>{}</strong><small>{}</small></span>{}</a></li>'.format(esc(p["name"].lower()),ps,store_mark(p["name"]),esc(p["name"]),esc(note),icon("arrow-right")))
+    links.sort()
+    directory='<section class="hero compact"><p class="eyebrow">Shop by store</p><h1>Stores & brands</h1><p>Browse official coupons, sales, and shipping offers.</p></section><div class="directory-toolbar"><label for="store-search" class="sr-only">Find a store</label><div class="directory-search">{}<input type="search" id="store-search" placeholder="Find a store" autocomplete="off"></div><span id="store-result-count" role="status">{} stores</span></div><ul class="store-directory">{}</ul><div id="store-empty" class="empty" hidden>No stores match your search.</div>'.format(icon("search"),len(links),"".join(links))
+    (SITE/"providers"/"index.html").write_text(page("Stores & Brands | TrueDealAtlas","Browse US store coupons and deals from official sources",directory,"/providers/","provider.html"),encoding="utf-8")
+    rows="".join('<tr class="compare-row" data-discount="{}" data-checked="{}"><td><a href="/providers/{}.html">{}</a></td><td><a href="/deals/{}-{}.html">{}</a></td><td>{}</td><td>{}</td></tr>'.format(o.get("discount_percent",0),esc(o.get("fetched_at","")),slug(o["provider"]),esc(o["provider"]),slug(o["provider"]),slug(o["title"]),esc(display_offer_title(o)),esc(offer_saving(o)),esc(format_checked(o.get("fetched_at","")))) for o in offers)
     item_list={"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i,"url":BASE+"/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"]))} for i,o in enumerate(offers,1)]}
-    compare_body='<section class="hero compact"><h1>Compare active deals</h1></section><table><thead><tr><th>Provider</th><th>Offer</th><th>Discount</th></tr></thead><tbody>{}</tbody></table>{}'.format(rows or '<tr><td colspan="3">No active offers detected.</td></tr>',jsonld(item_list))
+    compare_body='<section class="hero compact"><p class="eyebrow">Side by side</p><h1>Compare offers</h1><p>Compare savings and source check dates. Store terms apply.</p></section><label class="compare-sort">Sort by<select id="compare-sort"><option value="featured">Store name</option><option value="discount">Highest % off</option><option value="newest">Recently checked</option></select></label><div class="table-wrap" role="region" aria-label="Offer comparison" tabindex="0"><table><caption class="sr-only">Current official store offers</caption><thead><tr><th scope="col">Store</th><th scope="col">Offer</th><th scope="col">Savings</th><th scope="col">Source check</th></tr></thead><tbody>{}</tbody></table></div>{}'.format(rows or '<tr><td colspan="4">No offers listed.</td></tr>',jsonld(item_list))
     (SITE/"compare.html").write_text(page("Compare Deals | TrueDealAtlas","Compare currently active official promotions",compare_body,"/compare.html","compare.html"),encoding="utf-8")
     for o in offers:
-        path="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])); fields={"price":o["price"],"priceCurrency":o["currency"]} if o.get("price") and o.get("currency") else {}; schema={"@context":"https://schema.org","@type":"Offer","name":o["title"],"url":BASE+path,"availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":o["provider"]},**fields}; dbody='<article class="detail"><p class="eyebrow">{}</p><h1>{}</h1><h2>Offer</h2><p>{}</p><h2>Eligibility and conditions</h2><p>{}</p><p class="muted">Checked {}</p><a class="button" href="{}" rel="nofollow noopener">Check offer at {}</a><p class="source">Official source: <a href="{}">{}</a></p>{}</article>'.format(esc(o["provider"]),esc(o["title"]),esc(o["offer_text"]),esc(o["conditions"]),esc(o.get("fetched_at","")),esc(o["offer_url"]),esc(o["provider"]),esc(o["source_url"]),esc(o["source_url"]),jsonld(schema)); target=SITE/path.lstrip("/"); target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page(o["provider"]+" Offer | TrueDealAtlas",o["title"]+" from "+o["provider"]+", checked from the official source.",dbody,path),encoding="utf-8")
+        path="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])); fields={"price":o["price"],"priceCurrency":o["currency"]} if o.get("price") and o.get("currency") else {}; schema={"@context":"https://schema.org","@type":"Offer","name":o["title"],"url":BASE+path,"seller":{"@type":"Organization","name":o["provider"]},**fields}
+        dbody='<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Coupons & deals</a><span>/</span><a href="/providers/{}.html">{}</a><span>/</span><span>Offer</span></nav><article class="detail offer-detail"><p class="eyebrow">{} official offer</p><h1>{}</h1><div class="detail-saving">{}</div><p class="checked">{}</p>{}<a class="button detail-cta" href="{}" target="_blank" rel="nofollow noopener">Get deal at {} {}<span class="sr-only"> (opens in a new tab)</span></a><h2>Offer terms</h2><p>{}</p><h2>Eligibility & conditions</h2><p>{}</p><p class="source-note">Source checked means the offer text was found on the official page. Availability and eligibility can change; confirm the terms before checking out.</p><p class="source">Official source: <a href="{}" target="_blank" rel="noopener">{}{}</a></p>{}</article>'.format(slug(o["provider"]),esc(o["provider"]),esc(o["provider"]),esc(display_offer_title(o)),esc(offer_saving(o)),esc(format_checked(o.get("fetched_at",""))),copy_control(o),esc(o["offer_url"]),esc(o["provider"]),icon("arrow-up-right"),esc(o.get("offer_text","")),esc(o.get("conditions","See store for terms.")),esc(o["source_url"]),esc(o["source_url"]),'<span class="sr-only"> (opens in a new tab)</span>',jsonld(schema))
+        target=SITE/path.lstrip("/"); target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page(o["provider"]+" Offer | TrueDealAtlas",o["title"]+" from "+o["provider"]+", checked from the official source.",dbody,path),encoding="utf-8")
     (SITE/"guides").mkdir(exist_ok=True)
     for old_guide in (SITE/"guides").glob("*.html"):
         old_guide.unlink()
@@ -108,53 +200,6 @@ def build():
     guides_body='<section class="hero compact"><p class="eyebrow">Evidence-led answers</p><h1>Shopping guides</h1><p>Short answers built from official offer pages and public shopper questions.</p></section><ul class="provider-list">{}</ul>'.format("".join(guide_links) or '<li class="muted">No guides published yet.</li>')
     (SITE/"guides"/"index.html").write_text(page("Shopping Guides | TrueDealAtlas","Evidence-led answers about US brand coupons and offers.",guides_body,"/guides/","provider.html"),encoding="utf-8")
     urls=["/","/compare.html","/providers/","/guides/","/about.html","/privacy.html","/contact.html"]+["/providers/{}.html".format(slug(p["name"])) for p in data.get("providers",[])]+["/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])) for o in offers]+["/guides/{}.html".format(slug(a["slug"])) for a in articles]; lastmod=esc(data.get("generated_at",datetime.now(timezone.utc).isoformat())); (SITE/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join("<url><loc>{}{}</loc><lastmod>{}</lastmod></url>".format(BASE,u,lastmod) for u in urls)+"</urlset>",encoding="utf-8"); (SITE/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: {}/sitemap.xml\n".format(BASE),encoding="utf-8"); (SITE/".ilang").mkdir(exist_ok=True); (SITE/".ilang"/"site.ilang").write_text((ROOT/".ilang"/"site.ilang").read_text(encoding="utf-8"),encoding="utf-8")
-STYLES='''
-:root{--ink:#15231f;--muted:#63706b;--line:#dce3df;--paper:#f5f7f4;--white:#fff;--green:#116149;--green-dark:#0a4534;--mint:#e8f4ee;--coral:#d9562b;--yellow:#fff1b8;--shadow:0 10px 30px rgba(21,35,31,.07)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-rendering:optimizeLegibility}button,input{font:inherit}a{color:var(--green);text-underline-offset:3px}a:hover{color:var(--green-dark)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}
-.trust-strip{background:var(--green-dark);color:#fff;font-size:.78rem;font-weight:700;text-align:center}.trust-strip>div{max-width:1180px;margin:auto;padding:7px 24px}.trust-strip span{margin:0 8px;color:#a7d8c5}.site-header,main,footer{max-width:1180px;margin:auto;padding-left:24px;padding-right:24px}.site-header{height:70px;display:flex;align-items:center;justify-content:space-between;background:var(--paper)}.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);font-size:1.08rem;font-weight:850;text-decoration:none}.brand:hover{color:var(--ink)}.brand-mark{display:grid;width:34px;height:34px;place-items:center;background:var(--coral);border-radius:5px;color:#fff;font-size:1rem;font-weight:900}.desktop-nav{display:flex;align-items:center;gap:30px}.desktop-nav a{color:#35443f;font-size:.94rem;font-weight:700;text-decoration:none}.desktop-nav a:hover{color:var(--green)}.mobile-nav{display:none;position:relative}.mobile-nav summary{display:grid;width:42px;height:42px;place-items:center;border:1px solid var(--line);border-radius:5px;background:var(--white);cursor:pointer;font-size:1.25rem;list-style:none}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav nav{position:absolute;z-index:5;right:0;top:50px;width:210px;padding:8px;background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow)}.mobile-nav nav a{display:block;padding:11px 12px;color:var(--ink);font-weight:700;text-decoration:none;border-radius:4px}.mobile-nav nav a:hover{background:var(--mint)}
-.hero{padding:62px 0 54px}.home-hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(290px,.75fr);gap:72px;align-items:center;max-width:none}.hero-copy{max-width:700px}.eyebrow,.tag{margin:0;color:var(--coral);font-size:.74rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.hero h1{max-width:760px;margin:10px 0 20px;font-size:clamp(2.9rem,5vw,4.45rem);line-height:.98;letter-spacing:0}.hero .lede{max-width:650px;margin:0;color:#4f5e59;font-size:1.13rem;line-height:1.55}.hero.compact{max-width:790px;padding:48px 0 32px}.hero.compact h1,.detail h1{font-size:clamp(2.3rem,4vw,3.4rem);line-height:1.08}.hero.compact>p:not(.eyebrow){color:var(--muted);font-size:1.08rem}.deal-search{margin-top:28px}.search-box{display:flex;align-items:center;gap:10px;max-width:680px;padding:6px 6px 6px 16px;background:var(--white);border:1px solid #bac7c1;border-radius:7px;box-shadow:0 6px 20px rgba(21,35,31,.08)}.search-box:focus-within{border-color:var(--green);box-shadow:0 0 0 3px rgba(17,97,73,.13)}.search-box>span{font-size:.95rem}.search-box input{min-width:0;flex:1;padding:9px 0;border:0;outline:0;background:transparent;color:var(--ink)}.search-box input::placeholder{color:#83908b}.search-box button,.load-more{min-height:42px;border:0;border-radius:5px;background:var(--green);color:#fff;font-weight:800;cursor:pointer}.search-box button{padding:0 22px}.search-box button:hover,.load-more:hover{background:var(--green-dark)}.search-note{margin:8px 0 0;color:var(--muted);font-size:.82rem}.hero-proof{padding:28px;background:var(--white);border:1px solid var(--line);border-top:4px solid var(--coral);border-radius:7px;box-shadow:var(--shadow)}.proof-label{margin:0 0 5px;color:var(--muted);font-size:.74rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.hero-proof strong{display:block;font-size:1.85rem;line-height:1.15}.hero-proof>p:not(.proof-label){margin:5px 0 18px;color:var(--muted)}.hero-proof ul{display:grid;gap:9px;margin:0 0 20px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);list-style:none;color:#394843;font-size:.9rem}.hero-proof li span{display:inline-grid;width:19px;height:19px;margin-right:7px;place-items:center;border-radius:50%;background:var(--mint);color:var(--green);font-size:.72rem;font-weight:900}.hero-proof a,.text-link{font-weight:800;text-decoration:none}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px}.section-head h2,.sources h2{margin:3px 0 0;font-size:clamp(1.65rem,2.5vw,2.15rem);line-height:1.15}.store-section{padding:28px 0 42px;border-top:1px solid var(--line)}.store-strip{display:flex;gap:10px;margin-top:20px;padding-bottom:4px;overflow-x:auto;scrollbar-width:thin}.store-strip a{flex:0 0 auto;padding:10px 15px;border:1px solid var(--line);border-radius:5px;background:var(--white);color:var(--ink);font-size:.9rem;font-weight:750;text-decoration:none}.store-strip a:hover{border-color:#9ab3a8;background:var(--mint);color:var(--green-dark)}.deals-section{padding-top:18px}.result-count{padding-bottom:4px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.deal-grid{margin-top:22px}.deal{min-width:0;padding:20px;background:var(--white);border:1px solid var(--line);border-radius:7px}.deal-card{display:flex;min-height:270px;flex-direction:column;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}.deal-card:hover{transform:translateY(-2px);border-color:#b8c8c0;box-shadow:var(--shadow)}.deal-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.tag{display:inline-flex;width:max-content;padding:5px 8px;border-radius:4px;background:var(--yellow);color:#8f3e21;font-size:.7rem}.verified{color:var(--green);font-size:.75rem;font-weight:800}.verified span{margin-right:3px}.merchant{margin:18px 0 6px;color:var(--muted);font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.deal h3{margin:0 0 18px;font-size:1.13rem;line-height:1.36}.deal h3 a{color:var(--ink);text-decoration:none}.deal h3 a:hover{color:var(--green);text-decoration:underline}.deal-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid #edf0ee}.muted{color:var(--muted);font-size:.8rem}.button{display:inline-flex;min-height:38px;align-items:center;justify-content:center;gap:7px;padding:8px 12px;border-radius:5px;background:var(--green);color:#fff;font-size:.84rem;font-weight:800;text-decoration:none;white-space:nowrap}.button:hover{background:var(--green-dark);color:#fff}.load-more-wrap{text-align:center}.load-more{margin:28px auto 0;padding:0 24px}.empty{padding:30px;border:1px dashed #afbeb7;border-radius:7px;background:var(--white)}.search-empty{margin-top:20px;text-align:center}.search-empty h3,.search-empty p{margin:4px}.sources{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin:72px 0 0;padding:48px 0;border-top:1px solid var(--line)}.sources>.section-head,.sources>.grid{grid-column:1/-1}.source-coverage>div:last-child{max-width:520px;color:var(--muted)}.provider-list{padding:0;list-style:none;columns:2;column-gap:44px}.provider-list li{break-inside:avoid;padding:12px 0;border-bottom:1px solid var(--line)}.provider-list li>a{font-weight:750}.provider-list p{margin:4px 0}.detail{max-width:790px;padding:52px 0 96px}.detail p,.detail li{color:#44534e}.detail>p,.detail>section>p{font-size:1.03rem}.detail h2{margin-top:34px;font-size:1.45rem}.source{margin-top:36px;font-size:.9rem;overflow-wrap:anywhere}table{display:table;width:100%;margin-bottom:70px;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line)}th{background:#eaf0ed;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}footer{display:flex;justify-content:space-between;gap:40px;margin-top:72px;padding-top:32px;padding-bottom:42px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}footer p{max-width:520px;margin:8px 0}footer nav{display:flex;align-items:start;gap:18px;flex-wrap:wrap}footer a{color:#53625d;text-decoration:none}
-@media(max-width:900px){.home-hero{grid-template-columns:1fr;gap:32px}.hero-copy{max-width:760px}.hero-proof{max-width:620px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.deal-footer{align-items:flex-end;flex-direction:column}.deal-footer .button{width:100%}}
-@media(max-width:650px){.trust-strip>div{padding:6px 16px}.trust-strip span{margin:0 4px}.site-header,main,footer{padding-left:16px;padding-right:16px}.site-header{height:62px}.desktop-nav{display:none}.mobile-nav{display:block}.home-hero{padding:34px 0 28px;gap:18px}.hero h1{margin:8px 0 14px;font-size:2.55rem;line-height:1.02}.hero .lede{font-size:1rem}.deal-search{margin-top:18px}.search-box{padding-left:13px}.search-box button{padding:0 15px}.search-box input{font-size:.92rem}.hero-proof{display:grid;grid-template-columns:1fr auto;align-items:end;gap:3px 16px;padding:16px 18px}.hero-proof .proof-label,.hero-proof strong,.hero-proof>p{grid-column:1}.hero-proof strong{font-size:1.45rem}.hero-proof>p:not(.proof-label){margin:2px 0;color:var(--muted);font-size:.86rem}.hero-proof ul{display:none}.hero-proof>a{grid-column:2;grid-row:1/4;align-self:center;font-size:.84rem}.store-section{padding:22px 0 28px}.section-head{align-items:flex-end}.section-head h2,.sources h2{font-size:1.55rem}.text-link{font-size:.84rem}.deals-section{padding-top:10px}.grid{grid-template-columns:1fr;gap:12px}.deal-grid{margin-top:18px}.deal{padding:17px}.deal-card{min-height:0}.deal-footer{align-items:center;flex-direction:row}.deal-footer .button{width:auto}.sources{grid-template-columns:1fr;gap:14px;margin-top:52px;padding:36px 0}.sources>.section-head,.sources>.grid{grid-column:auto}.provider-list{columns:1}.hero.compact,.detail{padding:36px 0 64px}.hero.compact h1,.detail h1{font-size:2.25rem}table{display:block;max-width:100%;overflow-x:auto;white-space:nowrap}footer{display:block;margin-top:48px}footer nav{margin-top:22px;gap:14px}}
-@media(max-width:390px){.hero h1{font-size:2.25rem}.search-box>span{display:none}.search-box{padding-left:12px}.search-box button{padding:0 12px}.deal-footer{align-items:stretch;flex-direction:column}.deal-footer .button{width:100%}}
-'''
-SITE_JS='''
-(() => {
-  const form = document.getElementById("deal-search-form");
-  const input = document.getElementById("deal-search");
-  const grid = document.getElementById("deal-grid");
-  const more = document.getElementById("load-more");
-  const count = document.getElementById("deal-result-count");
-  const empty = document.getElementById("search-empty");
-  if (!form || !input || !grid || !more || !count || !empty) return;
-
-  const cards = Array.from(grid.querySelectorAll(".deal-card"));
-  const pageSize = window.matchMedia("(max-width: 650px)").matches ? 12 : 18;
-  let visibleLimit = pageSize;
-
-  const render = () => {
-    const query = input.value.trim().toLowerCase();
-    const matches = cards.filter((card) => card.dataset.search.includes(query));
-    cards.forEach((card) => {
-      const matchIndex = matches.indexOf(card);
-      card.hidden = matchIndex < 0 || (!query && matchIndex >= visibleLimit);
-    });
-    count.textContent = query ? `${matches.length} matching` : `${cards.length} active`;
-    empty.hidden = matches.length !== 0;
-    more.hidden = Boolean(query) || visibleLimit >= cards.length;
-  };
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    render();
-    document.querySelector(".deals-section")?.scrollIntoView({behavior: "smooth", block: "start"});
-  });
-  input.addEventListener("input", render);
-  more.addEventListener("click", () => {
-    visibleLimit += pageSize;
-    render();
-  });
-  render();
-})();
-'''
+STYLES=(ROOT/"templates"/"styles.css").read_text(encoding="utf-8")
+SITE_JS=(ROOT/"templates"/"site.js").read_text(encoding="utf-8")
 if __name__ == "__main__": build()

@@ -10,6 +10,12 @@ Run python scraper.py and then python build.py. The generated site is in site/. 
 
 Use a GitHub repository connected to Cloudflare Pages with build command python build.py, output directory site, and no framework preset. The generated static files require no server or runtime secrets.
 
+## Frontend assets
+
+Edit `templates/styles.css` and `templates/site.js` for the site's styling and interactions. `python build.py` copies these into `site/` and regenerates every page. Store filtering, offer types, sorting, and saved offers run in the browser. Saved offers stay in local browser storage; promo codes are copied only when they appear in the official offer text.
+
+Lucide icons and locally cached store favicons are kept in `templates/icons/` and `templates/store-icons/`. They are served locally with no third-party asset requests. The optional development command `python tools/prepare_ui_assets.py` downloads missing assets; production builds need no network access for these assets. Stores without a cached favicon use initials.
+
 ## Updating providers
 
 Edit .ilang/site.ilang under ::MODULE{PROVIDERS}. Both scraper.py and build.py read that file at runtime; changing one provider there changes the next scrape and generated provider pages.

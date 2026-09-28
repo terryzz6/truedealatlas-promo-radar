@@ -18,7 +18,7 @@ class BrandCouponPageTests(unittest.TestCase):
             with self.subTest(brand=item["brand"]):
                 path = "/guides/" + item["slug"] + ".html"
                 markup = (SITE / path.lstrip("/")).read_text(encoding="utf-8")
-                self.assertIn('<link rel="canonical" href="' + BASE + path + '">', markup)
+                self.assertIn('<link rel="canonical" href="' + BASE + path.removesuffix(".html") + '">', markup)
                 self.assertIn('<p class="answer"><strong>Answer:</strong> ' + html.escape(item["answer"], quote=True), markup)
                 self.assertIn('"@type": "FAQPage"', markup)
                 self.assertIn('<p class="brand-copyright">', markup)
@@ -34,7 +34,7 @@ class BrandCouponPageTests(unittest.TestCase):
         root = ET.parse(SITE / "sitemap.xml").getroot()
         entries = {node.findtext("{*}loc"): node.findtext("{*}lastmod") for node in root}
         for item in self.pages:
-            url = BASE + "/guides/" + item["slug"] + ".html"
+            url = BASE + "/guides/" + item["slug"]
             self.assertEqual(item["offers"][0]["checked"], entries[url])
 
 

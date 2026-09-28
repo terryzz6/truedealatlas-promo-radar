@@ -16,6 +16,9 @@ def load_data():
     articles_path=ROOT/"data"/"articles.json"
     payload["articles"]=(json.loads(articles_path.read_text(encoding="utf-8")).get("articles",[]) if articles_path.exists() else [])
     payload.setdefault("brand",cfg["meta"].get("brand","TrueDealAtlas")); payload.setdefault("niche",cfg["meta"].get("niche","US consumer brand coupons and discounts")); return cfg,payload
+def load_brand_coupon_pages():
+    path=ROOT/"data"/"brand_coupon_pages.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
 def jsonld(obj): return '<script type="application/ld+json">'+json.dumps(obj,ensure_ascii=False)+'</script>'
 def format_checked(value):
     try:
@@ -75,7 +78,7 @@ def display_offer_title(offer):
     title=str(offer.get("title", ""))
     prefix=str(offer.get("provider", ""))+":"
     return title[len(prefix):].strip() if title.lower().startswith(prefix.lower()) else title
-def page(title,desc,body,path="/",template_name=None):
+def page(title,desc,body,path="/",template_name=None,footer_brand=None):
     canonical=BASE+("/" if path=="/" else path)
     if template_name:
         template_path=ROOT/"templates"/template_name
@@ -83,7 +86,11 @@ def page(title,desc,body,path="/",template_name=None):
             body=template_path.read_text(encoding="utf-8").replace("{{content}}",body)
     nav="".join('<a href="{}"{}>{}</a>'.format(url,' aria-current="page"' if (path==url or url!="/" and path.startswith(url)) else "",label) for url,label in (("/","Coupons & deals"),("/providers/","Stores"),("/compare.html","Compare"),("/guides/","Guides")))
     search='<form class="header-search" id="deal-search-form" action="/" role="search"><label class="sr-only" for="deal-search">Search stores, coupons, and deals</label>{}<input id="deal-search" name="q" type="search" placeholder="Search stores, coupons & deals" autocomplete="off"><button class="icon-button" type="submit" aria-label="Search" title="Search">{}</button></form>'.format(icon("search"),icon("arrow-right"))
-    return '<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{}</title><meta name="description" content="{}"><meta name=\'impact-site-verification\' value=\'e0b16352-9ce9-435f-9d55-19b31ccd938b\'><link rel="canonical" href="{}"><meta property="og:title" content="{}"><meta property="og:description" content="{}"><meta property="og:url" content="{}"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="trust-strip">Offers from official store pages. Terms apply.</div><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="TrueDealAtlas home"><span class="brand-mark" aria-hidden="true">{}</span><span>TrueDealAtlas</span></a>{}<a class="saved-link" href="/?saved=1">{}<span>Saved <span data-saved-count>0</span></span></a><details class="mobile-nav"><summary aria-label="Open navigation" title="Menu">{}</summary><nav aria-label="Mobile navigation">{}</nav></details></div><nav class="desktop-nav" aria-label="Primary navigation">{}</nav></header><main id="main">{}</main><div class="toast" id="site-toast" role="status" aria-live="polite" hidden></div><footer><div><a class="footer-brand" href="/">TrueDealAtlas</a><p>Independent coupons and deals from official US store pages. Offers can change; confirm availability and terms at the store.</p></div><nav aria-label="Footer navigation"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/contact.html">Contact</a><a href="/.ilang/site.ilang">Source policy</a></nav></footer></body></html>'.format(esc(title),esc(desc),esc(canonical),esc(title),esc(desc),esc(canonical),icon("tag"),search,icon("heart"),icon("menu"),nav,nav,body)
+    markup='<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{}</title><meta name="description" content="{}"><meta name=\'impact-site-verification\' value=\'e0b16352-9ce9-435f-9d55-19b31ccd938b\'><link rel="canonical" href="{}"><meta property="og:title" content="{}"><meta property="og:description" content="{}"><meta property="og:url" content="{}"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="trust-strip">Offers from official store pages. Terms apply.</div><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="TrueDealAtlas home"><span class="brand-mark" aria-hidden="true">{}</span><span>TrueDealAtlas</span></a>{}<a class="saved-link" href="/?saved=1">{}<span>Saved <span data-saved-count>0</span></span></a><details class="mobile-nav"><summary aria-label="Open navigation" title="Menu">{}</summary><nav aria-label="Mobile navigation">{}</nav></details></div><nav class="desktop-nav" aria-label="Primary navigation">{}</nav></header><main id="main">{}</main><div class="toast" id="site-toast" role="status" aria-live="polite" hidden></div><footer><div><a class="footer-brand" href="/">TrueDealAtlas</a><p>Independent coupons and deals from official US store pages. Offers can change; confirm availability and terms at the store.</p></div><nav aria-label="Footer navigation"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/contact.html">Contact</a><a href="/.ilang/site.ilang">Source policy</a></nav></footer></body></html>'.format(esc(title),esc(desc),esc(canonical),esc(title),esc(desc),esc(canonical),icon("tag"),search,icon("heart"),icon("menu"),nav,nav,body)
+    if footer_brand:
+        note='<p class="brand-copyright">&copy; {} TrueDealAtlas. {} page.</p>'.format(datetime.now(timezone.utc).year,esc(footer_brand))
+        markup=markup.replace('</p></div><nav aria-label="Footer navigation">','</p>'+note+'</div><nav aria-label="Footer navigation">',1)
+    return markup
 def offer_card(o):
     detail="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"]))
     search_text="{} {} {} {}".format(o.get("provider",""),o.get("title",""),o.get("offer_text",""),o.get("conditions", "")).lower()
@@ -100,6 +107,13 @@ def provider_result_message(provider, has_offers):
 def article_card(article):
     path="/guides/{}.html".format(slug(article["slug"]))
     return '<article class="deal"><span class="tag">Guide</span><h3><a href="{}">{}</a></h3><p>{}</p><a class="button" href="{}">Read the guide</a></article>'.format(path,esc(article["title"]),esc(article.get("description","")),path)
+
+def brand_coupon_content(item):
+    brand=esc(item["brand"])
+    rows="".join('<tr><td>{}</td><td>{}</td><td><a href="{}" rel="nofollow noopener" target="_blank" aria-label="Official {} page (opens in a new tab)">Official {} page</a></td><td>{}</td></tr>'.format(esc(o["offer"]),esc(o["condition"]),esc(o["source"]),brand,brand,esc(o["checked"])) for o in item["offers"])
+    faq="".join('<section><h3>{}</h3><p>{}</p></section>'.format(esc(q["question"]),esc(q["answer"])) for q in item["faq"])
+    schema={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q["question"],"acceptedAnswer":{"@type":"Answer","text":q["answer"]}} for q in item["faq"]]}
+    return '<article class="detail"><p class="eyebrow">Official {} offers</p><h1>{}</h1><p class="answer"><strong>Answer:</strong> {}</p><p class="source-note">Offers can change. Confirm the displayed terms on the official site before purchasing.</p><h2>Offers and eligibility</h2><div class="table-wrap" role="region" aria-label="{} official offers" tabindex="0"><table><thead><tr><th scope="col">Offer</th><th scope="col">How to get it</th><th scope="col">Official source</th><th scope="col">Checked</th></tr></thead><tbody>{}</tbody></table></div><h2>Frequently asked questions</h2>{}{}</article>'.format(brand,esc(item["title"]),esc(item["answer"]),brand,rows,faq,jsonld(schema))
 
 def offer_list(offers, heading="Browse offers"):
     cards="".join(offer_card(o) for o in offers) or '<p class="empty static-empty">No offers currently listed. Check the official store for current availability.</p>'
@@ -130,7 +144,7 @@ def write_assets():
     if images.exists():
         shutil.copytree(images,assets/"stores",dirs_exist_ok=True)
 def build():
-    cfg,data=load_data(); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
+    cfg,data=load_data(); brand_pages=load_brand_coupon_pages(); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
     for old_deal in (SITE/"deals").glob("*.html"):
         old_deal.unlink()
     (SITE/"styles.css").write_text(STYLES,encoding="utf-8")
@@ -197,9 +211,17 @@ def build():
         abody='<article class="detail"><p class="eyebrow">Shopping guide</p><h1>{}</h1><p class="answer"><strong>Answer:</strong> {}</p><p class="muted">Published {}</p>{}<h2>Questions shoppers ask</h2>{}<h2>Sources</h2><ul>{}</ul></article>'.format(esc(article["title"]),esc(article["answer"]),esc(article.get("published_at","")),sections,faq,sources)
         (SITE/apath.lstrip("/")).write_text(page(article["title"]+" | TrueDealAtlas",article.get("description",article["title"]),abody,apath),encoding="utf-8")
         guide_links.append('<li><a href="{}">{}</a><p class="muted">{}</p></li>'.format(apath,esc(article["title"]),esc(article.get("description",""))))
+    existing_guide_slugs={slug(article["slug"]) for article in articles}
+    brand_slugs=[slug(item["slug"]) for item in brand_pages]
+    if len(brand_slugs)!=len(set(brand_slugs)) or existing_guide_slugs.intersection(brand_slugs):
+        raise ValueError("Duplicate brand coupon or guide path detected")
+    for item in brand_pages:
+        apath="/guides/{}.html".format(slug(item["slug"]))
+        (SITE/apath.lstrip("/")).write_text(page(item["title"]+" | TrueDealAtlas",item["answer"],brand_coupon_content(item),apath,footer_brand=item["brand"]),encoding="utf-8")
+        guide_links.append('<li><a href="{}">{}</a><p class="muted">Official {} offers and terms.</p></li>'.format(apath,esc(item["title"]),esc(item["brand"])))
     guides_body='<section class="hero compact"><p class="eyebrow">Evidence-led answers</p><h1>Shopping guides</h1><p>Short answers built from official offer pages and public shopper questions.</p></section><ul class="provider-list">{}</ul>'.format("".join(guide_links) or '<li class="muted">No guides published yet.</li>')
     (SITE/"guides"/"index.html").write_text(page("Shopping Guides | TrueDealAtlas","Evidence-led answers about US brand coupons and offers.",guides_body,"/guides/","provider.html"),encoding="utf-8")
-    urls=["/","/compare.html","/providers/","/guides/","/about.html","/privacy.html","/contact.html"]+["/providers/{}.html".format(slug(p["name"])) for p in data.get("providers",[])]+["/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])) for o in offers]+["/guides/{}.html".format(slug(a["slug"])) for a in articles]; lastmod=esc(data.get("generated_at",datetime.now(timezone.utc).isoformat())); (SITE/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join("<url><loc>{}{}</loc><lastmod>{}</lastmod></url>".format(BASE,u,lastmod) for u in urls)+"</urlset>",encoding="utf-8"); (SITE/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: {}/sitemap.xml\n".format(BASE),encoding="utf-8"); (SITE/".ilang").mkdir(exist_ok=True); (SITE/".ilang"/"site.ilang").write_text((ROOT/".ilang"/"site.ilang").read_text(encoding="utf-8"),encoding="utf-8")
+    urls=["/","/compare.html","/providers/","/guides/","/about.html","/privacy.html","/contact.html"]+["/providers/{}.html".format(slug(p["name"])) for p in data.get("providers",[])]+["/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])) for o in offers]+["/guides/{}.html".format(slug(a["slug"])) for a in articles]; lastmod=esc(data.get("generated_at",datetime.now(timezone.utc).isoformat())); brand_urls=[("/guides/{}.html".format(slug(item["slug"])),item["offers"][0]["checked"]) for item in brand_pages]; (SITE/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join("<url><loc>{}{}</loc><lastmod>{}</lastmod></url>".format(BASE,u,lastmod) for u in urls)+"".join("<url><loc>{}{}</loc><lastmod>{}</lastmod></url>".format(BASE,u,esc(checked)) for u,checked in brand_urls)+"</urlset>",encoding="utf-8"); (SITE/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: {}/sitemap.xml\n".format(BASE),encoding="utf-8"); (SITE/".ilang").mkdir(exist_ok=True); (SITE/".ilang"/"site.ilang").write_text((ROOT/".ilang"/"site.ilang").read_text(encoding="utf-8"),encoding="utf-8")
 STYLES=(ROOT/"templates"/"styles.css").read_text(encoding="utf-8")
 SITE_JS=(ROOT/"templates"/"site.js").read_text(encoding="utf-8")
 if __name__ == "__main__": build()

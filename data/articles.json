@@ -56,6 +56,43 @@
         }
       ],
       "published_at": "2026-09-27"
+    },
+    {
+      "slug": "old-navy-coupon-vs-sale",
+      "title": "Old Navy Coupon vs Sale Price: Which One Should You Check First?",
+      "description": "How to compare an Old Navy coupon with an advertised sale without assuming the discounts stack.",
+      "answer": "Check whether the item is already on sale, then read the coupon's exclusions and stacking rule. The checkout total, not the largest percentage in a headline, decides which option saves more.",
+      "sections": [
+        {
+          "heading": "Separate the sale from the coupon",
+          "paragraphs": [
+            "A sale price is attached to an item or category. A coupon can have a code, an account requirement, or a minimum spend. Compare the final eligible price for the exact item rather than adding the percentages together."
+          ]
+        },
+        {
+          "heading": "Look for exclusions before comparing",
+          "paragraphs": [
+            "Brand pages commonly restrict coupons by category, clearance status, payment method, or member status. Read the official terms before assuming a coupon applies to an item already marked down."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can Old Navy coupons stack with sale prices?",
+          "answer": "Only when the official terms allow it. Test the exact cart at checkout and use the result shown by Old Navy."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "Old Navy deals",
+          "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"
+        }
+      ],
+      "published_at": "2026-09-28"
     }
   ]
 }

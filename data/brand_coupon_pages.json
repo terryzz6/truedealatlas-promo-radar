@@ -3,13 +3,15 @@
     "brand": "Hostinger",
     "slug": "hostinger-coupon",
     "title": "Hostinger Coupon: Current Official Hosting Offers",
-    "answer": "No public Hostinger coupon code was confirmed on the official pages checked. The current way to save is to choose an eligible discounted plan on Hostinger's own site; check the term and renewal price before paying.",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public Hostinger coupon code was found after manually reviewing the visible hosting-offer and pricing text on Hostinger's official homepage at hostinger.com; this check covers only that page, not the entire website. The current way to save is to choose an eligible discounted plan on Hostinger's own site; check the term and renewal price before paying.",
     "offers": [
-      {"offer": "75% off Premium hosting", "condition": "Choose the Premium plan for 48 months; the displayed introductory price is $2.99/mo and the 48-month total is $143.52. Check the renewal price on the plan page.", "source": "https://www.hostinger.com/", "checked": "2026-09-28"},
-      {"offer": "30-day money-back guarantee", "condition": "Shown with Hostinger's hosting plans; review the refund policy and plan terms before purchase.", "source": "https://www.hostinger.com/", "checked": "2026-09-28"}
+      {"offer": "75% off Premium hosting", "condition": "Choose the Premium plan for 48 months; the displayed introductory price is $2.99/mo and the 48-month total is $143.52. Check the renewal price on the plan page.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.hostinger.com/", "checked": "2026-09-29"},
+      {"offer": "30-day money-back guarantee", "condition": "Shown with Hostinger's hosting plans; review the refund policy and plan terms before purchase.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.hostinger.com/", "checked": "2026-09-29"}
     ],
     "faq": [
-      {"question": "Is there a Hostinger coupon code on the official page?", "answer": "No public code was confirmed in this check. Hostinger displays the introductory discount on its plan page without a code in the offer text."},
+      {"question": "Is there a Hostinger coupon code on the official page?", "answer": "No public code was found on the official homepage reviewed on 2026-09-29. Hostinger displays the introductory discount on that page without a code in the offer text."},
       {"question": "How do I get the displayed Hostinger discount?", "answer": "Open the official Hostinger plan page, select the eligible plan and term, and compare the checkout and renewal prices before paying."}
     ]
   },
@@ -17,12 +19,14 @@
     "brand": "Shopify",
     "slug": "shopify-coupon",
     "title": "Shopify Coupon: Official Trial and Introductory Offer",
-    "answer": "No public Shopify coupon code was confirmed on the official pricing page. Shopify currently displays a 3-day free trial followed by $1/month for 3 months for most plans; start from its official pricing page and confirm the offer shown to your account.",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public Shopify coupon code was found after manually reviewing the visible trial, offer, pricing, and pricing-FAQ text on Shopify's official pricing page at shopify.com/pricing; this check covers only that page, not the entire website. Shopify currently displays a 3-day free trial followed by $1/month for 3 months for most plans; start from its official pricing page and confirm the offer shown to your account.",
     "offers": [
-      {"offer": "3-day free trial, then $1/month for 3 months", "condition": "Start from Shopify's pricing page. Its pricing FAQ says most plans start at $1 per month for the first 3 months after the trial, then switch to standard monthly pricing.", "source": "https://www.shopify.com/pricing", "checked": "2026-09-28"}
+      {"offer": "3-day free trial, then $1/month for 3 months", "condition": "Start from Shopify's pricing page. Its pricing FAQ says most plans start at $1 per month for the first 3 months after the trial, then switch to standard monthly pricing.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.shopify.com/pricing", "checked": "2026-09-29"}
     ],
     "faq": [
-      {"question": "Do I need a Shopify promo code for the introductory offer?", "answer": "No public code was confirmed on the official pricing page. Start the trial from that page and verify the price presented before subscribing."},
+      {"question": "Do I need a Shopify promo code for the introductory offer?", "answer": "No public code was found on the official pricing page reviewed on 2026-09-29. Start the trial from that page and verify the price presented before subscribing."},
       {"question": "Does the introductory price continue indefinitely?", "answer": "No. Shopify's pricing page says the introductory period is followed by standard monthly pricing."}
     ]
   },
@@ -30,12 +34,14 @@
     "brand": "Grammarly",
     "slug": "grammarly-coupon",
     "title": "Grammarly Coupon: Official Free Plan",
-    "answer": "No public Grammarly discount code was confirmed on its official plans page. Grammarly lists a Free plan at $0 USD per month; create an account from that page to use it.",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public Grammarly coupon code was found after manually reviewing the visible plan and price text on Grammarly's official plans page at grammarly.com/plans; this check covers only that page, not the entire website. Grammarly lists a Free plan at $0 USD per month; create an account from that page to use it.",
     "offers": [
-      {"offer": "Free plan at $0 USD/month", "condition": "Create a Free account from Grammarly's official plans page.", "source": "https://www.grammarly.com/plans", "checked": "2026-09-28"}
+      {"offer": "Free plan at $0 USD/month", "condition": "Create a Free account from Grammarly's official plans page.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.grammarly.com/plans", "checked": "2026-09-29"}
     ],
     "faq": [
-      {"question": "Is there a verified Grammarly promo code here?", "answer": "No public code was confirmed on the official plans page, so this page does not list one."},
+      {"question": "Is there a verified Grammarly promo code here?", "answer": "No public code was found on the official plans page reviewed on 2026-09-29, so this page does not list one."},
       {"question": "Can I use Grammarly without paying?", "answer": "Yes. Grammarly's official plans page lists a Free plan at $0 USD per month."}
     ]
   },
@@ -43,12 +49,14 @@
     "brand": "ActiveCampaign",
     "slug": "activecampaign-coupon",
     "title": "ActiveCampaign Coupon: Official Free Trial",
-    "answer": "No public ActiveCampaign coupon code was confirmed on its official site. The official offer checked is a free 14-day trial with email sign-up and no credit card needed.",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public ActiveCampaign coupon code was found after manually reviewing the visible trial and sign-up text on ActiveCampaign's official homepage at activecampaign.com; this check covers only that page, not the entire website. The official offer checked is a free 14-day trial with email sign-up and no credit card needed.",
     "offers": [
-      {"offer": "Free 14-day trial", "condition": "Sign up with an email address; the official site says no credit card is needed.", "source": "https://www.activecampaign.com/", "checked": "2026-09-28"}
+      {"offer": "Free 14-day trial", "condition": "Sign up with an email address; the official site says no credit card is needed.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.activecampaign.com/", "checked": "2026-09-29"}
     ],
     "faq": [
-      {"question": "Is a code needed for the ActiveCampaign trial?", "answer": "No public code was confirmed. Use the free-trial sign-up on the official site."},
+      {"question": "Is a code needed for the ActiveCampaign trial?", "answer": "No public code was found on the official homepage reviewed on 2026-09-29. Use the free-trial sign-up on that page."},
       {"question": "Do I need a credit card to start?", "answer": "The official page says no credit card is needed for the free trial."}
     ]
   },
@@ -56,13 +64,15 @@
     "brand": "FreshBooks",
     "slug": "freshbooks-coupon",
     "title": "FreshBooks Coupon: Official Introductory Offer",
-    "answer": "No public FreshBooks coupon code was confirmed on its official site. FreshBooks currently advertises $1/month for the first year as a limited-time offer; check the plan and final price on its own site before buying.",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public FreshBooks coupon code was found after manually reviewing the visible introductory-offer, trial, and FAQ text on FreshBooks' official homepage at freshbooks.com; this check covers only that page, not the entire website. FreshBooks currently advertises $1/month for the first year as a limited-time offer; check the plan and final price on its own site before buying.",
     "offers": [
-      {"offer": "$1/month for the first year", "condition": "Use the Buy Now & Save offer on FreshBooks' official home page. It is labeled a limited-time offer; no end date was stated in the text checked.", "source": "https://www.freshbooks.com/", "checked": "2026-09-28"},
-      {"offer": "30-day free trial", "condition": "Start the FreshBooks trial; its official FAQ says the trial includes FreshBooks features except Advanced Payments.", "source": "https://www.freshbooks.com/", "checked": "2026-09-28"}
+      {"offer": "$1/month for the first year", "condition": "Use the Buy Now & Save offer on FreshBooks' official home page. It is labeled a limited-time offer.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.freshbooks.com/", "checked": "2026-09-29"},
+      {"offer": "30-day free trial", "condition": "Start the FreshBooks trial; its official FAQ says the trial includes FreshBooks features except Advanced Payments.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.freshbooks.com/", "checked": "2026-09-29"}
     ],
     "faq": [
-      {"question": "Is there a FreshBooks coupon code on the official page?", "answer": "No public code was confirmed. FreshBooks displays its introductory offer directly on its site."},
+      {"question": "Is there a FreshBooks coupon code on the official page?", "answer": "No public code was found on the official homepage reviewed on 2026-09-29. FreshBooks displays its introductory offer directly on that page."},
       {"question": "What is excluded from the FreshBooks trial?", "answer": "FreshBooks' official FAQ says the trial includes its features except Advanced Payments."}
     ]
   }

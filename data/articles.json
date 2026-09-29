@@ -93,6 +93,43 @@
         }
       ],
       "published_at": "2026-09-28"
+    },
+    {
+      "slug": "old-navy-super-cash-explained",
+      "title": "Old Navy Super Cash: What to Verify Before Redeeming",
+      "description": "A source-first checklist for checking Old Navy Super Cash dates, thresholds, and redemption terms.",
+      "answer": "Verify the earning window, redemption window, minimum purchase, and eligible account on Old Navy's official Super Cash information before treating the certificate as a current discount.",
+      "sections": [
+        {
+          "heading": "Why the dates matter",
+          "paragraphs": [
+            "Super Cash has separate earning and redemption periods. A search snippet can mention the program while the current window has already changed, so use the official terms for the date that applies to your order."
+          ]
+        },
+        {
+          "heading": "Check the threshold and account",
+          "paragraphs": [
+            "Read the minimum-spend tier and whether the certificate is tied to a rewards account. Keep the official page open while you test the cart so the redemption rule is easy to verify."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I use Super Cash on any Old Navy order?",
+          "answer": "No assumption is safe: check the current official redemption terms, including dates, minimum spend, exclusions, and account requirements."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Super Cash information",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        },
+        {
+          "label": "Old Navy rewards sign-up",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"
+        }
+      ],
+      "published_at": "2026-09-29"
     }
   ]
 }

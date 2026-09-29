@@ -75,5 +75,100 @@
       {"question": "Is there a FreshBooks coupon code on the official page?", "answer": "No public code was found on the official homepage reviewed on 2026-09-29. FreshBooks displays its introductory offer directly on that page."},
       {"question": "What is excluded from the FreshBooks trial?", "answer": "FreshBooks' official FAQ says the trial includes its features except Advanced Payments."}
     ]
+  },
+  {
+    "brand": "HubSpot",
+    "slug": "hubspot-coupon",
+    "title": "HubSpot Coupon, Promo Code & Discount Code: Official Free CRM",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public HubSpot coupon code was found after manually reviewing the visible free-CRM, plan, and price text on HubSpot's official CRM page at hubspot.com/products/crm; this check covers only that page, not the entire website. HubSpot's official page says its free CRM is 100% free with no expiration date and requires no credit card.",
+    "offers": [
+      {"offer": "Free CRM: 100% free", "condition": "Select Get free CRM on HubSpot's official CRM page; the page says no credit card is required.", "end_date": "No expiration date.", "source": "https://www.hubspot.com/products/crm", "checked": "2026-09-29"}
+    ],
+    "faq": [
+      {"question": "Is there a HubSpot coupon, promo code, or discount code?", "answer": "No public code was found in the visible free-CRM, plan, and price text on the official CRM page reviewed on 2026-09-29."},
+      {"question": "Does HubSpot offer a free CRM instead?", "answer": "Yes. HubSpot's official CRM page says the free CRM is 100% free with no expiration date and requires no credit card."}
+    ]
+  },
+  {
+    "brand": "monday.com",
+    "slug": "monday-coupon",
+    "title": "monday Coupon, Promo Code & Discount Code: Official Free Plan and Trial",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public monday.com coupon code was found after manually reviewing the visible free-plan, trial, and pricing text on monday.com's official pricing page at monday.com/pricing; this check covers only that page, not the entire website. The page lists a $0 free-forever plan for up to two seats and a 14-day Pro trial for monday work management, monday CRM, and monday dev.",
+    "offers": [
+      {"offer": "$0 free-forever plan", "condition": "Start free with no credit card; the official pricing page lists the Free plan for up to two seats.", "end_date": "Free forever.", "source": "https://monday.com/pricing", "checked": "2026-09-29"},
+      {"offer": "14-day Pro trial", "condition": "Start the Pro trial for monday work management, monday CRM, or monday dev from the official pricing page.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://monday.com/pricing", "checked": "2026-09-29"}
+    ],
+    "faq": [
+      {"question": "Is there a monday coupon, promo code, or discount code?", "answer": "No public code was found in the visible free-plan, trial, and pricing text on the official pricing page reviewed on 2026-09-29."},
+      {"question": "Does monday.com have a free plan or free trial?", "answer": "Yes. Its official pricing page lists a $0 free-forever plan for up to two seats and a 14-day Pro trial for monday work management, monday CRM, and monday dev."}
+    ]
+  },
+  {
+    "brand": "Kit",
+    "slug": "kit-discount-code",
+    "title": "Kit Discount Code, Coupon & Promo Code: Official Free Plan and Trial",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public Kit discount code was found after manually reviewing the visible free-plan, trial, and annual-billing text on Kit's official pricing page at kit.com/pricing; this check covers only that page, not the entire website. Kit lists a $0 plan for up to 10,000 subscribers, a 14-day free trial with no credit card required, and 17% savings for yearly billing.",
+    "offers": [
+      {"offer": "$0 Free plan", "condition": "Sign up for the Free plan; the official pricing page lists it for up to 10,000 subscribers.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://kit.com/pricing", "checked": "2026-09-29"},
+      {"offer": "14-day free trial", "condition": "Start the trial from Kit's official pricing page; the page says no credit card is required.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://kit.com/pricing", "checked": "2026-09-29"},
+      {"offer": "Save 17% with yearly billing", "condition": "Choose yearly billing on Kit's official pricing page.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://kit.com/pricing", "checked": "2026-09-29"}
+    ],
+    "faq": [
+      {"question": "Is there a Kit discount code, coupon, or promo code?", "answer": "No public code was found in the visible free-plan, trial, and annual-billing text on the official pricing page reviewed on 2026-09-29."},
+      {"question": "What official Kit savings are listed?", "answer": "Kit's pricing page lists a $0 plan for up to 10,000 subscribers, a 14-day free trial with no credit card required, and 17% savings for yearly billing."}
+    ]
+  },
+  {
+    "brand": "GetResponse",
+    "slug": "getresponse-coupon",
+    "title": "GetResponse Coupon, Promo Code & Discount Code: Official Trial and Yearly Savings",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public GetResponse coupon code was found after manually reviewing the visible plan, annual-billing, and free-trial call-to-action text on GetResponse's official pricing page at getresponse.com/pricing; this check covers only that page, not the entire website. The page provides a free-trial sign-up and labels yearly billing as 18% lower than monthly billing.",
+    "offers": [
+      {"offer": "Free trial", "condition": "Use Start free trial on the official pricing page. Trial duration: Unconfirmed. Credit card requirement: Unconfirmed.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.getresponse.com/pricing", "checked": "2026-09-29"},
+      {"offer": "Yearly billing -18%", "condition": "Choose Yearly in the billing-period control on GetResponse's official pricing page.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.getresponse.com/pricing", "checked": "2026-09-29"}
+    ],
+    "faq": [
+      {"question": "Is there a GetResponse coupon, promo code, or discount code?", "answer": "No public code was found in the visible plan, annual-billing, and free-trial call-to-action text on the official pricing page reviewed on 2026-09-29."},
+      {"question": "What official GetResponse savings are listed?", "answer": "The official pricing page provides a free-trial sign-up and labels yearly billing as 18% lower than monthly billing. The trial duration and credit card requirement were unconfirmed on that page."}
+    ]
+  },
+  {
+    "brand": "AWeber",
+    "slug": "aweber-coupon",
+    "title": "AWeber Coupon, Promo Code & Discount Code: Official Trial and Annual Offer",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public AWeber coupon code was found after manually reviewing the visible trial, monthly, and annual-billing text on AWeber's official pricing page at aweber.com/pricing.htm; this check covers only that page, not the entire website. AWeber advertises a 14-day free trial and up to four months free alongside its monthly and annual billing options.",
+    "offers": [
+      {"offer": "14-day free trial", "condition": "Start the free trial from AWeber's official pricing page.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.aweber.com/pricing.htm", "checked": "2026-09-29"},
+      {"offer": "Up to four months free", "condition": "Compare the Monthly and Annually options on AWeber's official pricing page; the page advertises up to four months free.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.aweber.com/pricing.htm", "checked": "2026-09-29"}
+    ],
+    "faq": [
+      {"question": "Is there an AWeber coupon, promo code, or discount code?", "answer": "No public code was found in the visible trial, monthly, and annual-billing text on the official pricing page reviewed on 2026-09-29."},
+      {"question": "What official AWeber offers are listed?", "answer": "AWeber's official pricing page advertises a 14-day free trial and up to four months free alongside its monthly and annual billing options."}
+    ]
+  },
+  {
+    "brand": "Podia",
+    "slug": "podia-coupon",
+    "title": "Podia Coupon, Promo Code & Discount Code: Official Free Trial",
+    "reviewed": "2026-09-29",
+    "updated": "2026-09-29",
+    "answer": "On 2026-09-29, no public Podia coupon code was found after manually reviewing the visible free-trial and plan text on Podia's official pricing page at podia.com/pricing; this check covers only that page, not the entire website. Podia's pricing page offers a 14-day free trial without requiring a credit card or plan selection at signup.",
+    "offers": [
+      {"offer": "14-day free trial", "condition": "Start the trial from Podia's official pricing page; the page says no credit card or plan selection is required until you are ready.", "end_date": "No offer-specific end date found. Not finding one does not mean the offer is permanent.", "source": "https://www.podia.com/pricing", "checked": "2026-09-29"}
+    ],
+    "faq": [
+      {"question": "Is there a Podia coupon, promo code, or discount code?", "answer": "No public code was found in the visible free-trial and plan text on the official pricing page reviewed on 2026-09-29."},
+      {"question": "Does Podia have a free trial?", "answer": "Yes. Podia's official pricing page offers a 14-day free trial without requiring a credit card or plan selection at signup."}
+    ]
   }
 ]

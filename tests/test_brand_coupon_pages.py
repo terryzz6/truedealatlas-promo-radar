@@ -13,7 +13,9 @@ class BrandCouponPageTests(unittest.TestCase):
         cls.pages = load_brand_coupon_pages()
 
     def test_each_page_has_source_answer_schema_and_only_its_brand(self):
-        self.assertEqual(5, len(self.pages))
+        expected = {"Hostinger", "Shopify", "Grammarly", "ActiveCampaign", "FreshBooks", "HubSpot", "monday.com", "Kit", "GetResponse", "AWeber", "Podia"}
+        self.assertEqual(expected, {item["brand"] for item in self.pages})
+        self.assertNotIn("Kinsta", expected)
         for item in self.pages:
             with self.subTest(brand=item["brand"]):
                 path = "/guides/" + item["slug"] + ".html"
@@ -35,11 +37,32 @@ class BrandCouponPageTests(unittest.TestCase):
                 for offer in item["offers"]:
                     self.assertIn(offer["source"], markup)
                     self.assertEqual("2026-09-29", offer["checked"])
-                    self.assertEqual("No offer-specific end date found. Not finding one does not mean the offer is permanent.", offer["end_date"])
+                    self.assertIn(offer["end_date"], {"No offer-specific end date found. Not finding one does not mean the offer is permanent.", "No expiration date.", "Free forever."})
                     self.assertIn(offer["checked"], markup)
                     self.assertIn(offer["end_date"], markup)
                 dated_faq = next(q for q in item["faq"] if "code" in q["question"].lower())
                 self.assertIn("2026-09-29", dated_faq["answer"])
+
+    def test_new_pages_include_keyword_variants_and_bidirectional_links(self):
+        expected_terms = {
+            "hubspot-coupon": ("HubSpot Coupon", "Promo Code", "Discount Code"),
+            "monday-coupon": ("monday Coupon", "Promo Code", "Discount Code"),
+            "kit-discount-code": ("Kit Discount Code", "Coupon", "Promo Code"),
+            "getresponse-coupon": ("GetResponse Coupon", "Promo Code", "Discount Code"),
+            "aweber-coupon": ("AWeber Coupon", "Promo Code", "Discount Code"),
+            "podia-coupon": ("Podia Coupon", "Promo Code", "Discount Code"),
+        }
+        directory = (SITE / "guides" / "index.html").read_text(encoding="utf-8")
+        for item in self.pages:
+            if item["slug"] not in expected_terms:
+                continue
+            with self.subTest(brand=item["brand"]):
+                markup = (SITE / "guides" / (item["slug"] + ".html")).read_text(encoding="utf-8")
+                for term in expected_terms[item["slug"]]:
+                    self.assertIn(term, item["title"])
+                    self.assertIn(term.lower(), markup.lower())
+                self.assertIn('href="/guides/"', markup)
+                self.assertIn('href="/guides/' + item["slug"] + '"', directory)
 
     def test_sitemap_has_one_entry_per_brand_with_check_date(self):
         root = ET.parse(SITE / "sitemap.xml").getroot()

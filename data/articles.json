@@ -101,10 +101,22 @@
       "answer": "On September 29, 2026, Old Navy's official sale page displayed \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" The fetched official text did not expose a promo code, so we are not publishing one. Check the official coupon page and keep a code only if Old Navy shows it and checkout changes your total.",
       "visual_title": "From official source to a publishable result",
       "visual_steps": [
-        {"label": "Source", "detail": "Capture the exact official wording"},
-        {"label": "Classify", "detail": "Sale, code, account, or card"},
-        {"label": "Test", "detail": "Keep one cart unchanged"},
-        {"label": "Decide", "detail": "Publish evidence or reject"}
+        {
+          "label": "Source",
+          "detail": "Capture the exact official wording"
+        },
+        {
+          "label": "Classify",
+          "detail": "Sale, code, account, or card"
+        },
+        {
+          "label": "Test",
+          "detail": "Keep one cart unchanged"
+        },
+        {
+          "label": "Decide",
+          "detail": "Publish evidence or reject"
+        }
       ],
       "sections": [
         {
@@ -164,6 +176,84 @@
         }
       ],
       "published_at": "2026-09-29"
+    },
+    {
+      "slug": "old-navy-coupon-code",
+      "title": "Old Navy Coupon Code: What to Verify Before Checkout",
+      "description": "A four-state evidence check for separating an Old Navy coupon code from a sale, account offer, or card benefit.",
+      "answer": "Treat an Old Navy offer as a coupon code only when the official source exposes a code string and checkout accepts it for your cart. On the September 29 official-page snapshot, the sale wording was visible but no code string was captured, so it should be recorded as a promotion, not copied into a code field.",
+      "visual_title": "Coupon-code evidence gate",
+      "visual_steps": [
+        {
+          "label": "Source",
+          "detail": "Official page and timestamp"
+        },
+        {
+          "label": "State",
+          "detail": "Choose one of four offer types"
+        },
+        {
+          "label": "Terms",
+          "detail": "Record every stated condition"
+        },
+        {
+          "label": "Gate",
+          "detail": "Require source, code, terms, and result"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Use four evidence states",
+          "paragraphs": [
+            "State 1 is an automatic sale: the price changes without a code. State 2 is a visible code: the official page provides a string to enter. State 3 is account-gated: signing in or joining a program is required. State 4 is payment-gated: a specific card or payment method is part of eligibility.",
+            "Do not collapse those states into one coupon claim. Record the state first, then record the discount wording and conditions exactly as Old Navy presents them."
+          ]
+        },
+        {
+          "heading": "What the official snapshot did and did not prove",
+          "paragraphs": [
+            "The September 29, 2026 fetch of Old Navy's official sale page found \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" It proved that the wording appeared on the official source at the fetch time. It did not prove that every product qualified, that the offer stacked, or that a public code existed."
+          ]
+        },
+        {
+          "heading": "Diagnose a failed code in a fixed order",
+          "paragraphs": [
+            "Check the date first, then the item category, minimum spend, signed-in account, payment method, and stacking rule. Keeping this order prevents repeated random code attempts from hiding the real eligibility failure.",
+            "Save the checkout message in your notes. \"Expired,\" \"not eligible,\" and \"already applied\" are different outcomes and should not be reported as the same failure."
+          ]
+        },
+        {
+          "heading": "The publish-or-reject rule",
+          "paragraphs": [
+            "Publish a code only when its official source, exact string, applicable conditions, and checkout result can be recorded together. If any of those four fields is missing, publish the official promotion wording without a code or do not list the offer."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Why does an Old Navy coupon code fail?",
+          "answer": "Check date, product category, minimum spend, account, payment method, and stacking rules in that order, then keep the exact checkout message."
+        },
+        {
+          "question": "Is a sale banner a coupon code?",
+          "answer": "No. A banner can describe an automatic promotion. Call it a coupon code only when the official source provides a code string."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy official sale page",
+          "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"
+        },
+        {
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "Old Navy sign-up offers",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"
+        }
+      ],
+      "published_at": "2026-09-30"
     }
   ]
 }

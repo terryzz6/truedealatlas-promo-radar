@@ -95,38 +95,72 @@
       "published_at": "2026-09-28"
     },
     {
-      "slug": "old-navy-super-cash-explained",
-      "title": "Old Navy Super Cash: What to Verify Before Redeeming",
-      "description": "A source-first checklist for checking Old Navy Super Cash dates, thresholds, and redemption terms.",
-      "answer": "Verify the earning window, redemption window, minimum purchase, and eligible account on Old Navy's official Super Cash information before treating the certificate as a current discount.",
+      "slug": "old-navy-promo-code",
+      "title": "Old Navy Promo Code: What the Official Page Shows Today",
+      "description": "A dated, source-first check of Old Navy's official promotion text, plus a reproducible checkout test.",
+      "answer": "On September 29, 2026, Old Navy's official sale page displayed \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" The fetched official text did not expose a promo code, so we are not publishing one. Check the official coupon page and keep a code only if Old Navy shows it and checkout changes your total.",
+      "visual_title": "From official source to a publishable result",
+      "visual_steps": [
+        {"label": "Source", "detail": "Capture the exact official wording"},
+        {"label": "Classify", "detail": "Sale, code, account, or card"},
+        {"label": "Test", "detail": "Keep one cart unchanged"},
+        {"label": "Decide", "detail": "Publish evidence or reject"}
+      ],
       "sections": [
         {
-          "heading": "Why the dates matter",
+          "heading": "The dated official-source snapshot",
           "paragraphs": [
-            "Super Cash has separate earning and redemption periods. A search snippet can mention the program while the current window has already changed, so use the official terms for the date that applies to your order."
+            "TrueDealAtlas fetched Old Navy's official sale page on September 29, 2026 Pacific time. The promotion text found there was \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" It described a promotion but the fetched text did not provide a code string.",
+            "That distinction matters: a percentage headline is not automatically a reusable promo code. We link the exact official source and state what was and was not present instead of filling the gap with a code from a coupon directory."
           ]
         },
         {
-          "heading": "Check the threshold and account",
+          "heading": "Classify the offer before testing it",
           "paragraphs": [
-            "Read the minimum-spend tier and whether the certificate is tied to a rewards account. Keep the official page open while you test the cart so the redemption rule is easy to verify."
+            "Label what you see as one of four things: an automatic sale, a visible promo code, an account-only benefit, or a payment-card benefit. Only the second category gives you a code to enter. The other three may change the price without a code.",
+            "Also record the date, eligible category, minimum spend, account requirement, and payment requirement. If the official page does not state one of those fields, mark it unknown rather than guessing."
+          ]
+        },
+        {
+          "heading": "Use a five-line checkout record",
+          "paragraphs": [
+            "For one exact cart, write down the official offer wording, the item subtotal before the promotion, the code entered or \"no code shown,\" the checkout message, and the final total before payment. This creates a result another shopper can reproduce without relying on a screenshot of an old headline.",
+            "Change only one variable at a time. If you swap the item, account, shipping method, and code together, you cannot tell which condition caused the discount to appear or fail."
+          ]
+        },
+        {
+          "heading": "Stop when the evidence stops",
+          "paragraphs": [
+            "Do not publish or share a code when it appears only on a third-party page, when the official terms are unavailable, or when checkout rejects it. A failed code is not a prompt to invent a spelling variation. It is a failed result for that cart and date."
           ]
         }
       ],
       "faq": [
         {
-          "question": "Can I use Super Cash on any Old Navy order?",
-          "answer": "No assumption is safe: check the current official redemption terms, including dates, minimum spend, exclusions, and account requirements."
+          "question": "What Old Navy promo code did the official page show on September 29?",
+          "answer": "The fetched official sale-page text showed the promotion wording but did not expose a code string, so TrueDealAtlas does not publish a code for that snapshot."
+        },
+        {
+          "question": "Where should I verify a code?",
+          "answer": "Use Old Navy's official coupons page and the checkout result for the exact cart. A third-party listing alone is not enough evidence."
+        },
+        {
+          "question": "Does extra 30% off mean every item qualifies?",
+          "answer": "No. Match the exact item and any account, category, minimum-spend, or payment rules shown by Old Navy, then verify the final total before paying."
         }
       ],
       "sources": [
         {
-          "label": "Old Navy Super Cash information",
-          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+          "label": "Old Navy official sale page",
+          "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"
         },
         {
-          "label": "Old Navy rewards sign-up",
-          "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "TrueDealAtlas Old Navy source record",
+          "url": "https://truedealatlas.com/providers/old-navy.html"
         }
       ],
       "published_at": "2026-09-29"

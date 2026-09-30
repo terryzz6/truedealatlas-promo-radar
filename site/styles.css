@@ -170,6 +170,20 @@ td:last-child { min-width: 185px; color: var(--muted); font-size: 12px; }
 .detail h2 { margin: 28px 0 10px; font-size: 21px; }
 .detail h3 { margin: 22px 0 8px; font-size: 17px; }
 .detail p, .detail li { color: #444f5c; }
+.guide-detail { max-width: 840px; }
+.guide-detail .answer { margin: 18px 0 0; padding: 16px 18px; border-left: 4px solid var(--green); background: var(--white); color: #34404c; }
+.guide-detail .answer strong { color: var(--green-dark); }
+.guide-date { margin-top: 10px; font-size: 13px; }
+.guide-detail > section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.guide-detail > section h2, .guide-detail > section h3 { margin-top: 0; }
+.evidence-visual { margin: 24px 0 6px; padding: 0; }
+.evidence-visual figcaption { margin-bottom: 12px; color: var(--ink); font-size: 16px; font-weight: 700; }
+.evidence-flow { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1px; margin: 0; padding: 0; list-style: none; background: var(--line); border-block: 1px solid var(--line); }
+.evidence-flow li { min-width: 0; padding: 14px; background: var(--white); }
+.evidence-flow strong, .evidence-flow span { display: block; }
+.evidence-flow strong { margin: 8px 0 3px; color: var(--ink); font-size: 14px; }
+.evidence-flow li > span:last-child { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.flow-number { display: grid !important; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--green); color: white !important; font-size: 12px; font-weight: 700; }
 .detail .checked { margin-bottom: 22px; font-size: 13px; }
 .detail-saving { margin-top: 18px; font-size: 30px; font-weight: 800; color: var(--green-dark); }
 .offer-detail .coupon-code { max-width: 360px; }
@@ -234,6 +248,11 @@ footer nav a { color: var(--muted); text-decoration: none; }
   .source-coverage > a { grid-column: auto; }
   .hero.compact { padding: 24px 0 22px; }
   .hero.compact h1, .detail h1 { font-size: 28px; }
+  .guide-detail .answer { padding: 14px; }
+  .evidence-flow { grid-template-columns: minmax(0,1fr); }
+  .evidence-flow li { display: grid; grid-template-columns: 28px minmax(0,1fr); column-gap: 10px; }
+  .evidence-flow strong { margin: 1px 0 3px; }
+  .evidence-flow li > span:last-child { grid-column: 2; }
   .store-directory { grid-template-columns: minmax(0,1fr); }
   .directory-toolbar { flex-wrap: wrap; }
   .directory-search { flex: 1; }

@@ -108,6 +108,13 @@ def article_card(article):
     path="/guides/{}.html".format(slug(article["slug"]))
     return '<article class="deal"><span class="tag">Guide</span><h3><a href="{}">{}</a></h3><p>{}</p><a class="button" href="{}">Read the guide</a></article>'.format(path,esc(article["title"]),esc(article.get("description","")),path)
 
+def article_visual(article):
+    steps=article.get("visual_steps",[])
+    if not steps:
+        return ""
+    items="".join('<li><span class="flow-number">{}</span><strong>{}</strong><span>{}</span></li>'.format(index,esc(step["label"]),esc(step["detail"])) for index,step in enumerate(steps,1))
+    return '<figure class="evidence-visual" aria-label="{}"><figcaption>{}</figcaption><ol class="evidence-flow">{}</ol></figure>'.format(esc(article.get("visual_title","Evidence flow")),esc(article.get("visual_title","Evidence flow")),items)
+
 def brand_coupon_content(item):
     brand=esc(item["brand"])
     rows="".join('<tr><td>{}</td><td>{}</td><td><a href="{}" rel="nofollow noopener" target="_blank" aria-label="Official {} page (opens in a new tab)">Official {} page</a></td><td>{}</td><td>{}</td></tr>'.format(esc(o["offer"]),esc(o["condition"]),esc(o["source"]),brand,brand,esc(o["end_date"]),esc(o["checked"])) for o in item["offers"])
@@ -208,7 +215,7 @@ def build():
         sections="".join("<section><h2>{}</h2>{}</section>".format(esc(section["heading"]),"".join("<p>{}</p>".format(esc(paragraph)) for paragraph in section.get("paragraphs",[]))) for section in article.get("sections",[]))
         faq="".join("<section><h3>{}</h3><p>{}</p></section>".format(esc(item["question"]),esc(item["answer"])) for item in article.get("faq",[]))
         sources="".join('<li><a href="{}" rel="nofollow noopener">{}</a></li>'.format(esc(source["url"]),esc(source["label"])) for source in article.get("sources",[]))
-        abody='<article class="detail"><p class="eyebrow">Shopping guide</p><h1>{}</h1><p class="answer"><strong>Answer:</strong> {}</p><p class="muted">Published {}</p>{}<h2>Questions shoppers ask</h2>{}<h2>Sources</h2><ul>{}</ul></article>'.format(esc(article["title"]),esc(article["answer"]),esc(article.get("published_at","")),sections,faq,sources)
+        abody='<article class="detail guide-detail"><p class="eyebrow">Shopping guide</p><h1>{}</h1><p class="answer"><strong>Answer:</strong> {}</p>{}<p class="muted guide-date">Published {}</p>{}<h2>Questions shoppers ask</h2>{}<h2>Sources</h2><ul>{}</ul></article>'.format(esc(article["title"]),esc(article["answer"]),article_visual(article),esc(article.get("published_at","")),sections,faq,sources)
         (SITE/apath.lstrip("/")).write_text(page(article["title"]+" | TrueDealAtlas",article.get("description",article["title"]),abody,apath),encoding="utf-8")
         guide_links.append('<li><a href="{}">{}</a><p class="muted">{}</p></li>'.format(apath,esc(article["title"]),esc(article.get("description",""))))
     existing_guide_slugs={slug(article["slug"]) for article in articles}

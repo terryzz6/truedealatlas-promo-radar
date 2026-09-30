@@ -33,49 +33,55 @@
     "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy deals", "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"}]
   },
   {
-    "slug": "old-navy-super-cash-explained",
-    "title": "Old Navy Super Cash: What to Verify Before Redeeming",
-    "description": "A source-first checklist for checking Old Navy Super Cash dates, thresholds, and redemption terms.",
-    "answer": "Verify the earning window, redemption window, minimum purchase, and eligible account on Old Navy's official Super Cash information before treating the certificate as a current discount.",
-    "sections": [{"heading": "Why the dates matter", "paragraphs": ["Super Cash has separate earning and redemption periods. A search snippet can mention the program while the current window has already changed, so use the official terms for the date that applies to your order."]}, {"heading": "Check the threshold and account", "paragraphs": ["Read the minimum-spend tier and whether the certificate is tied to a rewards account. Keep the official page open while you test the cart so the redemption rule is easy to verify."]}],
-    "faq": [{"question": "Can I use Super Cash on any Old Navy order?", "answer": "No assumption is safe: check the current official redemption terms, including dates, minimum spend, exclusions, and account requirements."}],
-    "sources": [{"label": "Old Navy Super Cash information", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}, {"label": "Old Navy rewards sign-up", "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"}]
-  },
-  {
     "slug": "old-navy-promo-code",
-    "title": "Old Navy Promo Code: How to Check the Current Code",
-    "description": "A practical check for an Old Navy promo code before you spend time building a cart.",
-    "answer": "Check Old Navy's official coupons page first, then test the promo code against the exact items in your cart. Keep the code only when the checkout total changes under the published terms.",
+    "publish_on": "2026-09-29",
+    "title": "Old Navy Promo Code: What the Official Page Shows Today",
+    "description": "A dated, source-first check of Old Navy's official promotion text, plus a reproducible checkout test.",
+    "answer": "On September 29, 2026, Old Navy's official sale page displayed \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" The fetched official text did not expose a promo code, so we are not publishing one. Check the official coupon page and keep a code only if Old Navy shows it and checkout changes your total.",
+    "visual_title": "From official source to a publishable result",
+    "visual_steps": [{"label": "Source", "detail": "Capture the exact official wording"}, {"label": "Classify", "detail": "Sale, code, account, or card"}, {"label": "Test", "detail": "Keep one cart unchanged"}, {"label": "Decide", "detail": "Publish evidence or reject"}],
     "sections": [
-      {"heading": "Start with the source, not a copied code list", "paragraphs": ["Old Navy's official coupons page is the reference point for a current promo code, its end date, and any exclusions. A code shown on another page can be expired, account-limited, or tied to a different category.", "Record the wording of the offer and the source URL before opening checkout. That makes it easier to tell a true code from a headline or sale price."]},
-      {"heading": "Test the code on an eligible cart", "paragraphs": ["Add the exact item, enter the code once, and compare the before-and-after total. Check whether clearance, gift cards, shipping, or a minimum spend changes eligibility instead of assuming the advertised percentage applies to everything."]}
+      {"heading": "The dated official-source snapshot", "paragraphs": ["TrueDealAtlas fetched Old Navy's official sale page on September 29, 2026 Pacific time. The promotion text found there was \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" It described a promotion but the fetched text did not provide a code string.", "That distinction matters: a percentage headline is not automatically a reusable promo code. We link the exact official source and state what was and was not present instead of filling the gap with a code from a coupon directory."]},
+      {"heading": "Classify the offer before testing it", "paragraphs": ["Label what you see as one of four things: an automatic sale, a visible promo code, an account-only benefit, or a payment-card benefit. Only the second category gives you a code to enter. The other three may change the price without a code.", "Also record the date, eligible category, minimum spend, account requirement, and payment requirement. If the official page does not state one of those fields, mark it unknown rather than guessing."]},
+      {"heading": "Use a five-line checkout record", "paragraphs": ["For one exact cart, write down the official offer wording, the item subtotal before the promotion, the code entered or \"no code shown,\" the checkout message, and the final total before payment. This creates a result another shopper can reproduce without relying on a screenshot of an old headline.", "Change only one variable at a time. If you swap the item, account, shipping method, and code together, you cannot tell which condition caused the discount to appear or fail."]},
+      {"heading": "Stop when the evidence stops", "paragraphs": ["Do not publish or share a code when it appears only on a third-party page, when the official terms are unavailable, or when checkout rejects it. A failed code is not a prompt to invent a spelling variation. It is a failed result for that cart and date."]}
     ],
-    "faq": [{"question": "Where should I find an Old Navy promo code?", "answer": "Use Old Navy's official coupons and promo codes page, then confirm the result in checkout before relying on the code."}],
-    "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "TrueDealAtlas Old Navy provider page", "url": "https://truedealatlas.com/providers/old-navy.html"}]
+    "faq": [{"question": "What Old Navy promo code did the official page show on September 29?", "answer": "The fetched official sale-page text showed the promotion wording but did not expose a code string, so TrueDealAtlas does not publish a code for that snapshot."}, {"question": "Where should I verify a code?", "answer": "Use Old Navy's official coupons page and the checkout result for the exact cart. A third-party listing alone is not enough evidence."}, {"question": "Does extra 30% off mean every item qualifies?", "answer": "No. Match the exact item and any account, category, minimum-spend, or payment rules shown by Old Navy, then verify the final total before paying."}],
+    "sources": [{"label": "Old Navy official sale page", "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"}, {"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "TrueDealAtlas Old Navy source record", "url": "https://truedealatlas.com/providers/old-navy.html"}]
   },
   {
     "slug": "old-navy-coupon-code",
+    "publish_on": "2026-09-30",
     "title": "Old Navy Coupon Code: What to Verify Before Checkout",
-    "description": "How to distinguish an Old Navy coupon code from a sale banner, sign-up offer, or restricted promotion.",
-    "answer": "Verify the coupon code's eligible products, account rules, minimum spend, and expiry on Old Navy's official page. Then confirm that the discount appears in checkout before paying.",
+    "description": "A four-state evidence check for separating an Old Navy coupon code from a sale, account offer, or card benefit.",
+    "answer": "Treat an Old Navy offer as a coupon code only when the official source exposes a code string and checkout accepts it for your cart. On the September 29 official-page snapshot, the sale wording was visible but no code string was captured, so it should be recorded as a promotion, not copied into a code field.",
+    "visual_title": "Coupon-code evidence gate",
+    "visual_steps": [{"label": "Source", "detail": "Official page and timestamp"}, {"label": "State", "detail": "Choose one of four offer types"}, {"label": "Terms", "detail": "Record every stated condition"}, {"label": "Gate", "detail": "Require source, code, terms, and result"}],
     "sections": [
-      {"heading": "Identify what kind of offer it is", "paragraphs": ["A coupon code may apply to full-price items, a first order, a card purchase, or a rewards account. A sale banner may require no code at all. Treat these as separate offers until the official terms say otherwise."]},
-      {"heading": "Read the exclusions that affect the total", "paragraphs": ["Check category exclusions, clearance rules, payment requirements, and whether the code can combine with another promotion. The final cart total is the useful result, not the largest percentage in a search snippet."]}
+      {"heading": "Use four evidence states", "paragraphs": ["State 1 is an automatic sale: the price changes without a code. State 2 is a visible code: the official page provides a string to enter. State 3 is account-gated: signing in or joining a program is required. State 4 is payment-gated: a specific card or payment method is part of eligibility.", "Do not collapse those states into one coupon claim. Record the state first, then record the discount wording and conditions exactly as Old Navy presents them."]},
+      {"heading": "What the official snapshot did and did not prove", "paragraphs": ["The September 29, 2026 fetch of Old Navy's official sale page found \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" It proved that the wording appeared on the official source at the fetch time. It did not prove that every product qualified, that the offer stacked, or that a public code existed."]},
+      {"heading": "Diagnose a failed code in a fixed order", "paragraphs": ["Check the date first, then the item category, minimum spend, signed-in account, payment method, and stacking rule. Keeping this order prevents repeated random code attempts from hiding the real eligibility failure.", "Save the checkout message in your notes. \"Expired,\" \"not eligible,\" and \"already applied\" are different outcomes and should not be reported as the same failure."]},
+      {"heading": "The publish-or-reject rule", "paragraphs": ["Publish a code only when its official source, exact string, applicable conditions, and checkout result can be recorded together. If any of those four fields is missing, publish the official promotion wording without a code or do not list the offer."]}
     ],
-    "faq": [{"question": "Why does an Old Navy coupon code fail?", "answer": "The cart may contain excluded items, miss a minimum spend, use the wrong account or payment method, or fall outside the code's valid dates. Check the official terms and checkout message."}],
-    "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy sign-up offers", "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"}]
+    "faq": [{"question": "Why does an Old Navy coupon code fail?", "answer": "Check date, product category, minimum spend, account, payment method, and stacking rules in that order, then keep the exact checkout message."}, {"question": "Is a sale banner a coupon code?", "answer": "No. A banner can describe an automatic promotion. Call it a coupon code only when the official source provides a code string."}],
+    "sources": [{"label": "Old Navy official sale page", "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"}, {"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy sign-up offers", "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"}]
   },
   {
     "slug": "old-navy-discount-code",
+    "publish_on": "2026-10-01",
     "title": "Old Navy Discount Code: A Cart-First Verification Guide",
-    "description": "A cart-first way to check whether an Old Navy discount code actually applies to your order.",
-    "answer": "Use the official Old Navy offer page to confirm the discount code's dates and restrictions, then apply it to the specific cart you intend to buy. Do not treat an untested percentage as savings.",
+    "description": "A reproducible cart worksheet for deciding whether an Old Navy discount code changes the delivered total.",
+    "answer": "A discount code counts as savings only when Old Navy's official terms support it and the same cart has a lower final total after the code. Compare one cart twice, record shipping separately, and reject any code that is absent from the official source or fails at checkout.",
+    "visual_title": "Controlled cart comparison",
+    "visual_steps": [{"label": "Baseline", "detail": "Record the unchanged cart"}, {"label": "Code test", "detail": "Apply one official code"}, {"label": "Compare", "detail": "Separate discount and shipping"}, {"label": "Record", "detail": "Keep response and final total"}],
     "sections": [
-      {"heading": "Match the code to the item", "paragraphs": ["Some discount codes are limited to a department, new customers, a card, or an order threshold. Write down the qualifying item and required condition before comparing codes."]},
-      {"heading": "Compare the final price", "paragraphs": ["Run the code through checkout and compare the total with the same cart without it. Include shipping, taxes, and any membership condition in the check so a higher headline discount does not hide a higher final cost."]}
+      {"heading": "Build the baseline cart", "paragraphs": ["Choose the exact item, size, color, quantity, account state, and delivery method. Record merchandise subtotal, automatic sale amount, shipping, and the pre-tax total before entering a code. The baseline is invalid if any of those inputs changes during the test."]},
+      {"heading": "Run one controlled code test", "paragraphs": ["Enter one code from an official Old Navy source. Record the checkout response, the code discount line, any change to shipping, and the new pre-tax total. The measured savings are the baseline pre-tax total minus the tested pre-tax total; do not add a headline percentage to an already reduced price unless checkout actually does so."]},
+      {"heading": "Compare percentage savings with shipping", "paragraphs": ["When only one code can be used, compare the dollar value removed by the percentage code with the shipping charge removed by a free-shipping offer. Use the same cart and delivery method for both tests. Choose the lower final total, not the larger-looking headline."]},
+      {"heading": "Apply the evidence boundary", "paragraphs": ["The September 29 official sale-page snapshot showed \"Fall Faves Up To 50% Off + Extra 30% Off Purchase\" but exposed no code string in fetched text. That is enough to report the official promotion wording and not enough to invent or repeat a discount code."]}
     ],
-    "faq": [{"question": "Are Old Navy discount codes the same as sale prices?", "answer": "No. A sale price can be built into the item page, while a discount code has separate terms. Compare the final eligible cart total for the exact item."}],
-    "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy deals", "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"}]
+    "faq": [{"question": "Are Old Navy discount codes the same as sale prices?", "answer": "No. A sale can be automatic, while a discount code is entered and has separate terms. Compare the same cart before and after the code."}, {"question": "Should I choose a percentage code or free shipping?", "answer": "Test both on the same eligible cart when the terms allow only one. Choose the option with the lower final total."}],
+    "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy official sale page", "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"}]
   },
   {
     "slug": "old-navy-coupons-in-store",

@@ -254,6 +254,78 @@
         }
       ],
       "published_at": "2026-09-30"
+    },
+    {
+      "slug": "old-navy-discount-code",
+      "title": "Old Navy Discount Code: A Cart-First Verification Guide",
+      "description": "A reproducible cart worksheet for deciding whether an Old Navy discount code changes the delivered total.",
+      "answer": "A discount code counts as savings only when Old Navy's official terms support it and the same cart has a lower final total after the code. Compare one cart twice, record shipping separately, and reject any code that is absent from the official source or fails at checkout.",
+      "visual_title": "Controlled cart comparison",
+      "visual_steps": [
+        {
+          "label": "Baseline",
+          "detail": "Record the unchanged cart"
+        },
+        {
+          "label": "Code test",
+          "detail": "Apply one official code"
+        },
+        {
+          "label": "Compare",
+          "detail": "Separate discount and shipping"
+        },
+        {
+          "label": "Record",
+          "detail": "Keep response and final total"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Build the baseline cart",
+          "paragraphs": [
+            "Choose the exact item, size, color, quantity, account state, and delivery method. Record merchandise subtotal, automatic sale amount, shipping, and the pre-tax total before entering a code. The baseline is invalid if any of those inputs changes during the test."
+          ]
+        },
+        {
+          "heading": "Run one controlled code test",
+          "paragraphs": [
+            "Enter one code from an official Old Navy source. Record the checkout response, the code discount line, any change to shipping, and the new pre-tax total. The measured savings are the baseline pre-tax total minus the tested pre-tax total; do not add a headline percentage to an already reduced price unless checkout actually does so."
+          ]
+        },
+        {
+          "heading": "Compare percentage savings with shipping",
+          "paragraphs": [
+            "When only one code can be used, compare the dollar value removed by the percentage code with the shipping charge removed by a free-shipping offer. Use the same cart and delivery method for both tests. Choose the lower final total, not the larger-looking headline."
+          ]
+        },
+        {
+          "heading": "Apply the evidence boundary",
+          "paragraphs": [
+            "The September 29 official sale-page snapshot showed \"Fall Faves Up To 50% Off + Extra 30% Off Purchase\" but exposed no code string in fetched text. That is enough to report the official promotion wording and not enough to invent or repeat a discount code."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Are Old Navy discount codes the same as sale prices?",
+          "answer": "No. A sale can be automatic, while a discount code is entered and has separate terms. Compare the same cart before and after the code."
+        },
+        {
+          "question": "Should I choose a percentage code or free shipping?",
+          "answer": "Test both on the same eligible cart when the terms allow only one. Choose the option with the lower final total."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "Old Navy official sale page",
+          "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"
+        }
+      ],
+      "published_at": "2026-10-01"
     }
   ]
 }

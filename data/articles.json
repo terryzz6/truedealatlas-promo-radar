@@ -326,6 +326,43 @@
         }
       ],
       "published_at": "2026-10-01"
+    },
+    {
+      "slug": "old-navy-coupons-in-store",
+      "title": "Old Navy Coupons In Store: What to Check Before You Go",
+      "description": "How to check whether an Old Navy coupon is usable in a store rather than only online.",
+      "answer": "Confirm the coupon's channel, date, barcode or account requirement, and exclusions on Old Navy's official terms before traveling to a store. A code that works online may not be accepted at the register.",
+      "sections": [
+        {
+          "heading": "Check the redemption channel",
+          "paragraphs": [
+            "Look for language that says online, in store, app, or both. If a coupon needs a barcode, rewards account, or phone number, prepare that requirement before checkout rather than assuming a typed code will work."
+          ]
+        },
+        {
+          "heading": "Bring the terms that matter",
+          "paragraphs": [
+            "Verify the valid dates, minimum purchase, category exclusions, and whether the offer is limited to one transaction. Keep the official page available so the cashier or your account can show the same condition."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I use an Old Navy online coupon in store?",
+          "answer": "Only when the official terms include in-store redemption. Confirm the channel and any barcode or account requirement before relying on it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "Old Navy Super Cash information",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        }
+      ],
+      "published_at": "2026-10-02"
     }
   ]
 }

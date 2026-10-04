@@ -400,6 +400,47 @@
         }
       ],
       "published_at": "2026-10-03"
+    },
+    {
+      "slug": "old-navy-promo",
+      "title": "Old Navy Promo: How to Compare the Current Ways to Save",
+      "description": "A source-first way to compare an Old Navy promo, sale price, sign-up offer, and rewards benefit.",
+      "answer": "Compare the official promo's final eligible price with any sale, sign-up, or rewards condition in the same cart. Choose the offer that Old Navy actually applies, not the one with the biggest headline.",
+      "sections": [
+        {
+          "heading": "Separate the saving mechanisms",
+          "paragraphs": [
+            "An Old Navy promo may be a sale, a coupon code, a new-customer offer, a card benefit, or Super Cash. Each can have a different audience, date window, and exclusion list, so do not combine the labels as if they were one code."
+          ]
+        },
+        {
+          "heading": "Make one checkout comparison",
+          "paragraphs": [
+            "Use the same item and quantity for each eligible option. Record the final total and the condition needed to receive it, then keep the offer that is both valid and practical for your order."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is the best Old Navy promo?",
+          "answer": "The best option is the current official offer that applies to your exact cart after its restrictions and any required account or payment condition are included."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "Old Navy deals",
+          "url": "https://oldnavy.gap.com/browse/category.do?cid=26190"
+        },
+        {
+          "label": "Old Navy Super Cash information",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        }
+      ],
+      "published_at": "2026-10-04"
     }
   ]
 }

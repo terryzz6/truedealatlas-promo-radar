@@ -441,6 +441,47 @@
         }
       ],
       "published_at": "2026-10-04"
+    },
+    {
+      "slug": "old-navy-free-shipping-code",
+      "title": "Old Navy Free Shipping Code: Check the Threshold First",
+      "description": "How to verify whether an Old Navy free shipping code is needed, current, and valid for your order.",
+      "answer": "Check Old Navy's official shipping and promotion terms first because free shipping may be automatic above a threshold or limited to rewards members. Test the delivered total before assuming a code is required.",
+      "sections": [
+        {
+          "heading": "Find out whether shipping is automatic",
+          "paragraphs": [
+            "Some Old Navy shipping offers depend on order value, membership, a promotion window, or the delivery method. Read the official terms to see whether a code exists or whether the benefit appears automatically in checkout."
+          ]
+        },
+        {
+          "heading": "Check the order total and destination",
+          "paragraphs": [
+            "Use the actual items and delivery address in checkout, then verify the shipping line before paying. A free-shipping headline may exclude oversized items, expedited delivery, or orders below the stated threshold."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do I need an Old Navy free shipping code?",
+          "answer": "Not always. Check the current official shipping terms and your checkout total; the offer may apply automatically when the order and account meet the requirements."
+        },
+        {
+          "question": "How do you get free shipping at Old Navy?",
+          "answer": "Start from Old Navy's official promotion and shipping terms. Free shipping may apply automatically above the stated order threshold or for rewards members; confirm the shipping line in checkout before paying."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Coupons & Promo Codes",
+          "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"
+        },
+        {
+          "label": "Old Navy sign-up offers",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"
+        }
+      ],
+      "published_at": "2026-10-05"
     }
   ]
 }

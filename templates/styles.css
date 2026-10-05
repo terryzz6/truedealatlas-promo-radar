@@ -228,7 +228,9 @@ footer nav a { color: var(--muted); text-decoration: none; }
   .store-section { padding: 18px 0 20px; }
   .section-head h2 { font-size: 19px; }
   .store-strip { display: flex; overflow-x: auto; scrollbar-width: thin; padding-bottom: 6px; }
+  .store-strip { scroll-snap-type: x mandatory; }
   .store-strip a { flex: 0 0 145px; min-height: 64px; }
+  .store-strip a { scroll-snap-align: start; }
   .js-enabled .offer-tabs { margin-top: 12px; gap: 0; }
   .offer-tabs button { padding-inline: 11px; font-size: 13px; }
   .filter-fields { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; width: 100%; }

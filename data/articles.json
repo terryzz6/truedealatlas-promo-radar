@@ -447,6 +447,25 @@
       "title": "Old Navy Free Shipping Code: Check the Threshold First",
       "description": "How to verify whether an Old Navy free shipping code is needed, current, and valid for your order.",
       "answer": "Check Old Navy's official shipping and promotion terms first because free shipping may be automatic above a threshold or limited to rewards members. Test the delivered total before assuming a code is required.",
+      "visual_title": "Free-shipping evidence check",
+      "visual_steps": [
+        {
+          "label": "Terms",
+          "detail": "Read the current official shipping terms"
+        },
+        {
+          "label": "Eligibility",
+          "detail": "Match the cart, account, and destination"
+        },
+        {
+          "label": "Checkout",
+          "detail": "Inspect the shipping line before payment"
+        },
+        {
+          "label": "Decision",
+          "detail": "Keep only savings that checkout applies"
+        }
+      ],
       "sections": [
         {
           "heading": "Find out whether shipping is automatic",

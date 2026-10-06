@@ -161,7 +161,7 @@ def build():
     paths=["{}-{}".format(slug(o["provider"]),slug(o["title"])) for o in offers]
     if len(paths) != len(set(paths)):
         raise ValueError("Duplicate deal paths detected; scraper titles must be unique")
-    articles=data.get("articles",[])
+    articles=sorted(data.get("articles",[]),key=lambda article:article.get("published_at","") or "",reverse=True)
     guide_cards="".join(article_card(a) for a in articles[:6])
     guide_section='<section class="guides-section"><div class="section-head"><h2>Shopping guides</h2><a class="text-link" href="/guides/">All guides {}</a></div><div class="grid">{}</div></section>'.format(icon("arrow-right"),guide_cards) if guide_cards else ""
     provider_counts={}
@@ -217,7 +217,7 @@ def build():
         sources="".join('<li><a href="{}" rel="nofollow noopener">{}</a></li>'.format(esc(source["url"]),esc(source["label"])) for source in article.get("sources",[]))
         abody='<article class="detail guide-detail"><p class="eyebrow">Shopping guide</p><h1>{}</h1><p class="answer"><strong>Answer:</strong> {}</p>{}<p class="muted guide-date">Published {}</p>{}<h2>Questions shoppers ask</h2>{}<h2>Sources</h2><ul>{}</ul></article>'.format(esc(article["title"]),esc(article["answer"]),article_visual(article),esc(article.get("published_at","")),sections,faq,sources)
         (SITE/apath.lstrip("/")).write_text(page(article["title"]+" | TrueDealAtlas",article.get("description",article["title"]),abody,apath),encoding="utf-8")
-        guide_links.append('<li><a href="{}">{}</a><p class="muted">{}</p></li>'.format(apath,esc(article["title"]),esc(article.get("description",""))))
+        guide_links.append((article.get("published_at","") or "",'<li><a href="{}">{}</a><p class="muted">{}</p></li>'.format(apath,esc(article["title"]),esc(article.get("description","")))))
     existing_guide_slugs={slug(article["slug"]) for article in articles}
     brand_slugs=[slug(item["slug"]) for item in brand_pages]
     if len(brand_slugs)!=len(set(brand_slugs)) or existing_guide_slugs.intersection(brand_slugs):
@@ -226,8 +226,9 @@ def build():
         apath="/guides/{}.html".format(slug(item["slug"]))
         public_path=apath.removesuffix(".html")
         (SITE/apath.lstrip("/")).write_text(page(item["title"]+" | TrueDealAtlas",item["answer"],brand_coupon_content(item),public_path,footer_brand=item["brand"]),encoding="utf-8")
-        guide_links.append('<li><a href="{}">{}</a><p class="muted">Official {} offers and terms.</p></li>'.format(public_path,esc(item["title"]),esc(item["brand"])))
-    guides_body='<section class="hero compact"><p class="eyebrow">Evidence-led answers</p><h1>Shopping guides</h1><p>Short answers built from official offer pages and public shopper questions.</p></section><ul class="provider-list">{}</ul>'.format("".join(guide_links) or '<li class="muted">No guides published yet.</li>')
+        guide_links.append((item.get("updated","") or "",'<li><a href="{}">{}</a><p class="muted">Official {} offers and terms.</p></li>'.format(public_path,esc(item["title"]),esc(item["brand"]))))
+    guide_links.sort(key=lambda entry:entry[0],reverse=True)
+    guides_body='<section class="hero compact"><p class="eyebrow">Evidence-led answers</p><h1>Shopping guides</h1><p>Short answers built from official offer pages and public shopper questions.</p></section><ul class="provider-list">{}</ul>'.format("".join(markup for _,markup in guide_links) or '<li class="muted">No guides published yet.</li>')
     (SITE/"guides"/"index.html").write_text(page("Shopping Guides | TrueDealAtlas","Evidence-led answers about US brand coupons and offers.",guides_body,"/guides/","provider.html"),encoding="utf-8")
     urls=["/","/compare.html","/providers/","/guides/","/about.html","/privacy.html","/contact.html"]+["/providers/{}.html".format(slug(p["name"])) for p in data.get("providers",[])]+["/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])) for o in offers]+["/guides/{}.html".format(slug(a["slug"])) for a in articles]; lastmod=esc(data.get("generated_at",datetime.now(timezone.utc).isoformat())); brand_urls=[("/guides/{}".format(slug(item["slug"])),item["updated"]) for item in brand_pages]; (SITE/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join("<url><loc>{}{}</loc><lastmod>{}</lastmod></url>".format(BASE,u,lastmod) for u in urls)+"".join("<url><loc>{}{}</loc><lastmod>{}</lastmod></url>".format(BASE,u,esc(checked)) for u,checked in brand_urls)+"</urlset>",encoding="utf-8"); (SITE/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: {}/sitemap.xml\n".format(BASE),encoding="utf-8"); (SITE/".ilang").mkdir(exist_ok=True); (SITE/".ilang"/"site.ilang").write_text((ROOT/".ilang"/"site.ilang").read_text(encoding="utf-8"),encoding="utf-8")
 STYLES=(ROOT/"templates"/"styles.css").read_text(encoding="utf-8")

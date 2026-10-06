@@ -1,7 +1,9 @@
 import html
+import json
 import re
 import unittest
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 from build import BASE, SITE, build, load_brand_coupon_pages
 
@@ -70,6 +72,19 @@ class BrandCouponPageTests(unittest.TestCase):
         for item in self.pages:
             url = BASE + "/guides/" + item["slug"]
             self.assertEqual(item["updated"], entries[url])
+
+    def test_guide_directory_is_sorted_by_publish_date_newest_first(self):
+        root = Path(__file__).resolve().parents[1]
+        articles = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))["articles"]
+        dated_slugs = [(item["published_at"], item["slug"]) for item in articles]
+        dated_slugs.extend((item["updated"], item["slug"]) for item in self.pages)
+        expected = [slug for _, slug in sorted(dated_slugs, key=lambda entry: entry[0], reverse=True)]
+
+        markup = (SITE / "guides" / "index.html").read_text(encoding="utf-8")
+        directory = markup.split('<ul class="provider-list">', 1)[1].split("</ul>", 1)[0]
+        actual = re.findall(r'href="/guides/([^".]+)(?:\.html)?"', directory)
+
+        self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":

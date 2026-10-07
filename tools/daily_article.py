@@ -30,6 +30,10 @@ def select_next(queue, published, today):
     return next((item for item, publish_on in dated if publish_on is None), None)
 
 
+def queue_exhausted(queue, published):
+    return not any(item.get("slug") not in published for item in queue)
+
+
 def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
     payload = json.loads(ARTICLES.read_text(encoding="utf-8")) if ARTICLES.exists() else {"articles": []}
@@ -40,6 +44,9 @@ def main():
 
     next_item = select_next(queue, published, today)
     if next_item is None:
+        if queue_exhausted(queue, published):
+            print("editorial_queue=exhausted")
+            raise SystemExit(1)
         print("editorial_queue=no_due_item")
         return
     item = dict(next_item)

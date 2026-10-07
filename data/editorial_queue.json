@@ -130,5 +130,70 @@
     ],
     "faq": [{"question": "Do I need an Old Navy free shipping code?", "answer": "Not always. Check the current official shipping terms and your checkout total; the offer may apply automatically when the order and account meet the requirements."}, {"question": "How do you get free shipping at Old Navy?", "answer": "Start from Old Navy's official promotion and shipping terms. Free shipping may apply automatically above the stated order threshold or for rewards members; confirm the shipping line in checkout before paying."}],
     "sources": [{"label": "Old Navy Coupons & Promo Codes", "url": "https://oldnavy.gap.com/page/coupons-promo-codes?cid=1114260"}, {"label": "Old Navy sign-up offers", "url": "https://oldnavy.gap.com/browse/info.do?cid=3055041"}]
+  },
+  {
+    "slug": "old-navy-super-cash",
+    "publish_on": "2026-10-07",
+    "title": "Old Navy Super Cash: How Earning and Redemption Work",
+    "description": "The official Old Navy Super Cash thresholds, delivery methods, exclusions, and stacking rules in one source-checked guide.",
+    "answer": "During an eligible earn period, a qualifying merchandise purchase of $25 or more earns one universal Super Cash code. During a later eligible redeem period, the code is worth $20 off $50-$99.99, $40 off $100-$149.99, or $60 off $150 or more. Old Navy's public page did not display the current period dates when checked on October 7, 2026, so verify the active window before relying on a code.",
+    "visual_title": "Super Cash thresholds at a glance",
+    "visual_steps": [{"label": "Earn", "detail": "Spend $25+ in an eligible earn period"}, {"label": "$20 off", "detail": "Redeem on $50-$99.99"}, {"label": "$40 off", "detail": "Redeem on $100-$149.99"}, {"label": "$60 off", "detail": "Redeem on $150+"}],
+    "sections": [
+      {"heading": "Separate the earn window from the redeem window", "paragraphs": ["Super Cash is not an always-on discount. Old Navy describes an eligible earn period followed by a subsequent eligible redeem period. The public program page explained the thresholds but did not show the current start or end dates in its visible text on October 7, 2026, so those dates are unknown until Old Navy publishes them.", "Treat the code as future value, not an immediate reduction to the purchase that earned it. Check the official page and your account for the active redeem window before planning a cart around it."]},
+      {"heading": "Know where the code arrives", "paragraphs": ["Online shoppers receive a qualifying code by email within approximately 24 hours. In-store shoppers receive a paper coupon code at checkout. Encore members also have earned codes attached to their account.", "A code earned online can be redeemed in a participating store, and a code earned in a participating store can be redeemed online, subject to the eligible period and program terms."]},
+      {"heading": "Apply the threshold to eligible merchandise", "paragraphs": ["The earn and redeem thresholds exclude gift cards, packaging, shipping and handling, gift wrap, and taxes. Old Navy says merchandise sold and shipped by third parties may count toward a redemption threshold but does not receive a share of the discount.", "Only one Super Cash coupon can be redeemed per transaction, up to $60. If the purchase is below the threshold needed for the coupon's full value, the applicable lower discount can be used and the unused potential value is forfeited."]},
+      {"heading": "Check stacking and membership separately", "paragraphs": ["Super Cash cannot be combined with other coupons, promotions, or an employee discount. Encore members may redeem reward points in addition to Super Cash code savings.", "Old Navy states that all customers have been eligible to earn and redeem Super Cash since June 6, 2026. Encore membership is no longer required, although members get account-based code tracking and reward-point benefits."]}
+    ],
+    "faq": [{"question": "What is Old Navy Super Cash?", "answer": "It is a coupon program with separate earn and redeem periods. A qualifying $25-or-more merchandise purchase earns a code that can later provide a tiered discount when the redeem threshold is met."}, {"question": "Can Old Navy Super Cash be combined with another coupon?", "answer": "No. The official program page says Super Cash cannot be redeemed with other coupons or promotions, though Encore members may also redeem reward points."}, {"question": "Do you need an Encore membership to earn Super Cash?", "answer": "No. Old Navy says all customers can earn and redeem Super Cash as of June 6, 2026; membership adds code tracking and other member benefits."}],
+    "sources": [{"label": "Old Navy Super Cash program and terms", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}, {"label": "TrueDealAtlas Old Navy official-source record", "url": "https://truedealatlas.com/providers/old-navy.html"}]
+  },
+  {
+    "slug": "old-navy-rewards-program",
+    "publish_on": "2026-10-08",
+    "title": "Old Navy Rewards Program: Core, Premier, and All-Access Compared",
+    "description": "A source-checked comparison of Old Navy Encore membership levels, points, shipping thresholds, and cardmember conditions.",
+    "answer": "Old Navy's Encore program has three levels: Core is free to join, Premier begins after $350 or more in annual spend, and All-Access is for Encore Cardmembers. The official page lists 5 points per $1 at the family of brands for Core and Premier members, while eligible cardmembers earn 25 points per $1 there when the card is the required payment type.",
+    "visual_title": "Encore membership levels",
+    "visual_steps": [{"label": "Core", "detail": "Free membership"}, {"label": "Premier", "detail": "$350+ annual spend"}, {"label": "All-Access", "detail": "Encore Cardmember"}, {"label": "Verify", "detail": "Check terms before checkout"}],
+    "sections": [{"heading": "Start with the level, not the headline", "paragraphs": ["Core membership is free. Premier status is shown for members with $350 or more in annual spend. All-Access benefits require an Encore credit card, so card approval and payment terms are separate from free membership."]}, {"heading": "Match points to the payment method", "paragraphs": ["The official comparison shows Core and Premier members earning 5 points per $1 at the family of brands. It shows eligible All-Access Cardmembers earning 25 points per $1 there, subject to the card and rewards terms."]}, {"heading": "Treat shipping and birthday benefits as conditional", "paragraphs": ["The page lists free shipping thresholds by level and says members must be signed in. Birthday bonuses are for eligible members and designated family members, with the gift and additional conditions determined by Gap Inc."]}],
+    "faq": [{"question": "Is Old Navy Encore free?", "answer": "Core membership is listed as free to join. Premier depends on annual spend, while All-Access requires an Encore credit card."}, {"question": "How many points do Old Navy members earn?", "answer": "The official page lists 5 points per $1 at the family of brands for Core and Premier members, with different cardmember earning terms for All-Access."}],
+    "sources": [{"label": "Old Navy Encore membership", "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"}, {"label": "Old Navy rewards program terms", "url": "https://oldnavy.gap.com/Asset_Archive/AllBrands/Loyalty/terms/terms-conditions.html?v=on1"}]
+  },
+  {
+    "slug": "old-navy-birthday-bonus",
+    "publish_on": "2026-10-09",
+    "title": "Old Navy Birthday Bonus: What the Official Page Actually Promises",
+    "description": "What Old Navy publicly states about the Encore birthday bonus, without inventing an amount or coupon code.",
+    "answer": "Old Navy lists a birthday bonus for eligible Encore members and eligible designated family members, but its public membership page does not state a fixed dollar amount or universal coupon code. Gap Inc. selects the gift, and additional eligibility terms can apply.",
+    "visual_title": "Birthday bonus evidence check",
+    "visual_steps": [{"label": "Join", "detail": "Use an eligible Encore account"}, {"label": "Profile", "detail": "Keep birthday details current"}, {"label": "Offer", "detail": "Read the account-specific bonus"}, {"label": "Terms", "detail": "Do not assume a fixed amount"}],
+    "sections": [{"heading": "Do not turn a benefit into a made-up code", "paragraphs": ["The official Encore page names a birthday bonus but does not publish a universal amount or code. A third-party claim about a fixed percentage is not enough to state that every member receives it."]}, {"heading": "Eligibility depends on the account", "paragraphs": ["Old Navy says the benefit is for eligible program members and eligible designated family members. The gift is selected by Gap Inc. and may carry additional terms, so the account offer is the source to check."]}],
+    "faq": [{"question": "Does Old Navy give a birthday discount?", "answer": "Old Navy lists a birthday bonus for eligible Encore members, but the public page does not promise a fixed amount. Check the offer delivered to the eligible account."}],
+    "sources": [{"label": "Old Navy Encore membership and birthday details", "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"}, {"label": "Old Navy rewards program terms", "url": "https://oldnavy.gap.com/Asset_Archive/AllBrands/Loyalty/terms/terms-conditions.html?v=on1"}]
+  },
+  {
+    "slug": "old-navy-member-free-shipping",
+    "publish_on": "2026-10-10",
+    "title": "Old Navy Member Free Shipping: Which Threshold Applies?",
+    "description": "Compare the official Encore free-shipping thresholds for Core, Premier, and All-Access members.",
+    "answer": "Old Navy's Encore page lists free basic or standard shipping on qualifying online orders of $50 or more for signed-in Core and Premier members. Eligible All-Access Cardmembers can receive free standard shipping on qualifying orders of $35 or more when using the required Gap Inc. or Encore credit card.",
+    "visual_title": "Member shipping threshold check",
+    "visual_steps": [{"label": "Sign in", "detail": "Use the eligible online account"}, {"label": "Core", "detail": "$50+ free basic shipping"}, {"label": "Premier", "detail": "$50+ free standard shipping"}, {"label": "All-Access", "detail": "$35+ with eligible card"}],
+    "sections": [{"heading": "Identify the membership level first", "paragraphs": ["Core, Premier, and All-Access do not have identical shipping terms. The threshold and shipping speed shown by Old Navy depend on the account level and, for All-Access, the eligible card payment."]}, {"heading": "Calculate the threshold after discounts", "paragraphs": ["The official details say the qualifying online total is measured after discounts and before taxes. The order must ship to one U.S. address, including Puerto Rico, and choosing another shipping method may add charges."]}],
+    "faq": [{"question": "Do Old Navy members get free shipping?", "answer": "Eligible signed-in members can receive free shipping when their order meets the threshold for their level. Confirm the shipping line before payment."}],
+    "sources": [{"label": "Old Navy Encore membership and shipping details", "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"}, {"label": "Old Navy rewards program terms", "url": "https://oldnavy.gap.com/Asset_Archive/AllBrands/Loyalty/terms/terms-conditions.html?v=on1"}]
+  },
+  {
+    "slug": "old-navy-super-cash-stacking",
+    "publish_on": "2026-10-11",
+    "title": "Can You Stack Old Navy Super Cash With Coupons?",
+    "description": "The official stacking rule for Super Cash, other coupons, promotions, employee discounts, and Encore reward points.",
+    "answer": "Old Navy says Super Cash cannot be redeemed with another coupon, promotion, or employee discount. Encore members may redeem reward points in addition to Super Cash savings, which is a separate exception stated on the official program page.",
+    "visual_title": "Super Cash stacking decision",
+    "visual_steps": [{"label": "Super Cash", "detail": "Apply one eligible code"}, {"label": "Coupons", "detail": "Do not combine"}, {"label": "Promotions", "detail": "Do not combine"}, {"label": "Points", "detail": "Encore points may apply"}],
+    "sections": [{"heading": "Separate coupons from reward points", "paragraphs": ["The official terms prohibit combining Super Cash with other coupons or promotions. They separately allow Encore members to redeem reward points alongside Super Cash code savings."]}, {"heading": "Use one Super Cash coupon per transaction", "paragraphs": ["Old Navy limits redemption to one Super Cash coupon per transaction, up to $60. A shopper can redeem more coupons in separate eligible transactions, but unused value on a partially used coupon is forfeited."]}],
+    "faq": [{"question": "Can I use a promo code with Old Navy Super Cash?", "answer": "No. The official page says Super Cash cannot be redeemed with other coupons or promotions."}, {"question": "Can I use Old Navy rewards points with Super Cash?", "answer": "Yes, Old Navy states that Encore members may redeem reward points in addition to Super Cash code savings."}],
+    "sources": [{"label": "Old Navy Super Cash program and stacking terms", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}]
   }
 ]

@@ -176,6 +176,9 @@ td:last-child { min-width: 185px; color: var(--muted); font-size: 12px; }
 .guide-date { margin-top: 10px; font-size: 13px; }
 .guide-detail > section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
 .guide-detail > section h2, .guide-detail > section h3 { margin-top: 0; }
+.guide-detail > ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.guide-detail > ul a { display: block; min-height: 44px; padding: 11px 14px; border-left: 3px solid #8aaccb; background: var(--white); text-decoration: none; }
+.guide-detail > ul a:hover { background: var(--sky); text-decoration: underline; }
 .evidence-visual { margin: 24px 0 6px; padding: 0; }
 .evidence-visual figcaption { margin-bottom: 12px; color: var(--ink); font-size: 16px; font-weight: 700; }
 .evidence-flow { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1px; margin: 0; padding: 0; list-style: none; background: var(--line); border-block: 1px solid var(--line); }

@@ -501,6 +501,86 @@
         }
       ],
       "published_at": "2026-10-05"
+    },
+    {
+      "slug": "old-navy-super-cash",
+      "title": "Old Navy Super Cash: How Earning and Redemption Work",
+      "description": "The official Old Navy Super Cash thresholds, delivery methods, exclusions, and stacking rules in one source-checked guide.",
+      "answer": "During an eligible earn period, a qualifying merchandise purchase of $25 or more earns one universal Super Cash code. During a later eligible redeem period, the code is worth $20 off $50-$99.99, $40 off $100-$149.99, or $60 off $150 or more. Old Navy's public page did not display the current period dates when checked on October 7, 2026, so verify the active window before relying on a code.",
+      "visual_title": "Super Cash thresholds at a glance",
+      "visual_steps": [
+        {
+          "label": "Earn",
+          "detail": "Spend $25+ in an eligible earn period"
+        },
+        {
+          "label": "$20 off",
+          "detail": "Redeem on $50-$99.99"
+        },
+        {
+          "label": "$40 off",
+          "detail": "Redeem on $100-$149.99"
+        },
+        {
+          "label": "$60 off",
+          "detail": "Redeem on $150+"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Separate the earn window from the redeem window",
+          "paragraphs": [
+            "Super Cash is not an always-on discount. Old Navy describes an eligible earn period followed by a subsequent eligible redeem period. The public program page explained the thresholds but did not show the current start or end dates in its visible text on October 7, 2026, so those dates are unknown until Old Navy publishes them.",
+            "Treat the code as future value, not an immediate reduction to the purchase that earned it. Check the official page and your account for the active redeem window before planning a cart around it."
+          ]
+        },
+        {
+          "heading": "Know where the code arrives",
+          "paragraphs": [
+            "Online shoppers receive a qualifying code by email within approximately 24 hours. In-store shoppers receive a paper coupon code at checkout. Encore members also have earned codes attached to their account.",
+            "A code earned online can be redeemed in a participating store, and a code earned in a participating store can be redeemed online, subject to the eligible period and program terms."
+          ]
+        },
+        {
+          "heading": "Apply the threshold to eligible merchandise",
+          "paragraphs": [
+            "The earn and redeem thresholds exclude gift cards, packaging, shipping and handling, gift wrap, and taxes. Old Navy says merchandise sold and shipped by third parties may count toward a redemption threshold but does not receive a share of the discount.",
+            "Only one Super Cash coupon can be redeemed per transaction, up to $60. If the purchase is below the threshold needed for the coupon's full value, the applicable lower discount can be used and the unused potential value is forfeited."
+          ]
+        },
+        {
+          "heading": "Check stacking and membership separately",
+          "paragraphs": [
+            "Super Cash cannot be combined with other coupons, promotions, or an employee discount. Encore members may redeem reward points in addition to Super Cash code savings.",
+            "Old Navy states that all customers have been eligible to earn and redeem Super Cash since June 6, 2026. Encore membership is no longer required, although members get account-based code tracking and reward-point benefits."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is Old Navy Super Cash?",
+          "answer": "It is a coupon program with separate earn and redeem periods. A qualifying $25-or-more merchandise purchase earns a code that can later provide a tiered discount when the redeem threshold is met."
+        },
+        {
+          "question": "Can Old Navy Super Cash be combined with another coupon?",
+          "answer": "No. The official program page says Super Cash cannot be redeemed with other coupons or promotions, though Encore members may also redeem reward points."
+        },
+        {
+          "question": "Do you need an Encore membership to earn Super Cash?",
+          "answer": "No. Old Navy says all customers can earn and redeem Super Cash as of June 6, 2026; membership adds code tracking and other member benefits."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Super Cash program and terms",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        },
+        {
+          "label": "TrueDealAtlas Old Navy official-source record",
+          "url": "https://truedealatlas.com/providers/old-navy.html"
+        }
+      ],
+      "published_at": "2026-10-07"
     }
   ]
 }

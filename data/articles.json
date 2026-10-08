@@ -581,6 +581,72 @@
         }
       ],
       "published_at": "2026-10-07"
+    },
+    {
+      "slug": "old-navy-rewards-program",
+      "title": "Old Navy Rewards Program: Core, Premier, and All-Access Compared",
+      "description": "A source-checked comparison of Old Navy Encore membership levels, points, shipping thresholds, and cardmember conditions.",
+      "answer": "Old Navy's Encore program has three levels: Core is free to join, Premier begins after $350 or more in annual spend, and All-Access is for Encore Cardmembers. The official page lists 5 points per $1 at the family of brands for Core and Premier members, while eligible cardmembers earn 25 points per $1 there when the card is the required payment type.",
+      "visual_title": "Encore membership levels",
+      "visual_steps": [
+        {
+          "label": "Core",
+          "detail": "Free membership"
+        },
+        {
+          "label": "Premier",
+          "detail": "$350+ annual spend"
+        },
+        {
+          "label": "All-Access",
+          "detail": "Encore Cardmember"
+        },
+        {
+          "label": "Verify",
+          "detail": "Check terms before checkout"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Start with the level, not the headline",
+          "paragraphs": [
+            "Core membership is free. Premier status is shown for members with $350 or more in annual spend. All-Access benefits require an Encore credit card, so card approval and payment terms are separate from free membership."
+          ]
+        },
+        {
+          "heading": "Match points to the payment method",
+          "paragraphs": [
+            "The official comparison shows Core and Premier members earning 5 points per $1 at the family of brands. It shows eligible All-Access Cardmembers earning 25 points per $1 there, subject to the card and rewards terms."
+          ]
+        },
+        {
+          "heading": "Treat shipping and birthday benefits as conditional",
+          "paragraphs": [
+            "The page lists free shipping thresholds by level and says members must be signed in. Birthday bonuses are for eligible members and designated family members, with the gift and additional conditions determined by Gap Inc."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is Old Navy Encore free?",
+          "answer": "Core membership is listed as free to join. Premier depends on annual spend, while All-Access requires an Encore credit card."
+        },
+        {
+          "question": "How many points do Old Navy members earn?",
+          "answer": "The official page lists 5 points per $1 at the family of brands for Core and Premier members, with different cardmember earning terms for All-Access."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Encore membership",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"
+        },
+        {
+          "label": "Old Navy rewards program terms",
+          "url": "https://oldnavy.gap.com/Asset_Archive/AllBrands/Loyalty/terms/terms-conditions.html?v=on1"
+        }
+      ],
+      "published_at": "2026-10-08"
     }
   ]
 }

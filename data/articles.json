@@ -647,6 +647,62 @@
         }
       ],
       "published_at": "2026-10-08"
+    },
+    {
+      "slug": "old-navy-birthday-bonus",
+      "title": "Old Navy Birthday Bonus: What the Official Page Actually Promises",
+      "description": "What Old Navy publicly states about the Encore birthday bonus, without inventing an amount or coupon code.",
+      "answer": "Old Navy lists a birthday bonus for eligible Encore members and eligible designated family members, but its public membership page does not state a fixed dollar amount or universal coupon code. Gap Inc. selects the gift, and additional eligibility terms can apply.",
+      "visual_title": "Birthday bonus evidence check",
+      "visual_steps": [
+        {
+          "label": "Join",
+          "detail": "Use an eligible Encore account"
+        },
+        {
+          "label": "Profile",
+          "detail": "Keep birthday details current"
+        },
+        {
+          "label": "Offer",
+          "detail": "Read the account-specific bonus"
+        },
+        {
+          "label": "Terms",
+          "detail": "Do not assume a fixed amount"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Do not turn a benefit into a made-up code",
+          "paragraphs": [
+            "The official Encore page names a birthday bonus but does not publish a universal amount or code. A third-party claim about a fixed percentage is not enough to state that every member receives it."
+          ]
+        },
+        {
+          "heading": "Eligibility depends on the account",
+          "paragraphs": [
+            "Old Navy says the benefit is for eligible program members and eligible designated family members. The gift is selected by Gap Inc. and may carry additional terms, so the account offer is the source to check."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does Old Navy give a birthday discount?",
+          "answer": "Old Navy lists a birthday bonus for eligible Encore members, but the public page does not promise a fixed amount. Check the offer delivered to the eligible account."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Encore membership and birthday details",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"
+        },
+        {
+          "label": "Old Navy rewards program terms",
+          "url": "https://oldnavy.gap.com/Asset_Archive/AllBrands/Loyalty/terms/terms-conditions.html?v=on1"
+        }
+      ],
+      "published_at": "2026-10-09"
     }
   ]
 }

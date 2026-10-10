@@ -1,6 +1,6 @@
 # ILANG: ROLE=builder; READ=.ilang/site.ilang + data/offers.json; OUTPUT=site/; NEVER=fake prices
 from __future__ import annotations
-import html, json, re, shutil
+import hashlib, html, json, re, shutil
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
@@ -90,7 +90,8 @@ def page(title,desc,body,path="/",template_name=None,footer_brand=None):
     if footer_brand:
         note='<p class="brand-copyright">&copy; {} TrueDealAtlas. {} page.</p>'.format(datetime.now(timezone.utc).year,esc(footer_brand))
         markup=markup.replace('</p></div><nav aria-label="Footer navigation">','</p>'+note+'</div><nav aria-label="Footer navigation">',1)
-    return markup
+    styles_version=hashlib.sha256((ROOT/"templates"/"styles.css").read_bytes()).hexdigest()[:12]
+    return markup.replace('href="/styles.css"','href="/styles.css?v={}"'.format(styles_version))
 def offer_card(o):
     detail="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"]))
     search_text="{} {} {} {}".format(o.get("provider",""),o.get("title",""),o.get("offer_text",""),o.get("conditions", "")).lower()

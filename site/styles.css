@@ -171,7 +171,7 @@ td:last-child { min-width: 185px; color: var(--muted); font-size: 12px; }
 .detail h3 { margin: 22px 0 8px; font-size: 17px; }
 .detail p, .detail li { color: #444f5c; }
 .guide-detail { max-width: 840px; }
-.guide-detail .answer { margin: 18px 0 0; padding: 16px 18px; border-left: 4px solid var(--green); background: var(--white); color: #34404c; }
+.guide-detail .answer { margin: 18px 0 0; padding: 16px 18px; border-left: 4px solid var(--green); background: var(--mint); box-shadow: 0 2px 8px #20262e12; color: #34404c; }
 .guide-detail .answer strong { color: var(--green-dark); }
 .guide-date { margin-top: 10px; font-size: 13px; }
 .guide-detail > section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }

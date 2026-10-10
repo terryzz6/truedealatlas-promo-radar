@@ -708,6 +708,62 @@
         }
       ],
       "published_at": "2026-10-09"
+    },
+    {
+      "slug": "old-navy-member-free-shipping",
+      "title": "Old Navy Member Free Shipping: Which Threshold Applies?",
+      "description": "Compare the official Encore free-shipping thresholds for Core, Premier, and All-Access members.",
+      "answer": "Old Navy's Encore page lists free basic or standard shipping on qualifying online orders of $50 or more for signed-in Core and Premier members. Eligible All-Access Cardmembers can receive free standard shipping on qualifying orders of $35 or more when using the required Gap Inc. or Encore credit card.",
+      "visual_title": "Member shipping threshold check",
+      "visual_steps": [
+        {
+          "label": "Sign in",
+          "detail": "Use the eligible online account"
+        },
+        {
+          "label": "Core",
+          "detail": "$50+ free basic shipping"
+        },
+        {
+          "label": "Premier",
+          "detail": "$50+ free standard shipping"
+        },
+        {
+          "label": "All-Access",
+          "detail": "$35+ with eligible card"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Identify the membership level first",
+          "paragraphs": [
+            "Core, Premier, and All-Access do not have identical shipping terms. The threshold and shipping speed shown by Old Navy depend on the account level and, for All-Access, the eligible card payment."
+          ]
+        },
+        {
+          "heading": "Calculate the threshold after discounts",
+          "paragraphs": [
+            "The official details say the qualifying online total is measured after discounts and before taxes. The order must ship to one U.S. address, including Puerto Rico, and choosing another shipping method may add charges."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do Old Navy members get free shipping?",
+          "answer": "Eligible signed-in members can receive free shipping when their order meets the threshold for their level. Confirm the shipping line before payment."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Encore membership and shipping details",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"
+        },
+        {
+          "label": "Old Navy rewards program terms",
+          "url": "https://oldnavy.gap.com/Asset_Archive/AllBrands/Loyalty/terms/terms-conditions.html?v=on1"
+        }
+      ],
+      "published_at": "2026-10-10"
     }
   ]
 }

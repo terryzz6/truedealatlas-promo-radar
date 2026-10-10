@@ -591,15 +591,15 @@
       "visual_steps": [
         {
           "label": "Core",
-          "detail": "Free membership"
+          "detail": "Free membership; birthday bonus for the member"
         },
         {
           "label": "Premier",
-          "detail": "$350+ annual spend"
+          "detail": "$350+ annual spend; member and one family birthday bonus"
         },
         {
           "label": "All-Access",
-          "detail": "Encore Cardmember"
+          "detail": "Encore Cardmember; member and up to three family birthday bonuses"
         },
         {
           "label": "Verify",
@@ -656,20 +656,20 @@
       "visual_title": "Birthday bonus evidence check",
       "visual_steps": [
         {
-          "label": "Join",
-          "detail": "Use an eligible Encore account"
+          "label": "Core",
+          "detail": "The eligible member's birthday bonus"
         },
         {
-          "label": "Profile",
-          "detail": "Keep birthday details current"
+          "label": "Premier",
+          "detail": "Member plus one designated family member"
         },
         {
-          "label": "Offer",
-          "detail": "Read the account-specific bonus"
+          "label": "All-Access",
+          "detail": "Member plus up to three designated family members"
         },
         {
-          "label": "Terms",
-          "detail": "Do not assume a fixed amount"
+          "label": "Gift",
+          "detail": "Gap Inc. chooses it; additional terms may apply"
         }
       ],
       "sections": [
@@ -682,7 +682,8 @@
         {
           "heading": "Eligibility depends on the account",
           "paragraphs": [
-            "Old Navy says the benefit is for eligible program members and eligible designated family members. The gift is selected by Gap Inc. and may carry additional terms, so the account offer is the source to check."
+            "The official Encore comparison lists a birthday bonus for the Core member, for the Premier member and one family member, and for the All-Access member and up to three family members. These are the published tier descriptions, not a promise that every account receives the same gift.",
+            "Old Navy limits the benefit to eligible members and their designated family members. Gap Inc. chooses the gift and can apply additional conditions. Read the offer assigned to the account before treating it as an Old Navy coupon."
           ]
         }
       ],
@@ -690,6 +691,10 @@
         {
           "question": "Does Old Navy give a birthday discount?",
           "answer": "Old Navy lists a birthday bonus for eligible Encore members, but the public page does not promise a fixed amount. Check the offer delivered to the eligible account."
+        },
+        {
+          "question": "Can a family member receive an Old Navy birthday bonus?",
+          "answer": "The official membership table lists one designated family member for Premier and up to three for All-Access. The Core column lists the member's own bonus. Eligibility restrictions and the terms of the account offer still apply."
         }
       ],
       "sources": [

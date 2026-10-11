@@ -764,6 +764,62 @@
         }
       ],
       "published_at": "2026-10-10"
+    },
+    {
+      "slug": "old-navy-super-cash-stacking",
+      "title": "Can You Stack Old Navy Super Cash With Coupons?",
+      "description": "The official stacking rule for Super Cash, other coupons, promotions, employee discounts, and Encore reward points.",
+      "answer": "Old Navy says Super Cash cannot be redeemed with another coupon, promotion, or employee discount. Encore members may redeem reward points in addition to Super Cash savings, which is a separate exception stated on the official program page.",
+      "visual_title": "Super Cash stacking decision",
+      "visual_steps": [
+        {
+          "label": "Super Cash",
+          "detail": "Apply one eligible code"
+        },
+        {
+          "label": "Coupons",
+          "detail": "Do not combine"
+        },
+        {
+          "label": "Promotions",
+          "detail": "Do not combine"
+        },
+        {
+          "label": "Points",
+          "detail": "Encore points may apply"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Separate coupons from reward points",
+          "paragraphs": [
+            "The official terms prohibit combining Super Cash with other coupons or promotions. They separately allow Encore members to redeem reward points alongside Super Cash code savings."
+          ]
+        },
+        {
+          "heading": "Use one Super Cash coupon per transaction",
+          "paragraphs": [
+            "Old Navy limits redemption to one Super Cash coupon per transaction, up to $60. A shopper can redeem more coupons in separate eligible transactions, but unused value on a partially used coupon is forfeited."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I use a promo code with Old Navy Super Cash?",
+          "answer": "No. The official page says Super Cash cannot be redeemed with other coupons or promotions."
+        },
+        {
+          "question": "Can I use Old Navy rewards points with Super Cash?",
+          "answer": "Yes, Old Navy states that Encore members may redeem reward points in addition to Super Cash code savings."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Super Cash program and stacking terms",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        }
+      ],
+      "published_at": "2026-10-11"
     }
   ]
 }

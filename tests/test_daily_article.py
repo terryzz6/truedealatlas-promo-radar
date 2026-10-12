@@ -57,6 +57,7 @@ class DailyArticleSelectionTests(unittest.TestCase):
             "old-navy-birthday-bonus",
             "old-navy-member-free-shipping",
             "old-navy-super-cash-stacking",
+            "old-navy-credit-card-vs-encore",
         }
 
         unpublished = {item["slug"] for item in queue if item["slug"] not in published}

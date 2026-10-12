@@ -182,7 +182,7 @@ td:last-child { min-width: 185px; color: var(--muted); font-size: 12px; }
 .evidence-visual { margin: 24px 0 6px; padding: 0; }
 .evidence-visual figcaption { margin-bottom: 12px; color: var(--ink); font-size: 16px; font-weight: 700; }
 .evidence-flow { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1px; margin: 0; padding: 0; list-style: none; background: var(--line); border-block: 1px solid var(--line); }
-.evidence-flow li { min-width: 0; padding: 14px; background: var(--white); }
+.evidence-flow li { min-width: 0; padding: 14px; background: var(--white); overflow-wrap: anywhere; }
 .evidence-flow strong, .evidence-flow span { display: block; }
 .evidence-flow strong { margin: 8px 0 3px; color: var(--ink); font-size: 14px; }
 .evidence-flow li > span:last-child { color: var(--muted); font-size: 12px; line-height: 1.45; }

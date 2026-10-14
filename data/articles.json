@@ -932,6 +932,58 @@
         }
       ],
       "published_at": "2026-10-13"
+    },
+    {
+      "slug": "old-navy-encore-shipping-after-discounts",
+      "title": "Old Navy Encore Shipping: Check the Total After Discounts",
+      "description": "Why an Encore member's order can miss a free-shipping threshold after a discount.",
+      "answer": "Old Navy says its Encore free-shipping threshold uses the qualifying order amount after discounts and before taxes. Sign in, check the relevant membership tier and payment requirement, and compare that amount with the shipping threshold before placing the order.",
+      "visual_title": "Encore shipping eligibility",
+      "visual_steps": [
+        {
+          "label": "Sign in",
+          "detail": "Use the eligible Encore account"
+        },
+        {
+          "label": "Apply savings",
+          "detail": "Check the post-discount amount"
+        },
+        {
+          "label": "Choose tier",
+          "detail": "Core, Premier or eligible All-Access"
+        },
+        {
+          "label": "Verify",
+          "detail": "Read the shipping line at checkout"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Use the qualifying subtotal, not the original cart price",
+          "paragraphs": [
+            "The program details measure the shipping threshold after discounts and before tax. If a promotion reduces the eligible amount below the relevant threshold, the earlier list price does not establish free-shipping eligibility. This is a decision method, not a test of an individual cart."
+          ]
+        },
+        {
+          "heading": "Keep shipping speed and payment separate",
+          "paragraphs": [
+            "Core lists free basic shipping at $50 or more; Premier lists free standard shipping at $50 or more. The $35 or more free standard shipping benefit is for eligible All-Access Cardmembers paying with the required card. The account must be signed in, and the order must ship to one qualifying U.S. or Puerto Rico address."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Why did free shipping disappear after I applied a coupon?",
+          "answer": "The coupon may have lowered the qualifying post-discount, pre-tax amount below your tier's threshold. This is a possible explanation, not a diagnosis of your cart; confirm the actual shipping charge and official terms at checkout."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Encore membership and shipping details",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"
+        }
+      ],
+      "published_at": "2026-10-14"
     }
   ]
 }

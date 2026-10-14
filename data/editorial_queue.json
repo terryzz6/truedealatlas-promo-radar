@@ -207,5 +207,41 @@
     "sections": [{"heading": "Do not confuse membership and card status", "paragraphs": ["Core membership is free. The official Encore comparison distinguishes it from Premier, which is based on annual spend, and All-Access, which is for Cardmembers. A member-only benefit does not automatically require opening a credit card."]}, {"heading": "Check the card-dependent shipping benefit", "paragraphs": ["The official comparison shows Core free basic shipping at $50 or more, Premier free standard shipping at $50 or more, and eligible All-Access Cardmembers free standard shipping at $35 or more with the required card. Sign in and check the post-discount, pre-tax qualifying total before payment."]}],
     "faq": [{"question": "Does Old Navy have a credit card?", "answer": "Old Navy's Encore page describes an All-Access Cardmember level and card-dependent benefits. Check the issuer's current terms before applying; a Core Encore account does not itself require a card."}],
     "sources": [{"label": "Old Navy Encore membership comparison and shipping details", "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"}]
+  },
+  {
+    "slug": "old-navy-super-cash-threshold-after-discounts",
+    "publish_on": "2026-10-13",
+    "title": "Old Navy Super Cash Threshold: What Counts Toward Redemption?",
+    "description": "A source-led checklist for checking merchandise, exclusions, and the qualifying Super Cash spend threshold.",
+    "answer": "Old Navy's Super Cash terms base redemption on qualifying merchandise spend. Gift cards, shipping, handling, gift wrap, and taxes do not count toward the threshold. Check the eligible merchandise total and the redemption window before applying a code; the public program page does not establish that a current redeem window is open.",
+    "visual_title": "Super Cash threshold check",
+    "visual_steps": [{"label": "Merchandise", "detail": "Start with eligible items"}, {"label": "Exclude", "detail": "Shipping, fees, gift wrap, taxes and gift cards"}, {"label": "Tier", "detail": "Compare with the official redemption bands"}, {"label": "Checkout", "detail": "Confirm the code and final total"}],
+    "sections": [{"heading": "Separate merchandise from the order total", "paragraphs": ["A cart total that includes tax or shipping can exceed a published threshold while the qualifying merchandise amount does not. Old Navy excludes gift cards, packaging, shipping and handling, gift wrap, and taxes from earning and redemption thresholds. Do not treat the displayed grand total as proof of eligibility."]}, {"heading": "Check the band and the active window", "paragraphs": ["The official program describes $20 off a qualifying $50-$99.99 purchase, $40 off $100-$149.99, and $60 off $150 or more during an eligible redemption period. This is a tier rule, not a claim that a code is currently redeemable. Old Navy also limits each transaction to one Super Cash coupon and does not carry over unused coupon value."]}],
+    "faq": [{"question": "Does shipping count toward Old Navy Super Cash?", "answer": "No. Old Navy excludes shipping and handling from the merchandise threshold. Check the qualifying amount and the applied discount at checkout."}, {"question": "Can I use two Super Cash codes in one order?", "answer": "No. Old Navy's published program terms limit redemption to one Super Cash coupon per transaction."}],
+    "sources": [{"label": "Old Navy Super Cash program terms", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}]
+  },
+  {
+    "slug": "old-navy-encore-shipping-after-discounts",
+    "publish_on": "2026-10-14",
+    "title": "Old Navy Encore Shipping: Check the Total After Discounts",
+    "description": "Why an Encore member's order can miss a free-shipping threshold after a discount.",
+    "answer": "Old Navy says its Encore free-shipping threshold uses the qualifying order amount after discounts and before taxes. Sign in, check the relevant membership tier and payment requirement, and compare that amount with the shipping threshold before placing the order.",
+    "visual_title": "Encore shipping eligibility",
+    "visual_steps": [{"label": "Sign in", "detail": "Use the eligible Encore account"}, {"label": "Apply savings", "detail": "Check the post-discount amount"}, {"label": "Choose tier", "detail": "Core, Premier or eligible All-Access"}, {"label": "Verify", "detail": "Read the shipping line at checkout"}],
+    "sections": [{"heading": "Use the qualifying subtotal, not the original cart price", "paragraphs": ["The program details measure the shipping threshold after discounts and before tax. If a promotion reduces the eligible amount below the relevant threshold, the earlier list price does not establish free-shipping eligibility. This is a decision method, not a test of an individual cart."]}, {"heading": "Keep shipping speed and payment separate", "paragraphs": ["Core lists free basic shipping at $50 or more; Premier lists free standard shipping at $50 or more. The $35 or more free standard shipping benefit is for eligible All-Access Cardmembers paying with the required card. The account must be signed in, and the order must ship to one qualifying U.S. or Puerto Rico address."]}],
+    "faq": [{"question": "Why did free shipping disappear after I applied a coupon?", "answer": "The coupon may have lowered the qualifying post-discount, pre-tax amount below your tier's threshold. This is a possible explanation, not a diagnosis of your cart; confirm the actual shipping charge and official terms at checkout."}],
+    "sources": [{"label": "Old Navy Encore membership and shipping details", "url": "https://oldnavy.gap.com/browse/info.do?cid=1095422"}]
+  },
+  {
+    "slug": "old-navy-super-cash-email-or-account",
+    "publish_on": "2026-10-15",
+    "title": "Where to Find Old Navy Super Cash: Email, Receipt, or Account",
+    "description": "Trace an earned Super Cash code to its official delivery channel before trying to redeem it.",
+    "answer": "Old Navy says qualifying online purchases receive a Super Cash code by email in about 24 hours, in-store purchases receive a paper coupon at checkout, and Encore members can also find earned codes in their account. A code still needs an eligible redemption window and qualifying purchase.",
+    "visual_title": "Find the earned code",
+    "visual_steps": [{"label": "Online", "detail": "Check the purchase email"}, {"label": "Store", "detail": "Keep the checkout coupon"}, {"label": "Encore", "detail": "Review saved account codes"}, {"label": "Redeem", "detail": "Check the window and eligibility"}],
+    "sections": [{"heading": "Follow the purchase channel", "paragraphs": ["For qualifying online purchases, Old Navy describes delivery of the universal code by email within approximately 24 hours. In a participating store, the paper coupon is provided at checkout. Encore members may also see earned codes saved in their account."]}, {"heading": "Finding a code is not the same as using it", "paragraphs": ["The earn and redeem periods are distinct. Check the code's redemption dates and the official merchandise thresholds; do not assume a code found in email or an account is active today. The public program text reviewed for this guide did not establish a current redemption period."]}],
+    "faq": [{"question": "How long does Old Navy take to email Super Cash?", "answer": "Old Navy's program page says qualifying online purchases receive the code by email within approximately 24 hours. If it is missing, check the purchase account and the official help channel rather than using an unverified third-party code."}],
+    "sources": [{"label": "Old Navy Super Cash program and delivery terms", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}]
   }
 ]

@@ -876,6 +876,62 @@
         }
       ],
       "published_at": "2026-10-12"
+    },
+    {
+      "slug": "old-navy-super-cash-threshold-after-discounts",
+      "title": "Old Navy Super Cash Threshold: What Counts Toward Redemption?",
+      "description": "A source-led checklist for checking merchandise, exclusions, and the qualifying Super Cash spend threshold.",
+      "answer": "Old Navy's Super Cash terms base redemption on qualifying merchandise spend. Gift cards, shipping, handling, gift wrap, and taxes do not count toward the threshold. Check the eligible merchandise total and the redemption window before applying a code; the public program page does not establish that a current redeem window is open.",
+      "visual_title": "Super Cash threshold check",
+      "visual_steps": [
+        {
+          "label": "Merchandise",
+          "detail": "Start with eligible items"
+        },
+        {
+          "label": "Exclude",
+          "detail": "Shipping, fees, gift wrap, taxes and gift cards"
+        },
+        {
+          "label": "Tier",
+          "detail": "Compare with the official redemption bands"
+        },
+        {
+          "label": "Checkout",
+          "detail": "Confirm the code and final total"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Separate merchandise from the order total",
+          "paragraphs": [
+            "A cart total that includes tax or shipping can exceed a published threshold while the qualifying merchandise amount does not. Old Navy excludes gift cards, packaging, shipping and handling, gift wrap, and taxes from earning and redemption thresholds. Do not treat the displayed grand total as proof of eligibility."
+          ]
+        },
+        {
+          "heading": "Check the band and the active window",
+          "paragraphs": [
+            "The official program describes $20 off a qualifying $50-$99.99 purchase, $40 off $100-$149.99, and $60 off $150 or more during an eligible redemption period. This is a tier rule, not a claim that a code is currently redeemable. Old Navy also limits each transaction to one Super Cash coupon and does not carry over unused coupon value."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does shipping count toward Old Navy Super Cash?",
+          "answer": "No. Old Navy excludes shipping and handling from the merchandise threshold. Check the qualifying amount and the applied discount at checkout."
+        },
+        {
+          "question": "Can I use two Super Cash codes in one order?",
+          "answer": "No. Old Navy's published program terms limit redemption to one Super Cash coupon per transaction."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Super Cash program terms",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        }
+      ],
+      "published_at": "2026-10-13"
     }
   ]
 }

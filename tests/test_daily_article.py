@@ -58,6 +58,9 @@ class DailyArticleSelectionTests(unittest.TestCase):
             "old-navy-member-free-shipping",
             "old-navy-super-cash-stacking",
             "old-navy-credit-card-vs-encore",
+            "old-navy-super-cash-threshold-after-discounts",
+            "old-navy-encore-shipping-after-discounts",
+            "old-navy-super-cash-email-or-account",
         }
 
         unpublished = {item["slug"] for item in queue if item["slug"] not in published}

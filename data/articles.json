@@ -984,6 +984,58 @@
         }
       ],
       "published_at": "2026-10-14"
+    },
+    {
+      "slug": "old-navy-super-cash-email-or-account",
+      "title": "Where to Find Old Navy Super Cash: Email, Receipt, or Account",
+      "description": "Trace an earned Super Cash code to its official delivery channel before trying to redeem it.",
+      "answer": "Old Navy says qualifying online purchases receive a Super Cash code by email in about 24 hours, in-store purchases receive a paper coupon at checkout, and Encore members can also find earned codes in their account. A code still needs an eligible redemption window and qualifying purchase.",
+      "visual_title": "Find the earned code",
+      "visual_steps": [
+        {
+          "label": "Online",
+          "detail": "Check the purchase email"
+        },
+        {
+          "label": "Store",
+          "detail": "Keep the checkout coupon"
+        },
+        {
+          "label": "Encore",
+          "detail": "Review saved account codes"
+        },
+        {
+          "label": "Redeem",
+          "detail": "Check the window and eligibility"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Follow the purchase channel",
+          "paragraphs": [
+            "For qualifying online purchases, Old Navy describes delivery of the universal code by email within approximately 24 hours. In a participating store, the paper coupon is provided at checkout. Encore members may also see earned codes saved in their account."
+          ]
+        },
+        {
+          "heading": "Finding a code is not the same as using it",
+          "paragraphs": [
+            "The earn and redeem periods are distinct. Check the code's redemption dates and the official merchandise thresholds; do not assume a code found in email or an account is active today. The public program text reviewed for this guide did not establish a current redemption period."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "How long does Old Navy take to email Super Cash?",
+          "answer": "Old Navy's program page says qualifying online purchases receive the code by email within approximately 24 hours. If it is missing, check the purchase account and the official help channel rather than using an unverified third-party code."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Super Cash program and delivery terms",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        }
+      ],
+      "published_at": "2026-10-15"
     }
   ]
 }

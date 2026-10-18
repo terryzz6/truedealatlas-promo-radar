@@ -96,69 +96,75 @@
     },
     {
       "slug": "old-navy-promo-code",
-      "title": "Old Navy Promo Code: What the Official Page Shows Today",
-      "description": "A dated, source-first check of Old Navy's official promotion text, plus a reproducible checkout test.",
-      "answer": "On September 29, 2026, Old Navy's official sale page displayed \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" The fetched official text did not expose a promo code, so we are not publishing one. Check the official coupon page and keep a code only if Old Navy shows it and checkout changes your total.",
-      "visual_title": "From official source to a publishable result",
+      "title": "Old Navy Promo Code: What Makes a Code Work or Fail",
+      "description": "A practical guide to Old Navy promo-code conditions, Super Cash thresholds, account rules, failed codes, and shipping eligibility.",
+      "answer": "An Old Navy promo code works only when the offer matches the cart, account, payment method, and redemption window. It can fail when the order falls below the qualifying merchandise threshold, when another offer is already applied, when the code is tied to a different account, or when the offer period has ended.",
+      "visual_title": "Old Navy promo-code checks",
       "visual_steps": [
         {
-          "label": "Source",
-          "detail": "Capture the exact official wording"
+          "label": "Match",
+          "detail": "Confirm cart and account eligibility"
         },
         {
-          "label": "Classify",
-          "detail": "Sale, code, account, or card"
+          "label": "Qualify",
+          "detail": "Check merchandise threshold and window"
         },
         {
-          "label": "Test",
-          "detail": "Keep one cart unchanged"
+          "label": "Apply",
+          "detail": "Use one offer at checkout"
         },
         {
-          "label": "Decide",
-          "detail": "Publish evidence or reject"
+          "label": "Verify",
+          "detail": "Read discount and shipping lines"
         }
       ],
       "sections": [
         {
-          "heading": "The dated official-source snapshot",
+          "heading": "Super Cash thresholds and one-time use",
           "paragraphs": [
-            "TrueDealAtlas fetched Old Navy's official sale page on September 29, 2026 Pacific time. The promotion text found there was \"Fall Faves Up To 50% Off + Extra 30% Off Purchase.\" It described a promotion but the fetched text did not provide a code string.",
-            "That distinction matters: a percentage headline is not automatically a reusable promo code. We link the exact official source and state what was and was not present instead of filling the gap with a code from a coupon directory."
+            "A qualifying purchase of  or more earns one Super Cash coupon during an eligible earning period. A later purchase of -.99 can receive  off, -.99 can receive  off, and  or more can receive  off. Qualifying merchandise excludes shipping, handling, gift wrap, taxes, and gift cards.",
+            "Old Navy allows one Super Cash coupon in a single transaction, with a maximum discount of  per transaction. Separate available coupons may be used in separate eligible transactions while the redemption period is open."
           ]
         },
         {
-          "heading": "Classify the offer before testing it",
+          "heading": "Why an emailed code can fail",
           "paragraphs": [
-            "Label what you see as one of four things: an automatic sale, a visible promo code, an account-only benefit, or a payment-card benefit. Only the second category gives you a code to enter. The other three may change the price without a code.",
-            "Also record the date, eligible category, minimum spend, account requirement, and payment requirement. If the official page does not state one of those fields, mark it unknown rather than guessing."
+            "Online shoppers may receive a code by email after a qualifying purchase, and Encore members may see earned codes in their member profile. Email delivery does not prove that the current cart, account, product mix, or redemption window qualifies.",
+            "A support instruction to place the order first and request an adjustment is a service remedy, not proof that the code works at checkout. A store-level receipt adjustment is likewise not a replacement for a valid online redemption."
           ]
         },
         {
-          "heading": "Use a five-line checkout record",
+          "heading": "The , , and  bands",
           "paragraphs": [
-            "For one exact cart, write down the official offer wording, the item subtotal before the promotion, the code entered or \"no code shown,\" the checkout message, and the final total before payment. This creates a result another shopper can reproduce without relying on a screenshot of an old headline.",
-            "Change only one variable at a time. If you swap the item, account, shipping method, and code together, you cannot tell which condition caused the discount to appear or fail."
+            "The -.99 band corresponds to  off, the -.99 band to  off, and  or more to  off. The  figure is the next band, not the minimum for every Super Cash redemption."
           ]
         },
         {
-          "heading": "Stop when the evidence stops",
+          "heading": "Shipping after discounts",
           "paragraphs": [
-            "Do not publish or share a code when it appears only on a third-party page, when the official terms are unavailable, or when checkout rejects it. A failed code is not a prompt to invent a spelling variation. It is a failed result for that cart and date."
+            "Encore Core and Premier members have a published  shipping threshold, while eligible All-Access Cardmembers using the required card have a published  threshold. Online eligibility is measured after discounts and before taxes, and the shopper must be signed in.",
+            "A promo code can therefore remove free shipping without being invalid: the discount may lower the qualifying subtotal below the applicable threshold."
+          ]
+        },
+        {
+          "heading": "Checkout test",
+          "paragraphs": [
+            "Confirm the channel, record the qualifying merchandise subtotal, check the account and payment requirement, apply one offer during its valid window, and read the final discount and shipping lines before payment."
           ]
         }
       ],
       "faq": [
         {
-          "question": "What Old Navy promo code did the official page show on September 29?",
-          "answer": "The fetched official sale-page text showed the promotion wording but did not expose a code string, so TrueDealAtlas does not publish a code for that snapshot."
+          "question": "Why did my emailed Old Navy code fail?",
+          "answer": "Email delivery does not guarantee that the cart, account, product mix, or redemption window qualifies. Check the current terms and checkout response."
         },
         {
-          "question": "Where should I verify a code?",
-          "answer": "Use Old Navy's official coupons page and the checkout result for the exact cart. A third-party listing alone is not enough evidence."
+          "question": "Is  the minimum for  off?",
+          "answer": "No. The published bands place -.99 at  off, -.99 at  off, and  or more at  off."
         },
         {
-          "question": "Does extra 30% off mean every item qualifies?",
-          "answer": "No. Match the exact item and any account, category, minimum-spend, or payment rules shown by Old Navy, then verify the final total before paying."
+          "question": "Can a discount remove free shipping?",
+          "answer": "Yes. The shipping threshold is measured after discounts and before taxes, so the qualifying subtotal can fall below the applicable tier."
         }
       ],
       "sources": [
@@ -175,7 +181,7 @@
           "url": "https://truedealatlas.com/providers/old-navy.html"
         }
       ],
-      "published_at": "2026-09-29"
+      "published_at": "2026-10-17"
     },
     {
       "slug": "old-navy-coupon-code",

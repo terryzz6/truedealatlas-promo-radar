@@ -336,19 +336,22 @@
     {
       "slug": "old-navy-coupons-in-store",
       "title": "Old Navy Coupons In Store: What to Check Before You Go",
-      "description": "How to check whether an Old Navy coupon is usable in a store rather than only online.",
+      "description": "How to check whether an Old Navy coupon is usable in a store rather than only online, including the cross-channel Super Cash rule.",
       "answer": "Confirm the coupon's channel, date, barcode or account requirement, and exclusions on Old Navy's official terms before traveling to a store. A code that works online may not be accepted at the register.",
       "sections": [
         {
           "heading": "Check the redemption channel",
           "paragraphs": [
-            "Look for language that says online, in store, app, or both. If a coupon needs a barcode, rewards account, or phone number, prepare that requirement before checkout rather than assuming a typed code will work."
+            "Look for language that says online, in store, app, or both. If a coupon needs a barcode, rewards account, or phone number, prepare that requirement before checkout rather than assuming a typed code will work.",
+            "Old Navy Super Cash has an explicit cross-channel rule: a coupon earned online or in a retail store can be redeemed in either place during an eligible redemption period. For an in-store purchase, the coupon must be presented at the time of purchase.",
+            "Do not generalize a third-party coupon listing to the register. Old Navy's published Super Cash rule is narrower and more useful: a coupon earned online or in a store can be redeemed in either channel during the eligible redemption period, but it must be presented at the time of an in-store purchase."
           ]
         },
         {
           "heading": "Bring the terms that matter",
           "paragraphs": [
-            "Verify the valid dates, minimum purchase, category exclusions, and whether the offer is limited to one transaction. Keep the official page available so the cashier or your account can show the same condition."
+            "Verify the valid dates, minimum purchase, category exclusions, and whether the offer is limited to one transaction. Keep the official page available so the cashier or your account can show the same condition.",
+            "The store rule is not the same as an online adjustment promise. If an online code fails, keep the order receipt and the checkout response, but treat any later store or support remedy as case-specific rather than as a published redemption right."
           ]
         }
       ],
@@ -356,6 +359,10 @@
         {
           "question": "Can I use an Old Navy online coupon in store?",
           "answer": "Only when the official terms include in-store redemption. Confirm the channel and any barcode or account requirement before relying on it."
+        },
+        {
+          "question": "Can I redeem Super Cash in store if I earned it online?",
+          "answer": "Yes. Old Navy says Super Cash earned online or in a store can be redeemed in either channel during an eligible redemption period. In a store, present the coupon at the time of purchase."
         }
       ],
       "sources": [
@@ -368,7 +375,26 @@
           "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
         }
       ],
-      "published_at": "2026-10-02"
+      "published_at": "2026-10-02",
+      "visual_title": "Check an Old Navy coupon before the store register",
+      "visual_steps": [
+        {
+          "label": "Read the channel",
+          "detail": "Confirm the offer allows in-store redemption"
+        },
+        {
+          "label": "Check eligibility",
+          "detail": "Review dates, items, and minimum spend"
+        },
+        {
+          "label": "Present the offer",
+          "detail": "Show the coupon at purchase"
+        },
+        {
+          "label": "Verify",
+          "detail": "Check the discount on the receipt"
+        }
+      ]
     },
     {
       "slug": "old-navy-promo-code-today",

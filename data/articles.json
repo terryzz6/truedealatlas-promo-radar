@@ -1077,6 +1077,74 @@
         }
       ],
       "published_at": "2026-10-15"
+    },
+    {
+      "slug": "old-navy-super-cash-returns",
+      "title": "Old Navy Super Cash Returns: What Happens to the Discount?",
+      "description": "How Old Navy allocates Super Cash across eligible items and handles the discount when you return merchandise.",
+      "answer": "Old Navy allocates a Super Cash discount across the prices of eligible items in the transaction. If you return some or all of the merchandise bought with that coupon, the coupon’s dollar discount is not refunded or credited back. Check the item-level return details before deciding what to send back.",
+      "visual_title": "How a Super Cash return is handled",
+      "visual_steps": [
+        {
+          "label": "Redeem",
+          "detail": "Use one coupon in an eligible transaction"
+        },
+        {
+          "label": "Allocate",
+          "detail": "Discount is spread across eligible item prices"
+        },
+        {
+          "label": "Return",
+          "detail": "Return the merchandise under the return process"
+        },
+        {
+          "label": "Review",
+          "detail": "Coupon discount is not refunded or credited back"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "The discount follows eligible items in the transaction",
+          "paragraphs": [
+            "Old Navy says the Super Cash discount is allocated across the purchase price of all eligible items in the transaction. Merchandise sold and shipped by third parties receives no portion of the discount, even though the terms say it may count toward a minimum purchase threshold.",
+            "That allocation matters when a transaction contains several eligible items: the coupon is not described as a discount attached only to the first item or to the item with the highest price."
+          ]
+        },
+        {
+          "heading": "A return does not restore the coupon value",
+          "paragraphs": [
+            "The program terms say that if some or all merchandise bought with a Super Cash coupon is returned, the coupon’s dollar discount will not be refunded or credited back. The policy applies to partial returns as well as returns of the full purchase.",
+            "This is separate from the merchandise return itself. The cited Super Cash terms explain what happens to the coupon discount; they do not specify an individual item’s refund amount, return eligibility, or processing time. Check the order’s return details for those terms."
+          ]
+        },
+        {
+          "heading": "Check the order before submitting a return",
+          "paragraphs": [
+            "Review which items were eligible for the discount and the return summary shown for those items. Do not count on a returned item restoring unused Super Cash or creating a new coupon credit: the published program terms say the discount is not returned as cash or credit."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do I get my Old Navy Super Cash back if I return an item?",
+          "answer": "Old Navy’s program terms say the Super Cash coupon discount is not refunded or credited back when some or all merchandise from that purchase is returned."
+        },
+        {
+          "question": "How is Super Cash divided across an order?",
+          "answer": "The terms say the discount is allocated across the purchase price of all eligible items. Third-party merchandise sold and shipped by the seller does not receive a portion of the discount."
+        },
+        {
+          "question": "Does the Super Cash return rule explain my merchandise refund amount?",
+          "answer": "No. The Super Cash terms describe whether the coupon discount is restored. They do not state your item-specific refund amount or return eligibility."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Navy Super Cash program terms",
+          "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"
+        }
+      ],
+      "published_at": "2026-10-20"
     }
   ]
 }

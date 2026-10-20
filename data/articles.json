@@ -337,7 +337,7 @@
       "slug": "old-navy-coupons-in-store",
       "title": "Old Navy Coupons In Store: What to Check Before You Go",
       "description": "How to check whether an Old Navy coupon is usable in a store rather than only online, including the cross-channel Super Cash rule.",
-      "answer": "Confirm the coupon's channel, date, barcode or account requirement, and exclusions on Old Navy's official terms before traveling to a store. A code that works online may not be accepted at the register.",
+      "answer": "For an Old Navy store purchase, a coupon works when its terms allow in-store redemption, the redemption period is open, the merchandise qualifies, and the coupon is presented before payment. Super Cash has a documented store path; an online-only code does not become a store coupon merely because someone else used it. On a $100 qualifying merchandise purchase, an eligible Super Cash coupon belongs to the $40-off tier—not the $60-off tier.",
       "sections": [
         {
           "heading": "Check the redemption channel",
@@ -352,6 +352,15 @@
           "paragraphs": [
             "Verify the valid dates, minimum purchase, category exclusions, and whether the offer is limited to one transaction. Keep the official page available so the cashier or your account can show the same condition.",
             "The store rule is not the same as an online adjustment promise. If an online code fails, keep the order receipt and the checkout response, but treat any later store or support remedy as case-specific rather than as a published redemption right."
+          ]
+        },
+        {
+          "heading": "A $100 cart does not explain a failed code",
+          "paragraphs": [
+            "For a hypothetical $100 cart containing only qualifying merchandise, the published Super Cash bands put the purchase in the $40-off tier, leaving $60 before tax. The $60-off tier starts at $150. This is arithmetic from the published thresholds, not a checkout test. It identifies the tier; it does not diagnose why a specific code fails.",
+            "One shopper in August described an emailed code that failed even after support suggested two other codes: “They sent me a code in an email that doesn't work; person on chat told me to try SAVE and SUPER, neither of those work.” The published Super Cash terms set spending tiers, but they do not establish why that shopper's emailed code was rejected.",
+            "Another shopper in August said support proposed ordering first and requesting an adjustment afterward: “Mine isn't working either and the person on chat keeps telling me to place the order and then do an adjustment after.” That reported support path differs from the published in-store instruction to present the coupon at purchase; it is not a published promise that every order will receive a later adjustment.",
+            "A person describing their own store in August said staff had been told to address online Super Cash problems when customers brought an order receipt: “At my store we were told that there are issues with using super cash online. We were told to compensate people if they come in with the order receipt.” The official terms describe redemption channels and timing; they do not promise this receipt-based remedy at every store."
           ]
         }
       ],

@@ -177,6 +177,9 @@ def write_assets():
     images=ROOT/"templates"/"store-icons"
     if images.exists():
         shutil.copytree(images,assets/"stores",dirs_exist_ok=True)
+    verification=ROOT/"googled8f8271b32339ba8.html"
+    if verification.exists():
+        shutil.copyfile(verification, SITE/verification.name)
 def build():
     cfg,data=load_data(); brand_pages=load_brand_coupon_pages(); validate_old_navy_guides(data.get("articles",[])); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
     overrides=json.loads((ROOT/"data"/"offer_page_overrides.json").read_text(encoding="utf-8"))

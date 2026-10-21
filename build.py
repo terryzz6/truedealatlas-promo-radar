@@ -19,6 +19,25 @@ def load_data():
 def load_brand_coupon_pages():
     path=ROOT/"data"/"brand_coupon_pages.json"
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+def validate_old_navy_guides(articles):
+    patterns=(
+        re.compile(r"\bof\s+or more\b",re.I),
+        re.compile(r"\bcan receive\s+off\b",re.I),
+        re.compile(r"\bThe\s*,\s*,\s*and\s*bands\b",re.I),
+    )
+    for article in articles:
+        if not article.get("slug","").startswith("old-navy-"):
+            continue
+        fields=[("answer",article.get("answer",""))]
+        for index,section in enumerate(article.get("sections",[])):
+            fields.append((f"sections[{index}].heading",section.get("heading","")))
+            fields.extend((f"sections[{index}].paragraphs[{number}]",text) for number,text in enumerate(section.get("paragraphs",[])))
+        for index,item in enumerate(article.get("faq",[])):
+            fields.extend((f"faq[{index}].{key}",item.get(key,"")) for key in ("question","answer"))
+        for field,text in fields:
+            for pattern in patterns:
+                if pattern.search(text):
+                    raise ValueError(f"data/articles.json: {article['slug']} {field}: {text}")
 def jsonld(obj): return '<script type="application/ld+json">'+json.dumps(obj,ensure_ascii=False)+'</script>'
 def format_checked(value):
     try:
@@ -152,7 +171,7 @@ def write_assets():
     if images.exists():
         shutil.copytree(images,assets/"stores",dirs_exist_ok=True)
 def build():
-    cfg,data=load_data(); brand_pages=load_brand_coupon_pages(); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
+    cfg,data=load_data(); brand_pages=load_brand_coupon_pages(); validate_old_navy_guides(data.get("articles",[])); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
     for old_deal in (SITE/"deals").glob("*.html"):
         old_deal.unlink()
     (SITE/"styles.css").write_text(STYLES,encoding="utf-8")

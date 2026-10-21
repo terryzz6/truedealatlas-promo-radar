@@ -5,10 +5,15 @@ import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from build import BASE, SITE, build, load_brand_coupon_pages
+from build import BASE, SITE, build, load_brand_coupon_pages, validate_old_navy_guides
 
 
 class BrandCouponPageTests(unittest.TestCase):
+    def test_old_navy_blank_amount_fails_before_build(self):
+        article={"slug":"old-navy-promo-code","sections":[{"heading":"Thresholds","paragraphs":["A qualifying purchase of  or more earns a coupon."]}]}
+        with self.assertRaisesRegex(ValueError,r"data/articles.json: old-navy-promo-code sections\[0\].paragraphs\[0\].*of  or more"):
+            validate_old_navy_guides([article])
+
     @classmethod
     def setUpClass(cls):
         build()

@@ -122,9 +122,11 @@
         {
           "heading": "Super Cash thresholds and one-time use",
           "paragraphs": [
-            "A qualifying purchase of  or more earns one Super Cash coupon during an eligible earning period. A later purchase of -.99 can receive  off, -.99 can receive  off, and  or more can receive  off. Qualifying merchandise excludes shipping, handling, gift wrap, taxes, and gift cards.",
-            "Old Navy allows one Super Cash coupon in a single transaction, with a maximum discount of  per transaction. Separate available coupons may be used in separate eligible transactions while the redemption period is open."
-          ]
+            "A qualifying purchase of $25 or more earns one Super Cash coupon during an eligible earning period. A later purchase of $50-$99.99 can receive $20 off, $100-$149.99 can receive $40 off, and $150 or more can receive $60 off. Qualifying merchandise excludes shipping, handling, gift wrap, taxes, and gift cards.",
+            "Old Navy allows one Super Cash coupon in a single transaction, with a maximum discount of $60 per transaction. Separate available coupons may be used in separate eligible transactions while the redemption period is open."
+          ],
+          "amount_source_url": "https://oldnavy.gap.com/browse/info.do?cid=56526",
+          "amount_checked_at": "2026-10-20"
         },
         {
           "heading": "Why an emailed code can fail",
@@ -134,17 +136,21 @@
           ]
         },
         {
-          "heading": "The , , and  bands",
+          "heading": "The $20, $40, and $60 bands",
           "paragraphs": [
-            "The -.99 band corresponds to  off, the -.99 band to  off, and  or more to  off. The  figure is the next band, not the minimum for every Super Cash redemption."
-          ]
+            "The $50-$99.99 band corresponds to $20 off, the $100-$149.99 band to $40 off, and $150 or more to $60 off. The $100 figure is the next band, not the minimum for every Super Cash redemption."
+          ],
+          "amount_source_url": "https://oldnavy.gap.com/browse/info.do?cid=56526",
+          "amount_checked_at": "2026-10-20"
         },
         {
           "heading": "Shipping after discounts",
           "paragraphs": [
-            "Encore Core and Premier members have a published  shipping threshold, while eligible All-Access Cardmembers using the required card have a published  threshold. Online eligibility is measured after discounts and before taxes, and the shopper must be signed in.",
+            "Encore Core and Premier members have a published $50 shipping threshold, while eligible All-Access Cardmembers using the required card have a published $35 threshold. Online eligibility is measured after discounts and before taxes, and the shopper must be signed in.",
             "A promo code can therefore remove free shipping without being invalid: the discount may lower the qualifying subtotal below the applicable threshold."
-          ]
+          ],
+          "amount_source_url": "https://oldnavy.gap.com/browse/info.do?cid=1153535",
+          "amount_checked_at": "2026-10-20"
         },
         {
           "heading": "Checkout test",
@@ -159,8 +165,10 @@
           "answer": "Email delivery does not guarantee that the cart, account, product mix, or redemption window qualifies. Check the current terms and checkout response."
         },
         {
-          "question": "Is  the minimum for  off?",
-          "answer": "No. The published bands place -.99 at  off, -.99 at  off, and  or more at  off."
+          "question": "Is $100 the minimum for $20 off?",
+          "answer": "No. The published bands place $50-$99.99 at $20 off, $100-$149.99 at $40 off, and $150 or more at $60 off.",
+          "amount_source_url": "https://oldnavy.gap.com/browse/info.do?cid=56526",
+          "amount_checked_at": "2026-10-20"
         },
         {
           "question": "Can a discount remove free shipping?",

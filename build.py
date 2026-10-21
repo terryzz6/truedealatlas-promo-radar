@@ -94,9 +94,16 @@ def offer_filters(offers):
     tabs="".join('<button type="button" role="tab" id="tab-{}" aria-controls="deal-grid" aria-selected="{}" tabindex="{}" data-kind="{}">{}</button>'.format(key,"true" if key=="all" else "false","0" if key=="all" else "-1",key,label) for key,label in (("all","All offers"),("codes","Promo codes"),("sales","Deals"),("shipping","Free shipping")))
     return '<div class="offer-tabs" role="tablist" aria-label="Offer type">{}</div><div class="filter-bar"><div class="filter-fields"><label>Store<select id="store-filter"><option value="">All stores</option>{}</select></label><label>Sort by<select id="sort-order"><option value="featured">Store name</option><option value="discount">Highest % off</option><option value="newest">Recently checked</option></select></label></div><label class="saved-filter"><input type="checkbox" id="saved-only"> Saved offers</label><button class="text-button" id="reset-filters" type="button" hidden>Clear filters {}</button></div>'.format(tabs,options,icon("x"))
 def display_offer_title(offer):
-    title=str(offer.get("title", ""))
+    title=str(offer.get("page_title", offer.get("title", "")))
     prefix=str(offer.get("provider", ""))+":"
     return title[len(prefix):].strip() if title.lower().startswith(prefix.lower()) else title
+def redirect_target(source, target, available_paths):
+    if target in available_paths:
+        return target
+    for provider in ("marine-layer", "outdoor-voices", "faherty", "biossance", "old-navy"):
+        if source.startswith("/deals/"+provider+"-"):
+            return "/providers/"+provider+".html"
+    raise ValueError("No provider fallback for "+source)
 def page(title,desc,body,path="/",template_name=None,footer_brand=None):
     canonical=BASE+("/" if path=="/" else path)
     if template_name:
@@ -172,12 +179,25 @@ def write_assets():
         shutil.copytree(images,assets/"stores",dirs_exist_ok=True)
 def build():
     cfg,data=load_data(); brand_pages=load_brand_coupon_pages(); validate_old_navy_guides(data.get("articles",[])); SITE.mkdir(exist_ok=True); (SITE/"providers").mkdir(exist_ok=True); (SITE/"deals").mkdir(exist_ok=True)
+    overrides=json.loads((ROOT/"data"/"offer_page_overrides.json").read_text(encoding="utf-8"))
+    redirects=overrides["redirects"]
     for old_deal in (SITE/"deals").glob("*.html"):
         old_deal.unlink()
     (SITE/"styles.css").write_text(STYLES,encoding="utf-8")
     (SITE/"site.js").write_text(SITE_JS,encoding="utf-8")
     write_assets()
-    offers=sorted([o for o in data.get("offers",[]) if o.get("active",True)],key=lambda o:(o["provider"].lower(),display_offer_title(o).lower()))
+    offers=[]
+    for offer in data.get("offers",[]):
+        if not offer.get("active",True):
+            continue
+        path="/deals/{}-{}.html".format(slug(offer["provider"]),slug(offer["title"]))
+        if path in redirects:
+            continue
+        page_override=overrides["pages"].get(path,{})
+        offers.append({**offer,**{("page_title" if key=="title" else key):value for key,value in page_override.items()}})
+    offers.sort(key=lambda o:(o["provider"].lower(),display_offer_title(o).lower()))
+    available_paths={"/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])) for o in offers}
+    (SITE/"_redirects").write_text("".join(f"{source} {redirect_target(source,target,available_paths)} 301\n" for source,target in redirects.items()),encoding="utf-8")
     paths=["{}-{}".format(slug(o["provider"]),slug(o["title"])) for o in offers]
     if len(paths) != len(set(paths)):
         raise ValueError("Duplicate deal paths detected; scraper titles must be unique")
@@ -223,9 +243,9 @@ def build():
     compare_body='<section class="hero compact"><p class="eyebrow">Side by side</p><h1>Compare offers</h1><p>Compare savings and source check dates. Store terms apply.</p></section><label class="compare-sort">Sort by<select id="compare-sort"><option value="featured">Store name</option><option value="discount">Highest % off</option><option value="newest">Recently checked</option></select></label><div class="table-wrap" role="region" aria-label="Offer comparison" tabindex="0"><table><caption class="sr-only">Current official store offers</caption><thead><tr><th scope="col">Store</th><th scope="col">Offer</th><th scope="col">Savings</th><th scope="col">Source check</th></tr></thead><tbody>{}</tbody></table></div>{}'.format(rows or '<tr><td colspan="4">No offers listed.</td></tr>',jsonld(item_list))
     (SITE/"compare.html").write_text(page("Compare Deals | TrueDealAtlas","Compare currently active official promotions",compare_body,"/compare.html","compare.html"),encoding="utf-8")
     for o in offers:
-        path="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])); fields={"price":o["price"],"priceCurrency":o["currency"]} if o.get("price") and o.get("currency") else {}; schema={"@context":"https://schema.org","@type":"Offer","name":o["title"],"url":BASE+path,"seller":{"@type":"Organization","name":o["provider"]},**fields}
+        path="/deals/{}-{}.html".format(slug(o["provider"]),slug(o["title"])); fields={"price":o["price"],"priceCurrency":o["currency"]} if o.get("price") and o.get("currency") else {}; schema={"@context":"https://schema.org","@type":"Offer","name":o.get("page_title",o["title"]),"url":BASE+path,"seller":{"@type":"Organization","name":o["provider"]},**fields}
         dbody='<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Coupons & deals</a><span>/</span><a href="/providers/{}.html">{}</a><span>/</span><span>Offer</span></nav><article class="detail offer-detail"><p class="eyebrow">{} official offer</p><h1>{}</h1><div class="detail-saving">{}</div><p class="checked">{}</p>{}<a class="button detail-cta" href="{}" target="_blank" rel="nofollow noopener">Get deal at {} {}<span class="sr-only"> (opens in a new tab)</span></a><h2>Offer terms</h2><p>{}</p><h2>Eligibility & conditions</h2><p>{}</p><p class="source-note">Source checked means the offer text was found on the official page. Availability and eligibility can change; confirm the terms before checking out.</p><p class="source">Official source: <a href="{}" target="_blank" rel="noopener">{}{}</a></p>{}</article>'.format(slug(o["provider"]),esc(o["provider"]),esc(o["provider"]),esc(display_offer_title(o)),esc(offer_saving(o)),esc(format_checked(o.get("fetched_at",""))),copy_control(o),esc(o["offer_url"]),esc(o["provider"]),icon("arrow-up-right"),esc(o.get("offer_text","")),esc(o.get("conditions","See store for terms.")),esc(o["source_url"]),esc(o["source_url"]),'<span class="sr-only"> (opens in a new tab)</span>',jsonld(schema))
-        target=SITE/path.lstrip("/"); target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page(o["provider"]+" Offer | TrueDealAtlas",o["title"]+" from "+o["provider"]+", checked from the official source.",dbody,path),encoding="utf-8")
+        target=SITE/path.lstrip("/"); target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page(o["provider"]+" Offer | TrueDealAtlas",o.get("page_title",o["title"])+" from "+o["provider"]+", checked from the official source.",dbody,path),encoding="utf-8")
     (SITE/"guides").mkdir(exist_ok=True)
     for old_guide in (SITE/"guides").glob("*.html"):
         old_guide.unlink()

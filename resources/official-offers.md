@@ -4,7 +4,7 @@ This snapshot is exported from [TrueDealAtlas](https://truedealatlas.com/), an i
 The public dataset is archived on [Zenodo](https://doi.org/10.5281/zenodo.22885986) (DOI: `10.5281/zenodo.22885986`).
 
 - Snapshot time: `2026-09-21T22:07:19+00:00` (UTC)
-- Active offers in this snapshot: **108**
+- Active offers in this snapshot: **107**
 - Configured official sources: **71**
 - Source policy: every row keeps both the official detail URL and the source page URL.
 

@@ -30,6 +30,10 @@ class OfferExtractionTests(unittest.TestCase):
         )
         self.assertEqual([], offers)
 
+    def test_rejects_cart_ui_remove_free_gift_action(self):
+        offers = self.extract("Remove free gift? This can't be undone.")
+        self.assertEqual([], offers)
+
     def test_keeps_one_human_title_for_near_duplicate_discount(self):
         offers = self.extract(
             "75% Off Select Items",

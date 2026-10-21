@@ -1,0 +1,25 @@
+{
+  "redirects": {
+    "/deals/marine-layer-marine-layer-free-shipping-on-75.html": "/deals/marine-layer-marine-layer-free-shipping-on-orders-over-75.html",
+    "/deals/marine-layer-marine-layer-free-shipping-on-orders-75.html": "/deals/marine-layer-marine-layer-free-shipping-on-orders-over-75.html",
+    "/deals/outdoor-voices-outdoor-voices-free-shipping-on-orders-100.html": "/deals/outdoor-voices-outdoor-voices-free-shipping-on-orders-over-100.html",
+    "/deals/faherty-faherty-free-shipping-over-150-60.html": "/deals/faherty-faherty-free-shipping-over-150.html",
+    "/deals/biossance-biossance-free-shipping-in-app.html": "/deals/biossance-biossance-free-shipping-in-app-exclusively-on.html",
+    "/deals/old-navy-old-navy-60-off-steals-baby-girls.html": "/deals/old-navy-old-navy-60-off-steals-baby-boys.html",
+    "/deals/old-navy-old-navy-60-off-steals-toddler-boys.html": "/deals/old-navy-old-navy-60-off-steals-baby-boys.html",
+    "/deals/old-navy-old-navy-60-off-steals-toddler-girls.html": "/deals/old-navy-old-navy-60-off-steals-baby-boys.html"
+  },
+  "pages": {
+    "/deals/old-navy-old-navy-60-off-steals-baby-boys.html": {
+      "title": "Old Navy: 60% Off Steals Baby Boys, Baby Girls, Toddler Boys, and Toddler Girls",
+      "offer_text": "60% Off Steals Baby Boys, Baby Girls, Toddler Boys, and Toddler Girls",
+      "conditions": "Steals Baby Boys, Baby Girls, Toddler Boys, and Toddler Girls"
+    },
+    "/deals/boll-branch-boll-branch-free-shipping-on-u.html": {
+      "title": "Boll & Branch: Free Shipping on U.S. orders of $100+ with Complimentary Returns"
+    },
+    "/deals/google-store-google-store-1-100-off.html": {
+      "title": "Google Store: $1,100 off Google Pixel 11 Pro XL, plus $10/mo off your phone plan when you join Google Fi Wireless"
+    }
+  }
+}

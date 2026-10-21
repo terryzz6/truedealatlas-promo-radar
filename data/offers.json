@@ -1806,16 +1806,6 @@
       "discount_percent": 15
     },
     {
-      "provider": "Perelel",
-      "title": "Perelel: Remove free gift",
-      "offer_text": "Remove free gift? This can't be undone.",
-      "conditions": "Remove free gift? This can't be undone.",
-      "offer_url": "https://perelelhealth.com/collections/giveback-sale",
-      "source_url": "https://perelelhealth.com/collections/giveback-sale",
-      "fetched_at": "2026-10-20T21:43:01+00:00",
-      "active": true
-    },
-    {
       "provider": "Coterie",
       "title": "Coterie: 15% Off Auto-Renew Orders",
       "offer_text": "Military Discounts | 15% Off Auto-Renew Orders",

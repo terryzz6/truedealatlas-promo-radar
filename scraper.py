@@ -68,6 +68,7 @@ BOGO_OR_GIFT = re.compile(r"\b(?:buy\s+(?:one|1)\s+get\s+(?:one|1)|free\s+gift|g
 LIMITED_EVENT = re.compile(r"\b(?:limited[- ]time\s+(?:sale|deal|event)|deal days?|flash sale|sale ends?|ends?\s+(?:today|tonight|on\b)|through\s+[A-Z][a-z]+\s+\d{1,2})\b", re.I)
 CLEARANCE_PRICE = re.compile(r"\bclearance\s+(?:under|from)\s+(\$\s?\d[\d,]*(?:\.\d{2})?)\b", re.I)
 EXCLUDED_TEXT = re.compile(r"\b(?:terms? of (?:sale|use|service)|privacy|frequently asked questions?|faq|rewards?(?: loyalty)?(?: program)?|customer service|store locator|find a store|return policy|shipping policy|accessibility)\b", re.I)
+UI_ACTION_TEXT = re.compile(r"^remove\s+(?:a\s+)?free\s+gift(?:\b|[?!])", re.I)
 EXCLUDED_PATH = re.compile(r"(?:^|[-_/])(?:privacy|faq|help|customer-service|store-locator|return-policy|terms-of-sale)(?:[-_/.]|$)", re.I)
 FRAGMENT_START = re.compile(r"^(?:and|or|but|because|by|while|additionally|which|that|then|without this product|connectivity discounts are)\b", re.I)
 FRAGMENT_END = re.compile(r"\b(?:including|and|or|with|for|on|to|from|of|in|plus)\.?$", re.I)
@@ -243,7 +244,7 @@ def usable_candidate(text, offer_url):
     words = text.split()
     if not 2 <= len(words) <= 32 or len(text) > 240:
         return False
-    if EXCLUDED_TEXT.search(text) or EXCLUDED_PATH.search(urlparse(offer_url).path):
+    if EXCLUDED_TEXT.search(text) or UI_ACTION_TEXT.search(text) or EXCLUDED_PATH.search(urlparse(offer_url).path):
         return False
     if FRAGMENT_START.search(text) or FRAGMENT_END.search(text) or text.endswith(("...", ":", ";", ",")):
         return False

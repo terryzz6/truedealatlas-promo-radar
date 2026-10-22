@@ -22,3 +22,4 @@ Tomorrow's first article: **Old Navy Super Cash: What Counts Toward a Qualifying
 - T5: A four-step evidence diagram is embedded in the guide; no YouTube video or channel access is claimed.
 - T1: Removed the answer-panel shadow; pre-change version remains in git, public visual review pending.
 - Tomorrow: Old Navy Super Cash: What Counts Toward a Qualifying Cart? Source material is in roster.md; distinguish official terms from unknown checkout outcomes.
+- Deployment: commit 947bd99f was pushed to origin/main on 2026-10-22. Public guide URL returned HTTP 404 after the push; Cloudflare dashboard requires login. Publication remains unverified.

@@ -1153,6 +1153,31 @@
         }
       ],
       "published_at": "2026-10-20"
+    },
+    {
+      "slug": "old-navy-super-cash-mixed-cart",
+      "title": "Old Navy Super Cash on a Mixed Cart: What Gets the Discount?",
+      "description": "Separate the qualifying threshold from the items that actually receive a Super Cash discount.",
+      "answer": "A mixed cart has two different questions: what counts toward the Super Cash purchase threshold, and which items receive a share of the discount. Old Navy's published terms say merchandise sold and shipped by third-party sellers may count toward a minimum purchase threshold but receives no portion of the coupon discount. Check the eligible Old Navy items and the checkout allocation before paying; a threshold being met does not mean every line was discounted.",
+      "visual_title": "Two checks for a mixed cart",
+      "visual_steps": [
+        {"label": "Classify", "detail": "Separate Old Navy and third-party seller lines"},
+        {"label": "Threshold", "detail": "Check what the terms count toward the minimum"},
+        {"label": "Allocation", "detail": "Check which eligible lines receive the discount"},
+        {"label": "Confirm", "detail": "Review the actual checkout before payment"}
+      ],
+      "sections": [
+        {"heading": "One cart, two different tests", "paragraphs": ["First ask whether the qualifying purchase meets the coupon's minimum. Then ask which merchandise receives the discount. These are not interchangeable tests: Old Navy's Super Cash terms distinguish the minimum-purchase calculation from the allocation of the coupon's dollar value.", "The terms say the discount is allocated across the purchase price of eligible items. Merchandise sold and shipped by third-party sellers does not receive part of that discount, even when it may count toward a minimum purchase threshold. Do not apply a headline discount to every product row in a mixed basket."]},
+        {"heading": "A reproducible cart check without a guessed result", "paragraphs": ["Before entering a coupon, record each line's seller, item price, and whether the terms identify it as eligible. Record the displayed qualifying subtotal separately from the sum of lines that can receive a discount. After applying the coupon, compare each eligible line and the pre-tax order total with the unchanged cart. No actual checkout was performed for this guide, so it does not claim that a particular basket or code succeeds.", "Keep the redemption date, channel, and coupon terms with the record. If checkout shows no discount or a different allocation, the displayed checkout result controls the purchase decision; the public terms alone cannot diagnose an individual account or item rejection."]},
+        {"heading": "What this evidence cannot establish", "paragraphs": ["The official program terms explain the category-level distinction, not the seller and eligibility of an unknown shopper's items. They also do not prove that a coupon is currently in a redemption window or available to a particular account. This page provides a decision method, not a current code, price, or predicted savings."]}
+      ],
+      "faq": [
+        {"question": "Can a third-party seller item help me reach the Super Cash minimum?", "answer": "The published terms say such merchandise may count toward the minimum purchase threshold. Check the specific coupon and checkout; that does not mean the item itself receives any of the discount."},
+        {"question": "Why is my entire cart not discounted?", "answer": "A threshold and discount allocation are different. Third-party seller merchandise receives no portion of the Super Cash discount under the cited terms. Other item-specific causes cannot be diagnosed without the cart and checkout response."},
+        {"question": "Does this guide verify a working Super Cash code today?", "answer": "No. It describes published program terms, not a tested code or a current redemption window."}
+      ],
+      "sources": [{"label": "Old Navy Super Cash program terms", "url": "https://oldnavy.gap.com/browse/info.do?cid=56526"}],
+      "published_at": "2026-10-22"
     }
   ]
 }
